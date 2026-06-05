@@ -1,0 +1,31 @@
+{
+  "name": "pf2e-module-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PF2e Foundry VTT module template (hybrid content + scripted Svelte UI).",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "init": "node scripts/init.ts",
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "check": "svelte-check --tsconfig ./tsconfig.json && tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
+    "clean": "rm -rf dist",
+    "setup": "node scripts/setup.ts",
+    "pack": "fvtt package pack",
+    "unpack": "fvtt package unpack"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.3",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@types/node": "^22.12.0",
+    "foundry-pf2e": "github:7H3LaughingMan/foundry-pf2e#78aa843c39a59e06ede407a45ed1fd627169b5a3",
+    "svelte": "^5.46.4",
+    "svelte-check": "^4.1.4",
+    "typescript": "^5.9.2",
+    "vite": "^8.0.0"
+  }
+}
