@@ -5,10 +5,10 @@ const { ApplicationV2 } = foundry.applications.api;
 
 export class ExampleApp extends ApplicationV2 {
   static override DEFAULT_OPTIONS = {
-    id: 'pf2e-module-template-example',
+    id: 'pf2e-netherworld-example',
     tag: 'section',
-    classes: ['pf2e-module-template'],
-    window: { title: 'PF2e Module Template', icon: 'fa-solid fa-flask', resizable: false },
+    classes: ['pf2e-netherworld'],
+    window: { title: 'PF2e Netherworld', icon: 'fa-solid fa-flask', resizable: false },
     position: { width: 420, height: 'auto' as const },
   };
 

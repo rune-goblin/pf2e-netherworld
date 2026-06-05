@@ -1,4 +1,4 @@
-# PF2e Module Template
+# PF2e Netherworld
 
 A starting point for **Pathfinder 2e Foundry VTT** modules. Ship compendium content
 (`packs/`) and a scripted esmodule (`src/`) — a **Svelte 5** UI in an **ApplicationV2**
@@ -15,7 +15,7 @@ shell — from one repo.
   `tsx` or `ts-node`. No v1 Foundry APIs — ApplicationV2, DialogV2, and DataModel only.
 - **Svelte 5 in ApplicationV2, wired up.** A working window (`src/ui/ExampleApp.ts`)
   `mount()`s a runes component and `unmount()`s it on close. The lifecycle plumbing is
-  done. Open it from the console: `game.modules.get('pf2e-module-template').api.open()`.
+  done. Open it from the console: `game.modules.get('pf2e-netherworld').api.open()`.
 - **A Vite library build.** `src/index.ts` compiles to `dist/<id>.{js,css}`, the artifacts
   `module.json` loads. `npm run dev` watches; `npm run check` runs `svelte-check` and `tsc`.
 - **Compendium packs.** `packs/_source/` JSON, tracked in git and packed to LevelDB with
@@ -34,49 +34,6 @@ shell — from one repo.
 - **Sensible defaults.** Localization (`lang/en.json`), a public `api` surface, the
   `module.<id>` socket channel, and license and author metadata all key off the module id.
 
-<!-- TEMPLATE:START -->
-## Use this template
-
-This is a GitHub **template repository**. Create a module from it, then `npm run init`
-to rename it.
-
-**GitHub CLI (recommended)** — create, clone, and detach history in one step:
-
-```bash
-gh repo create rune-goblin/pf2e-my-module \
-  --template rune-goblin/runegoblin-foundrytemplate \
-  --private --clone
-cd pf2e-my-module
-npm run init -- pf2e-my-module --title "PF2e My Module"
-npm install && npm run build
-```
-
-**GitHub UI** — **Use this template → Create a new repository**, then:
-
-```bash
-git clone git@github.com:rune-goblin/pf2e-my-module.git
-cd pf2e-my-module
-npm run init -- pf2e-my-module --title "PF2e My Module"
-npm install && npm run build
-```
-
-**Plain clone** — start your own history:
-
-```bash
-git clone git@github.com:rune-goblin/runegoblin-foundrytemplate.git pf2e-my-module
-cd pf2e-my-module
-npm run init -- pf2e-my-module --title "PF2e My Module"
-rm -rf .git && git init -b main
-npm install && npm run build
-```
-
-`npm run init -- <id> [--title "..."] [--org <github-owner>]` rewrites the id and title
-across the repo, then removes itself and the template's `CHANGELOG.md` (your module starts
-its own history). It leaves `.claude/` (the bundled skill) alone and derives the title from
-the id when omitted. Pass `--org` to repoint the `module.json` `url`/`manifest`/`download`
-URLs at your GitHub owner (defaults to `rune-goblin`).
-
-<!-- TEMPLATE:END -->
 ## Layout
 
 ```
@@ -85,7 +42,7 @@ src/                 TypeScript + Svelte source (entry: src/index.ts)
   index.ts           registers hooks, exposes game.modules.get(id).api
   ui/ExampleApp.ts   ApplicationV2 shell that mounts a Svelte component
   ui/Example.svelte  sample Svelte 5 component (runes)
-  styles.css         global styles → dist/pf2e-module-template.css
+  styles.css         global styles → dist/pf2e-netherworld.css
   app.d.ts           ambient *.svelte declaration
 dist/                build output (gitignored) — what module.json loads
 lang/en.json         localization
@@ -157,7 +114,7 @@ claude mcp add -s project svelte -- npx -y @sveltejs/mcp  # or commit for collab
 The window is a thin `ApplicationV2` subclass; Svelte renders. `_renderHTML` calls
 `mount()` into a detached element, `_replaceHTML` inserts it, `_preClose` calls
 `unmount()`. See `src/ui/ExampleApp.ts`. Open the sample from the console:
-`game.modules.get('pf2e-module-template').api.open()`.
+`game.modules.get('pf2e-netherworld').api.open()`.
 
 ## Compendium packs (fvtt CLI)
 
@@ -174,7 +131,7 @@ Add the pack to `module.json` `"packs"`; Actor/Item packs also need `"system": "
 ## Release
 
 Push a tag `vX.Y.Z`; `release.yml` stamps the version, type-checks, builds, and
-publishes a GitHub release with `module.json` + `pf2e-module-template.zip`.
+publishes a GitHub release with `module.json` + `pf2e-netherworld.zip`.
 
 ## License
 

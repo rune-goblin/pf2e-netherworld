@@ -16,7 +16,7 @@ import { stdin, stdout } from 'node:process';
 
 const repo = process.cwd();
 const home = homedir();
-const ID = 'pf2e-module-template';
+const ID = 'pf2e-netherworld';
 
 const PF2E_REPO = 'https://github.com/foundryvtt/pf2e.git';
 const CONFIG = join(repo, '.dev-paths.json');

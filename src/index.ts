@@ -1,7 +1,7 @@
 import './styles.css';
 import { ExampleApp } from './ui/ExampleApp';
 
-const MODULE_ID = 'pf2e-module-template';
+const MODULE_ID = 'pf2e-netherworld';
 
 interface ModuleApi {
   version: string;
