@@ -1,5 +1,34 @@
 {
   "pf2e-netherworld": {
-    "title": "PF2e Netherworld"
+    "title": "PF2e Netherworld",
+    "app": {
+      "title": "Nether World",
+      "search": "Filter scenes…",
+      "active": "Active",
+      "save": "Save",
+      "cancel": "Cancel",
+      "empty": "No navigable scenes.",
+      "noMatches": "No scenes match your filter.",
+      "tabs": {
+        "scene": "This Scene",
+        "all": "All Scenes"
+      },
+      "thisScene": {
+        "on": "Lights dimmed (nether world)",
+        "off": "Normal lighting",
+        "none": "No scene is currently active."
+      }
+    },
+    "notifications": {
+      "gmOnly": "Only a GM can manage nether world scenes.",
+      "saved": "Nether world scenes updated."
+    },
+    "settings": {
+      "picker": {
+        "name": "Nether World",
+        "label": "Open Picker",
+        "hint": "Mark scenes as nether world to dim their lights one step (bright → dim, dim → dark)."
+      }
+    }
   }
 }

@@ -23,7 +23,14 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Nether World Macros",
+      "path": "packs/macros",
+      "type": "Macro"
+    }
+  ],
   "relationships": {
     "systems": [
       {

@@ -1,0 +1,13 @@
+{
+    "_id": "nwOpenPicker0001",
+    "_key": "!macros!nwOpenPicker0001",
+    "name": "Nether World: Open Picker",
+    "type": "script",
+    "author": "rgnetherworld001",
+    "img": "icons/svg/light-off.svg",
+    "scope": "global",
+    "command": "game.modules.get('pf2e-netherworld')?.api?.open();",
+    "ownership": {
+        "default": 0
+    }
+}

@@ -8,16 +8,35 @@ shell — from one repo.
 - Foundry: v14 minimum, verified on v14
 - Build: TypeScript + Svelte 5 + Vite
 
+## Nether World
+
+Mark scenes as **nether world** and every light on them is dimmed one step: bright
+becomes dim, dim falls to dark. Bright never collapses straight to dark, and a dim-only
+light is removed entirely. The shift feeds vision/detection geometry (PF2e RBV inherits
+it), not just the render, and applies to both ambient and token lights — darkness
+sources are left alone.
+
+A GM opens the picker — a Svelte window listing the navigable scenes with a checkbox
+each and a filter at the top — from a script macro or the console:
+
+```js
+game.modules.get('pf2e-netherworld').api.open();
+```
+
+Toggling a scene's checkbox and saving sets/unsets a per-scene flag. The light patch
+installs at `init` on every client, so the dimming is consistent across the table, and
+each client refreshes its own perception when the scene it's viewing is toggled.
+
 ## What you get
 
 - **A v14-only stack.** TypeScript runs source and tooling alike: `vite.config.ts`,
   `svelte.config.ts`, and `scripts/*.ts` execute straight through Node ≥ 22.12, with no
   `tsx` or `ts-node`. No v1 Foundry APIs — ApplicationV2, DialogV2, and DataModel only.
-- **Svelte 5 in ApplicationV2, wired up.** A working window (`src/ui/ExampleApp.ts`)
+- **Svelte 5 in ApplicationV2, wired up.** The Nether World picker (`src/ui/NetherWorldApp.ts`)
   `mount()`s a runes component and `unmount()`s it on close. The lifecycle plumbing is
   done. Open it from the console: `game.modules.get('pf2e-netherworld').api.open()`.
 - **A Vite library build.** `src/index.ts` compiles to `dist/<id>.{js,css}`, the artifacts
-  `module.json` loads. `npm run dev` watches; `npm run check` runs `svelte-check` and `tsc`.
+  `module.json` loads. `npm run dev` serves with hot module reload (HMR); `npm run check` runs `svelte-check` and `tsc`.
 - **Compendium packs.** `packs/_source/` JSON, tracked in git and packed to LevelDB with
   the bundled `fvtt` CLI (`npm run pack`). The hybrid content workflow is set up.
 - **One-command rename.** `npm run init -- <new-id> [--title "..."]` rewrites the id and
@@ -39,9 +58,11 @@ shell — from one repo.
 ```
 module.json          manifest (esmodules, styles, packs, pf2e relationship)
 src/                 TypeScript + Svelte source (entry: src/index.ts)
-  index.ts           registers hooks, exposes game.modules.get(id).api
-  ui/ExampleApp.ts   ApplicationV2 shell that mounts a Svelte component
-  ui/Example.svelte  sample Svelte 5 component (runes)
+  index.ts           installs the patch at init, exposes game.modules.get(id).api
+  constants.ts       MODULE_ID + the per-scene flag key
+  lightPatch.ts      PointLightSource patch + cross-client perception refresh
+  ui/NetherWorldApp.ts   ApplicationV2 shell that mounts the picker
+  ui/NetherWorld.svelte  scene picker (runes): checkboxes + filter + save
   styles.css         global styles → dist/pf2e-netherworld.css
   app.d.ts           ambient *.svelte declaration
 dist/                build output (gitignored) — what module.json loads
@@ -66,12 +87,27 @@ npm run build      # emit dist/, then enable the module in a world
 Then:
 
 ```bash
-npm run dev        # vite build --watch
+npm run dev        # HMR dev server (Vite reverse-proxies Foundry)
+npm run watch      # vite build --watch (rebuild dist/ on save, no HMR)
 npm run check      # svelte-check + tsc --noEmit
 ```
 
-Foundry hot-reloads `.hbs`/`.css`/`.json` but not esmodules — reload the browser
-after a `.js`/`.svelte` rebuild.
+**HMR** runs Vite on `:30001` as a reverse proxy *in front of* a running Foundry. Foundry
+must already be running, and the esmodule loads only inside an **active world** — so
+there's nothing to hot-swap until you launch one:
+
+1. Start Foundry, then **Launch World** (Setup → a world with this module enabled). First
+   time only: launch the world once on `:30000`, enable the module under *Manage Modules*,
+   and reload — after that it stays on.
+2. `npm run dev` (leave Foundry running).
+3. Open **http://localhost:30001/game** — *not* `:30000` — and log in.
+
+Now editing a `.svelte` component hot-swaps in place, keeping state. Editing
+`src/index.ts` (hooks/bootstrap) triggers a full page reload instead — that's expected.
+
+Prefer the plain bundle? `npm run watch` keeps the old flow: it rebuilds `dist/` on
+save; browse `:30000` and reload the browser after a `.js`/`.svelte` rebuild (Foundry
+hot-reloads `.hbs`/`.css`/`.json` in place, but not esmodules).
 
 ### `npm run setup`
 
@@ -113,7 +149,7 @@ claude mcp add -s project svelte -- npx -y @sveltejs/mcp  # or commit for collab
 
 The window is a thin `ApplicationV2` subclass; Svelte renders. `_renderHTML` calls
 `mount()` into a detached element, `_replaceHTML` inserts it, `_preClose` calls
-`unmount()`. See `src/ui/ExampleApp.ts`. Open the sample from the console:
+`unmount()`. See `src/ui/NetherWorldApp.ts`. Open the picker from the console:
 `game.modules.get('pf2e-netherworld').api.open()`.
 
 ## Compendium packs (fvtt CLI)
