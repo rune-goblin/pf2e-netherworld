@@ -32,7 +32,17 @@ Code style: global `~/.claude/CLAUDE.md` — comment only the non-obvious *why*.
 - `npm run build` → `dist/` (gitignored; build before enabling a world, and after edits).
 - `npm run dev` — HMR dev server (`:30001`, proxies Foundry). `npm run watch` — `vite build --watch`.
   `npm run check` — `svelte-check` + `tsc`. `npm run setup` — resolve dev paths
-  (detect/clone/prompt), then symlink into Foundry + pull references in.
+  (detect/clone/prompt), then scaffold the Foundry module dir + pull references in.
+- **Two ways the module lands in Foundry** (both put it at `modules/<id>/`):
+  - `npm run setup` (dev) — a **real** module dir whose entries (`module.json`, `dist`, `lang`,
+    `packs`, `assets`) symlink back to the repo, so edits + Vite HMR are live. NOT a
+    whole-repo symlink (that leaked `node_modules`/`.git` and shipped no assets).
+  - `npm run deploy` — `vite build`, then **copy** a clean, link-free, self-contained dir
+    (same shape as the release zip). Use to test the shipped artifact or install without the repo.
+- Art is **content, not source**: it lives in a top-level `assets/` (beside `lang/`, `packs/` —
+  not under `src/`, which is for built code) and is referenced as `modules/<id>/assets/…`. The
+  esmodule never imports it (it's author-pickable scene/tile art). That path must resolve in dev
+  (symlinked), `deploy` (copied), and the release zip — keep all three in sync.
 - Active install: `FoundryVTT` (a fresh v14 desktop install may use `FoundryVTT-v14`).
   References: `_pf2e-source`, `_foundry-data`, `_foundry-modules`.
 
@@ -43,12 +53,12 @@ Code style: global `~/.claude/CLAUDE.md` — comment only the non-obvious *why*.
 - Public API: `game.modules.get(MODULE_ID).api = {...}` (cast — `api` isn't typed on `Module`).
 - Strings: `lang/en.json` under `pf2e-netherworld.*`; `game.i18n.localize/format`. No hard-coded strings.
 - compatibility `minimum "14"`, `verified "14"`; author `Mark Pearce`, org `rune-goblin`, MIT license.
-- Release: tag `vX.Y.Z` → `release.yml` stamps the version, type-checks, builds, publishes `module.json` + `pf2e-netherworld.zip`.
+- Release: tag `vX.Y.Z` → `release.yml` stamps the version, type-checks, builds, publishes `module.json` + `pf2e-netherworld.zip` (zip ships `dist lang packs assets` — must include the art).
 
 ## Gotchas
 
 - Close Foundry before any `fvtt package` op (LevelDB lock). Pack workflow: skill's `packs-cli.md`.
-- `dist/` is gitignored — loaded via the dev symlink after build; CI builds it for releases.
+- `dist/` is gitignored — served via the dev scaffold's `dist` symlink after build; CI builds it for releases.
 - Vite does **not** type-check — run `npm run check` (the release workflow does too).
 - `npm run dev` = Vite HMR dev server on `:30001` reverse-proxying Foundry (`:30000`). It proxies an *already-running* Foundry — start Foundry and **launch a world with the module enabled** first, or there's no esmodule to hot-swap. Then browse `:30001/game` (not `:30000`). `.svelte` edits hot-swap; editing `src/index.ts` full-reloads. `npm run watch` = old `vite build --watch` (browse `:30000`, manual F5; Foundry hot-reloads `.hbs`/`.css`/`.json` but not esmodules).
 - Persist state in document flags, not raw socket; raw socket for transient signals only (skill's `multi-client-sync.md`).

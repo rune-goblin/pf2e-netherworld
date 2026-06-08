@@ -43,8 +43,11 @@ each client refreshes its own perception when the scene it's viewing is toggled.
   title across the manifest, sources, flags, socket channel, and pack names, then deletes
   itself. Your module is wired in seconds.
 - **Dev setup that finds Foundry.** `npm run setup` detects your Foundry data dir from
-  `options.json`, symlinks the module in, and pulls reference sources. It prompts only when
-  it cannot resolve a path itself.
+  `options.json`, scaffolds the module into it (a real dir whose `module.json`/`dist`/`lang`/
+  `packs`/`assets` symlink back to the repo — not a whole-repo symlink), and pulls
+  reference sources. It prompts only when it cannot resolve a path itself. `npm run deploy`
+  instead **copies** a clean, self-contained module (assets and packs included) — the same
+  shape the release zip ships, for testing the artifact or installing without the repo.
 - **Release on tag.** Push `vX.Y.Z`; `release.yml` stamps the version, type-checks, builds,
   and publishes a GitHub release with `module.json` and the module zip.
 - **AI authoring built in.** A bundled `foundry-pf2e` Claude Code skill (`.claude/skills/`)
@@ -65,11 +68,13 @@ src/                 TypeScript + Svelte source (entry: src/index.ts)
   ui/NetherWorld.svelte  scene picker (runes): checkboxes + filter + save
   styles.css         global styles → dist/pf2e-netherworld.css
   app.d.ts           ambient *.svelte declaration
+assets/              scene/tile art (content, shipped as-is) → modules/<id>/assets/…
 dist/                build output (gitignored) — what module.json loads
 lang/en.json         localization
 packs/               LevelDB compendium packs (built)
   _source/           JSON pack sources (tracked; packed with fvtt)
-scripts/setup.ts     dev symlink setup
+scripts/setup.ts     dev install (real dir + symlinks back to the repo)
+scripts/deploy.ts    build + copy a clean self-contained module into Foundry
 ```
 
 ## Develop
@@ -80,7 +85,7 @@ dependency, so `npm install` brings it:
 
 ```bash
 npm install
-npm run setup      # symlink this module into Foundry (see below)
+npm run setup      # scaffold this module into Foundry (see below)
 npm run build      # emit dist/, then enable the module in a world
 ```
 
@@ -90,6 +95,7 @@ Then:
 npm run dev        # HMR dev server (Vite reverse-proxies Foundry)
 npm run watch      # vite build --watch (rebuild dist/ on save, no HMR)
 npm run check      # svelte-check + tsc --noEmit
+npm run deploy     # build + copy a clean, self-contained module into Foundry
 ```
 
 **HMR** runs Vite on `:30001` as a reverse proxy *in front of* a running Foundry. Foundry
@@ -111,8 +117,8 @@ hot-reloads `.hbs`/`.css`/`.json` in place, but not esmodules).
 
 ### `npm run setup`
 
-Links the repo into Foundry and pulls reference sources in. It resolves three things,
-prompting only when it can't detect them:
+Installs the module into Foundry for live dev and pulls reference sources in. It resolves
+three things, prompting only when it can't detect them:
 
 - **Foundry data dir** — from Foundry's `Config/options.json` (`dataPath`) in the
   default user-data folder (macOS `~/Library/Application Support/FoundryVTT*`, Windows
@@ -120,7 +126,14 @@ prompting only when it can't detect them:
   overrides. It links an existing dir, never creates one.
 - **PF2e source** (optional — types also come from the `foundry-pf2e` dep) — clone
   `foundryvtt/pf2e`, point at a checkout, or skip.
-- **Symlinks** — confirms before writing them.
+- **Links** — confirms before writing them.
+
+The Foundry module dir (`<FoundryData>/Data/modules/pf2e-netherworld`) is a **real
+directory** whose entries symlink back to the repo — `module.json`, `dist/`, `lang/`,
+`packs/`, and `assets/`. This keeps edits and Vite HMR live without exposing the whole
+repo (`node_modules`, `.git`) to Foundry, and `assets/` resolves at the same
+`modules/<id>/assets/…` path the content references. For a clean, link-free copy
+(assets and packs included), use `npm run deploy`.
 
 Resolved paths cache to `.dev-paths.json` (gitignored). Flags: `--reconfigure` (re-ask),
 `--no-link` (paths only), `--yes` (non-interactive). The gitignored links it creates:

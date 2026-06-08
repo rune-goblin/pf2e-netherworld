@@ -30,7 +30,9 @@ export default defineConfig({
         target: `http://localhost:30001/modules/${id}/dist`,
         rewrite: () => '/index.ts',
       },
-      // Our static files live on disk under the module, not in Vite's src/ root — Foundry serves them.
+      // Committed content (assets, lang, packs) lives on disk under the module — proxy it to
+      // Foundry so dev resolves the same modules/<id>/assets/… URLs that scene/tile documents
+      // store, rather than leaning on Vite's own src/-root file fallback.
       [`^/modules/${id}/(lang|packs|assets)/`]: FOUNDRY,
       // Everything outside our module (Foundry core, the active system, other modules).
       [`^(?!/modules/${id}/)`]: FOUNDRY,

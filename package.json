@@ -15,6 +15,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
     "clean": "rm -rf dist",
     "setup": "node scripts/setup.ts",
+    "deploy": "node scripts/deploy.ts",
     "pack": "fvtt package pack",
     "unpack": "fvtt package unpack"
   },
