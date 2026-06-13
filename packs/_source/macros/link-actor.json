@@ -1,0 +1,13 @@
+{
+    "_id": "nwLinkMirror0001",
+    "_key": "!macros!nwLinkMirror0001",
+    "name": "Nether World: Link Mirror",
+    "type": "script",
+    "author": "rgnetherworld001",
+    "img": "icons/magic/symbols/chevron-elipse-circle-blue.webp",
+    "scope": "global",
+    "command": "/*\n * Link Mirror — bind a Shadow Reflection to the PC it mirrors (pf2e v8.1.2).\n *\n * Stores the PC's actor UUID in the Reflection's \"mirrorSource\" flag; Mirror\n * Cast then matches that PC by actor id. Run once per Reflection during setup,\n * or any time to fix/change a link.\n *\n * Use: select the Reflection token, TARGET the source PC's token, run this.\n * (No target -> a picker lists the player characters instead.)\n */\n\nconst reflection = canvas.tokens.controlled[0]?.actor;\nif (!reflection || canvas.tokens.controlled.length !== 1) {\n  ui.notifications.warn(\"Link Mirror: select exactly one Reflection token first.\");\n  return;\n}\n\nlet pc = [...game.user.targets].map((t) => t.actor).find((a) => a?.type === \"character\");\n\nif (!pc) {\n  const pcs = game.actors.filter((a) => a.type === \"character\" && a.hasPlayerOwner);\n  if (!pcs.length) {\n    ui.notifications.warn(\"Link Mirror: no player characters found.\");\n    return;\n  }\n  const current = reflection.getFlag(\"world\", \"mirrorSource\");\n  const options = pcs\n    .map((a) => `<option value=\"${a.uuid}\" ${a.uuid === current ? \"selected\" : \"\"}>${a.name}</option>`)\n    .join(\"\");\n  const uuid = await foundry.applications.api.DialogV2.prompt({\n    window: { title: `Link ${reflection.name}` },\n    content: `<p>Which PC does <b>${reflection.name}</b> mirror?</p>\n      <select name=\"src\" style=\"width:100%\">${options}</select>`,\n    ok: { label: \"Link\", callback: (_e, btn) => btn.form.elements.src.value },\n  }).catch(() => null);\n  if (!uuid) return;\n  pc = await fromUuid(uuid);\n}\n\nawait reflection.setFlag(\"world\", \"mirrorSource\", pc.uuid);\nui.notifications.info(`${reflection.name} now mirrors ${pc.name}.`);",
+    "ownership": {
+        "default": 0
+    }
+}

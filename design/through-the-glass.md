@@ -106,6 +106,11 @@ Two things make this sing at the table:
 - **Players can feed the echo.** Once they spot the lag, they can spend a harmless round — Stride in a circle, Recall Knowledge — knowing the double will waste its next turn copying it. Reward the cleverness.
 - **Unmirrorable acts leave it exposed.** If a PC does something the double genuinely can't follow — breaks line of sight to it, or shatters the pane it emerged from — that double is **stunned 1 until the end of its next turn**, with nothing to echo.
 
+*In Foundry, two macros (module's `pf2e-netherworld.macros`) automate the echo for spells:* **Nether World: Link Mirror** *and* **Nether World: Mirror Cast***.*
+- *Setup — run **Link Mirror** once per Reflection: select the Reflection token, target the PC it mirrors, run it. (It stores the PC's link on the Reflection; with no target it shows a PC picker.)*
+- *Each round — on the Reflection's turn, select it and run **Mirror Cast**. It walks the chat log back to the Reflection's own last turn (so the window is initiative-correct), gathers the linked PC's spell casts since then, and after a confirm/trim dialog re-casts them from the Reflection — same spell and rank, but at the **Reflection's** spell DC, clamping ranks above its rank-6 ceiling.*
+- *Scope: these mirror **spells** only. Strikes, Strides, skill actions, and consumables you still replay by hand (the "basic Strike / nearest equivalent" fallback above). Set a Reflection's mirror DC with its `mirrorSpellDC` flag (defaults to 32).*
+
 ---
 
 ## Encounter 2: The Threshold of Pain *(optional)*
