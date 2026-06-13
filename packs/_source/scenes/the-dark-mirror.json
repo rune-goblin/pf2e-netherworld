@@ -2,7 +2,7 @@
     "name": "The Dark Mirror",
     "_id": "yx63y21u1f3Ola0w",
     "navigation": false,
-    "thumb": "worlds/stolen-lands/assets/scenes/thumb-g3UVLhieYIuHQjTQUHUn8A.webp",
+    "thumb": "modules/pf2e-netherworld/assets/thumbnails/thumb-g3UVLhieYIuHQjTQUHUn8A.webp",
     "width": 8192,
     "height": 4608,
     "padding": 0.25,
@@ -92,7 +92,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/maps/mrakovich-manor/Veyrin-Myrcovich-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/Veyrin-Myrcovich-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",

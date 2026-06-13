@@ -3,7 +3,7 @@
     "name": "Threshhold of Pain",
     "_id": "QGFC0kT0Ts93Ag67",
     "navigation": false,
-    "thumb": "worlds/stolen-lands/assets/scenes/thumb-AXIfaSBOw1E3o_LmtzdA-A.webp",
+    "thumb": "modules/pf2e-netherworld/assets/thumbnails/thumb-AXIfaSBOw1E3o_LmtzdA-A.webp",
     "width": 7680,
     "height": 4320,
     "padding": 0.25,
@@ -93,7 +93,7 @@
             "actorLink": false,
             "depth": 0.5,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/maps/mrakovich-manor/isla-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/isla-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",

@@ -6,7 +6,7 @@
     "type": "effect",
     "system": {
         "description": {
-            "value": "<p>Granted by @UUID[Compendium.pf2e-netherworld.items.Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The cold-iron hook tears open as the fight begins. <strong>Apply this effect when you roll initiative</strong> &mdash; you take @Damage[2d6[persistent,bleed]] damage (flat DC 15 to end). The bleed persists on its own; you can remove this effect once it is ticking, and re-apply it at the start of the next combat.</p>"
+            "value": "<p>Granted by @UUID[Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The cold-iron hook tears open as the fight begins. <strong>Apply this effect when you roll initiative</strong> &mdash; you take @Damage[2d6[persistent,bleed]] damage (flat DC 15 to end). The bleed persists on its own; you can remove this effect once it is ticking, and re-apply it at the start of the next combat.</p>"
         },
         "duration": {
             "expiry": "turn-start",

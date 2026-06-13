@@ -52,6 +52,17 @@ Code style: global `~/.claude/CLAUDE.md` — comment only the non-obvious *why*.
   and pack names (`<id>.<pack>`) all key off it. Use `const MODULE_ID`.
 - Public API: `game.modules.get(MODULE_ID).api = {...}` (cast — `api` isn't typed on `Module`).
 - Strings: `lang/en.json` under `pf2e-netherworld.*`; `game.i18n.localize/format`. No hard-coded strings.
+- **Content ships as one Adventure pack** (`packs/netherworld`, type `Adventure`), not loose
+  per-type packs. `npm run build:adventure` assembles `packs/_source/{scenes,journals,macros,
+  bestiary,hazards,items}` into a single Adventure document and compiles it. The importer creates
+  world docs with **keepId**, so every `_id` (the Dark Mirror scene, the intro journal, every
+  actor) is preserved on every install — that's what keeps `DARK_MIRROR_SCENE_ID` and the `@UUID`
+  cross-links valid. Loose import mints new ids and silently breaks them (the original fresh-install
+  bug). On `ready`, the GM is prompted to import (gated by `core.adventureImports[uuid]`).
+  Cross-references to imported docs are **world** UUIDs (`@UUID[Actor.<id>]` / `Item.<id>`).
+- **`effects` stays a separate Item pack** — a runtime library granted in place by rule elements
+  (the Queen's Rime aura's `Compendium.pf2e-netherworld.effects.Item.…`), never imported. Edit
+  `packs/_source/effects` then `npm run pack -- effects --in packs/_source/effects --out packs`.
 - compatibility `minimum "14"`, `verified "14"`; author `Mark Pearce`, org `rune-goblin`, MIT license.
 - Release: tag `vX.Y.Z` → `release.yml` stamps the version, type-checks, builds, publishes `module.json` + `pf2e-netherworld.zip` (zip ships `dist lang packs assets` — must include the art).
 

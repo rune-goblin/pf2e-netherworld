@@ -19,7 +19,7 @@
     "actorLink": false,
     "depth": 1,
     "texture": {
-      "src": "worlds/stolen-lands/sessions/party/harrow-token.webp",
+      "src": "modules/pf2e-netherworld/assets/tokens/harrow-token.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

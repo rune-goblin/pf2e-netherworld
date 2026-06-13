@@ -25,43 +25,11 @@
   ],
   "packs": [
     {
-      "name": "macros",
-      "label": "Nether World Macros",
-      "path": "packs/macros",
-      "type": "Macro"
-    },
-    {
-      "name": "hazards",
-      "label": "Nether World Hazards",
-      "path": "packs/hazards",
-      "type": "Actor",
+      "name": "netherworld",
+      "label": "Through the Glass",
+      "path": "packs/netherworld",
+      "type": "Adventure",
       "system": "pf2e"
-    },
-    {
-      "name": "bestiary",
-      "label": "Nether World Bestiary",
-      "path": "packs/bestiary",
-      "type": "Actor",
-      "system": "pf2e"
-    },
-    {
-      "name": "items",
-      "label": "Nether World Items",
-      "path": "packs/items",
-      "type": "Item",
-      "system": "pf2e"
-    },
-    {
-      "name": "journals",
-      "label": "Nether World Journals",
-      "path": "packs/journals",
-      "type": "JournalEntry"
-    },
-    {
-      "name": "scenes",
-      "label": "Nether World Scenes",
-      "path": "packs/scenes",
-      "type": "Scene"
     },
     {
       "name": "effects",
@@ -77,13 +45,8 @@
       "sorting": "a",
       "color": "#5b2c68",
       "packs": [
-        "bestiary",
-        "hazards",
-        "items",
-        "effects",
-        "journals",
-        "scenes",
-        "macros"
+        "netherworld",
+        "effects"
       ]
     }
   ],
@@ -93,7 +56,7 @@
         "id": "pf2e",
         "type": "system",
         "compatibility": {
-          "minimum": "7.2.0"
+          "minimum": "8.2.0"
         }
       }
     ]

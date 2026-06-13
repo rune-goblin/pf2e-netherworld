@@ -1,5 +1,7 @@
 import './styles.css';
-import { MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING } from './constants';
+import {
+  MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING, ADVENTURE_UUID, INTRO_JOURNAL_ID,
+} from './constants';
 import { installLightPatch, registerSceneSync, setNetherworld } from './lightPatch';
 import { NetherWorldApp } from './ui/NetherWorldApp';
 import { MirrorToolbarApp } from './ui/MirrorToolbarApp';
@@ -29,6 +31,19 @@ async function setActive(scene: Scene | null, enabled: boolean): Promise<boolean
   return enabled;
 }
 
+/**
+ * On a world that hasn't imported the bundled adventure, open the stock Adventure importer so the
+ * GM can populate the world in one click. `core.adventureImports` is Foundry's own per-adventure
+ * record (keyed by UUID), so this prompts exactly once and never re-nags after import.
+ */
+async function promptAdventureImport(): Promise<void> {
+  if (!game.user.isGM) return;
+  const done = game.settings.get('core', 'adventureImports') as Record<string, boolean> | undefined;
+  if (done?.[ADVENTURE_UUID]) return;
+  const adventure = await fromUuid(ADVENTURE_UUID);
+  void (adventure as { sheet?: { render: (options: object) => unknown } } | null)?.sheet?.render({ force: true });
+}
+
 // At init so the light-source patch is in place on every client before any scene's
 // lights initialize, and the scene-flag listener is live for the first update.
 Hooks.once('init', () => {
@@ -45,6 +60,12 @@ Hooks.once('init', () => {
 
   // One scene-load hook gates the toolbar: it mounts on a dark-mirror scene and unmounts on leave.
   Hooks.on('canvasReady', () => MirrorToolbarApp.sync());
+
+  // Open the intro journal the moment the adventure import creates it. Its id is preserved by the
+  // import, so this fires once (re-import updates rather than creates) without an adventure-hook.
+  Hooks.on('createJournalEntry', (entry: JournalEntry) => {
+    if (game.user.isGM && entry.id === INTRO_JOURNAL_ID) void entry.sheet?.render(true);
+  });
 
   // The picker is the menu's handler: clicking the button in module settings opens
   // NetherWorldApp directly. `restricted` keeps it GM-only (scene flags are world writes).
@@ -76,5 +97,6 @@ Hooks.once('ready', () => {
 
   // canvasReady usually fires before this, but covers a code reload while a scene is already up.
   MirrorToolbarApp.sync();
+  void promptAdventureImport();
   console.log(`${MODULE_ID} | ready (v${version})`);
 });

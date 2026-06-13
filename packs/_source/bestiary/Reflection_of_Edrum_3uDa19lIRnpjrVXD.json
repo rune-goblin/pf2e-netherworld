@@ -20,7 +20,7 @@
     "actorLink": false,
     "depth": 1,
     "texture": {
-      "src": "worlds/stolen-lands/sessions/party/edrum-token.webp",
+      "src": "modules/pf2e-netherworld/assets/tokens/edrum-token.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

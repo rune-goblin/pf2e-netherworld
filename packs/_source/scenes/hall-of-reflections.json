@@ -2,7 +2,7 @@
     "name": "Hall of Reflections",
     "_id": "9tRQ2QuatnZeFEQy",
     "navigation": false,
-    "thumb": "worlds/stolen-lands/assets/scenes/thumb-ghdMrrRit3mXocJeI5vcxg.webp",
+    "thumb": "modules/pf2e-netherworld/assets/thumbnails/thumb-ghdMrrRit3mXocJeI5vcxg.webp",
     "width": 7680,
     "height": 4320,
     "padding": 0.25,
@@ -103,7 +103,7 @@
             },
             "name": "The Party",
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/party-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/party-token.webp",
                 "scaleX": 2,
                 "scaleY": 2,
                 "anchorX": 0.5,
@@ -398,7 +398,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/alderic-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/alderic-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",
@@ -583,7 +583,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/silver.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/silver.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",
@@ -768,7 +768,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/edrum-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/edrum-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",
@@ -953,7 +953,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/gene-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/gene-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",
@@ -1139,7 +1139,7 @@
             "actorLink": false,
             "depth": 1,
             "texture": {
-                "src": "worlds/stolen-lands/sessions/party/harrow-token.webp",
+                "src": "modules/pf2e-netherworld/assets/tokens/harrow-token.webp",
                 "anchorX": 0.5,
                 "anchorY": 0.5,
                 "fit": "contain",
