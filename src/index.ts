@@ -6,6 +6,7 @@ import { installLightPatch, registerSceneSync, setNetherworld } from './lightPat
 import { NetherWorldApp } from './ui/NetherWorldApp';
 import { MirrorToolbarApp } from './ui/MirrorToolbarApp';
 import { setMirrorState, type MirrorState } from './mirror';
+import { makeShadow } from './shadow';
 
 interface ModuleApi {
   version: string;
@@ -18,6 +19,8 @@ interface ModuleApi {
   toggle: (scene?: Scene | null) => Promise<boolean>;
   /** Set the dark-mirror overlay on the active scene (intact/cracked/broken). GM-only. */
   mirror: (state: MirrorState) => Promise<void>;
+  /** Clone a PC into a hostile, level-2-weaker glass Reflection with the shadow abilities. GM-only. */
+  makeShadow: (pc: Actor) => Promise<Actor | null>;
 }
 
 /** GM-gate a scene-flag write, then resolve to the scene's resulting state. Warns and no-ops for players. */
@@ -91,6 +94,7 @@ Hooks.once('ready', () => {
     disable: (scene = canvas.scene) => setActive(scene, false),
     toggle: (scene = canvas.scene) => setActive(scene, !scene?.getFlag(MODULE_ID, ENABLED_FLAG)),
     mirror: (state) => canvas.scene ? setMirrorState(canvas.scene, state) : Promise.resolve(),
+    makeShadow,
   };
   // `api` is the Foundry convention for a public API, but isn't a typed field on Module.
   if (module) (module as { api?: ModuleApi }).api = api;

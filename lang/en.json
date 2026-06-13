@@ -36,7 +36,11 @@
     },
     "notifications": {
       "gmOnly": "Only a GM can manage nether world scenes.",
-      "saved": "Nether world scenes updated."
+      "saved": "Nether world scenes updated.",
+      "shadowNeedsPc": "Select a player character to make a shadow of."
+    },
+    "shadow": {
+      "name": "Reflection of {name}"
     },
     "settings": {
       "picker": {
