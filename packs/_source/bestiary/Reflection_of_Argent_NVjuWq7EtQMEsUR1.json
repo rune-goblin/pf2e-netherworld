@@ -1,0 +1,679 @@
+{
+  "folder": "LhHwLWCUztAvLTXN",
+  "name": "Reflection of Argent",
+  "type": "npc",
+  "ownership": {
+    "default": 0,
+    "rJDvcbHa2crb2UJb": 3
+  },
+  "prototypeToken": {
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Reflection of Argent",
+    "displayName": 20,
+    "actorLink": false,
+    "depth": 1,
+    "texture": {
+      "src": "worlds/stolen-lands/sessions/party/silver.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#694d93",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 0.85,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "effects": [],
+  "system": {
+    "attributes": {
+      "hp": {
+        "value": 111,
+        "temp": 0,
+        "max": 111,
+        "details": "Glass Body: destroyed at 0 HP (see Shatter)."
+      },
+      "ac": {
+        "value": 32,
+        "details": ""
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "speed": {
+        "value": 15,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 60
+          }
+        ],
+        "details": ""
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "details": {
+      "languages": {
+        "value": [],
+        "details": ""
+      },
+      "level": {
+        "value": 12
+      },
+      "blurb": "Glass reflection — the bird companion (minion).",
+      "publicNotes": "<p>A glass reflection of Reflection of Argent, conjured by the crossing. It mirrors its original on a one-round lag.</p>",
+      "privateNotes": "",
+      "publication": {
+        "title": "Shadow Reflections",
+        "authors": "",
+        "license": "OGL",
+        "remaster": true
+      },
+      "creatureType": "Animal"
+    },
+    "resources": {},
+    "_migration": {
+      "version": 0.959,
+      "previous": {
+        "schema": null,
+        "foundry": "14.363",
+        "system": "8.1.2"
+      }
+    },
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 6
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 4
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "perception": {
+      "details": "",
+      "mod": 25,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ],
+      "vision": true
+    },
+    "saves": {
+      "fortitude": {
+        "value": 22,
+        "saveDetail": ""
+      },
+      "reflex": {
+        "value": 25,
+        "saveDetail": ""
+      },
+      "will": {
+        "value": 19,
+        "saveDetail": ""
+      }
+    },
+    "skills": {},
+    "traits": {
+      "value": [
+        "animal",
+        "shadow"
+      ],
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      }
+    }
+  },
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "items": [
+    {
+      "_id": "9NmUh6WK8tPXyqDw",
+      "name": "Jaws",
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": [],
+          "config": {}
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "damageRolls": {
+          "GDpYMKci1lgSWw7gNx2k": {
+            "damage": "2d8+10",
+            "damageType": "piercing",
+            "category": null
+          }
+        },
+        "bonus": {
+          "value": 24
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "action": "strike",
+        "area": null,
+        "range": null,
+        "subjectToMAP": true,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376046,
+        "modifiedTime": 1780316376046,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.9NmUh6WK8tPXyqDw"
+    },
+    {
+      "_id": "aKIKGDxpR71RBkSD",
+      "name": "Talon",
+      "type": "melee",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "agile"
+          ],
+          "config": {}
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "damageRolls": {
+          "LzD8BAyTP8fHjwMXnOa6": {
+            "damage": "2d6+10",
+            "damageType": "slashing",
+            "category": null
+          }
+        },
+        "bonus": {
+          "value": 24
+        },
+        "attackEffects": {
+          "value": []
+        },
+        "action": "strike",
+        "area": null,
+        "range": null,
+        "subjectToMAP": true,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376047,
+        "modifiedTime": 1780316376047,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.aKIKGDxpR71RBkSD"
+    },
+    {
+      "_id": "VmgXl3V9EttAf1Bu",
+      "name": "Flyby",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The reflection Flies up to its Speed and makes one melee Strike at any point during that movement. It doesn’t trigger reactions from the movement before or after the Strike.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "actionType": {
+          "value": "action"
+        },
+        "category": "offensive",
+        "actions": {
+          "value": 1
+        },
+        "deathNote": false,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376048,
+        "modifiedTime": 1780316376048,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.VmgXl3V9EttAf1Bu"
+    },
+    {
+      "_id": "hL5qWaxIiLXMxyVl",
+      "name": "Mirror Echo",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The reflection acts on a one-round lag, regardless of initiative order.</p>\n<p><strong>Round 1:</strong> it has nothing to copy yet, so it simply Strides toward the nearest foe and Strikes (or claws its way free of the glass).</p>\n<p><strong>Round 2+:</strong> on its turn it repeats, as best it can, every action its original took on the <em>previous</em> round, retargeting effects to the nearest valid creature. If it can't replicate an action — a consumable it doesn't have, a target that's gone — it instead makes a basic Strike or the nearest equivalent (GM's call).</p>\n<p><strong>Feed the Echo:</strong> if the original wastes a round (Strides in a circle, Recall Knowledge), the reflection wastes its next turn faithfully copying it. Reward that cleverness.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "category": "interaction",
+        "actions": {
+          "value": null
+        },
+        "deathNote": false,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376048,
+        "modifiedTime": 1780316376048,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.hL5qWaxIiLXMxyVl"
+    },
+    {
+      "_id": "uX0DyYqQtwQNumKL",
+      "name": "Shattered Echo",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>If the original does something the reflection genuinely cannot follow — breaking line of sight to the reflection, or shattering the pane it emerged from — the reflection has nothing to echo and is <strong>off-guard until the end of its next turn</strong>.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "category": "defensive",
+        "actions": {
+          "value": null
+        },
+        "deathNote": false,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376048,
+        "modifiedTime": 1780316376048,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.uX0DyYqQtwQNumKL"
+    },
+    {
+      "_id": "aAnAd4uad520vd6C",
+      "name": "Glass Body",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The reflection has no dying condition and makes no death saves. The instant it reaches 0 Hit Points it is destroyed, using <strong>Shatter</strong>.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "category": "defensive",
+        "actions": {
+          "value": null
+        },
+        "deathNote": false,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376049,
+        "modifiedTime": 1780316376049,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.aAnAd4uad520vd6C"
+    },
+    {
+      "_id": "Robjj5UPN7VgUWfl",
+      "name": "Shatter",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p><strong>Trigger</strong> The reflection is reduced to 0 Hit Points.</p>\n<p>The reflection bursts into razor shards. Each creature in a 10-foot emanation takes <strong>4d6 slashing damage</strong> (<strong>basic Reflex DC 30</strong>).</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": true
+        },
+        "actionType": {
+          "value": "free"
+        },
+        "category": "offensive",
+        "actions": {
+          "value": null
+        },
+        "deathNote": false,
+        "_migration": {
+          "version": 0.959,
+          "previous": {
+            "schema": null,
+            "foundry": "14.363",
+            "system": "8.1.2"
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.1.2",
+        "createdTime": 1780316376049,
+        "modifiedTime": 1780316376049,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!NVjuWq7EtQMEsUR1.Robjj5UPN7VgUWfl"
+    }
+  ],
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.363",
+    "systemId": "pf2e",
+    "systemVersion": "8.1.2",
+    "createdTime": 1780316376044,
+    "modifiedTime": 1780316376044,
+    "lastModifiedBy": "rJDvcbHa2crb2UJb",
+    "compendiumSource": null,
+    "duplicateSource": "Actor.NVjuWq7EtQMEsUR1",
+    "exportSource": {
+      "worldId": "stolen-lands",
+      "uuid": "Actor.NVjuWq7EtQMEsUR1",
+      "coreVersion": "14.363",
+      "systemId": "pf2e",
+      "systemVersion": "8.1.2"
+    }
+  },
+  "_id": "NVjuWq7EtQMEsUR1",
+  "_key": "!actors!NVjuWq7EtQMEsUR1"
+}

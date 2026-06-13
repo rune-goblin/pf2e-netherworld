@@ -1,0 +1,74 @@
+{
+    "_id": "nwShroudOfName01",
+    "_key": "!items!nwShroudOfName01",
+    "img": "icons/magic/death/silhouette-robe-evil-glow.webp",
+    "name": "Shroud of the Nameless",
+    "type": "equipment",
+    "system": {
+        "description": {
+            "value": "<p>The Flesh Shaper drew the threshold's cold light into this one, and a thread of it never left. The dark took a name in payment, and the world half-forgot the bearer to seal the bargain.</p>\n<hr />\n<p><strong>Wrapped in cold light (the gift).</strong> You gain <strong>resistance 10 to cold</strong>, permanently &mdash; it blunts the Queen of Shadows' rime in the finale, and any cold that comes after.</p>\n<hr />\n<p><strong>Voice of the gulf.</strong> <span class=\"action-glyph\">2</span> <strong>(once per day)</strong> You loose the despair of the lightless plane, casting @UUID[Compendium.pf2e.spells-srd.Item.Wave of Despair]{Wave of Despair} as an innate spell (a 30-foot cone, Will save). Use a <strong>spell DC appropriate to your level</strong> &mdash; your own spell DC if you have one, otherwise the standard innate DC for a creature of your level. <em>(Tracked by hand: once per day.)</em></p>\n<hr />\n<p><strong>The name given to the dark (the cost).</strong> You surrendered your name to the gulf, and the world half-forgets you: allies grope for what to call you, and you take a <strong>&minus;2 status penalty to Diplomacy</strong> &mdash; until you win the name back.</p>"
+        },
+        "rules": [
+            {
+                "key": "Resistance",
+                "type": [
+                    "cold"
+                ],
+                "value": 10
+            },
+            {
+                "key": "FlatModifier",
+                "selector": "diplomacy",
+                "type": "status",
+                "value": -2,
+                "label": "Shroud of the Nameless"
+            }
+        ],
+        "slug": "shroud-of-the-nameless",
+        "level": {
+            "value": 14
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "cold",
+                "magical"
+            ]
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "baseItem": null,
+        "bulk": {
+            "value": 0
+        },
+        "containerId": null,
+        "equipped": {
+            "carryType": "worn",
+            "handsHeld": 0,
+            "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "quantity": 1,
+        "size": "med",
+        "usage": {
+            "value": "worn"
+        }
+    },
+    "ownership": {
+        "default": 0
+    }
+}

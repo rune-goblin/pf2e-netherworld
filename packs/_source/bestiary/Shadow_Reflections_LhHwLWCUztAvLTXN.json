@@ -1,0 +1,23 @@
+{
+  "type": "Actor",
+  "folder": "tPzW5eubmMnK6wMU",
+  "name": "Shadow Reflections",
+  "color": null,
+  "sorting": "a",
+  "_id": "LhHwLWCUztAvLTXN",
+  "description": "",
+  "sort": 100000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.363",
+    "systemId": "pf2e",
+    "systemVersion": "8.1.2",
+    "createdTime": 1780159139593,
+    "modifiedTime": 1781281444622,
+    "lastModifiedBy": "rJDvcbHa2crb2UJb",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!LhHwLWCUztAvLTXN"
+}

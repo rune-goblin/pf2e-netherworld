@@ -1,0 +1,138 @@
+{
+    "_id": "nwGlassIcePalace",
+    "_key": "!actors!nwGlassIcePalace",
+    "img": "icons/magic/water/snowflake-ice-blue.webp",
+    "name": "The Glass to the Ice Palace",
+    "type": "hazard",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": 33
+            },
+            "emitsSound": "encounter",
+            "hardness": 14,
+            "hp": {
+                "details": "Broken Threshold 75 &mdash; the Queen's Rime ends when the Glass is Broken; the gloom lifts when it is Destroyed.",
+                "max": 150,
+                "temp": 0,
+                "value": 150
+            },
+            "immunities": [
+                {
+                    "type": "object-immunities"
+                }
+            ],
+            "stealth": {
+                "details": "<p>(0 to notice the Glass; the rime flares at the start of each round)</p>",
+                "value": 28
+            }
+        },
+        "creatureType": "",
+        "details": {
+            "description": "<p>A towering mirror set high on the far wall in a frame of black ice. Through it, clear as a window, lies the frozen palace of Natalia, Queen of Shadows &mdash; and she stands within, watching down, impassive. While the Glass stands, frost creeps across the floor and walls, the Queen's power bleeding through the glass: the hall stays frozen and the floor slick with rime until the mirror cracks.</p>",
+            "disable": "<p>@Check[thievery|dc:38|name:Deface the Glass] (master) to score and craze the surface, or @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] (7th rank, counteract DC 36) to sever the Queen's channel &mdash; or simply destroy the Glass. It is an <strong>object</strong>: <strong>Hardness 14</strong> (halved to <strong>7</strong> against adamantine, whose standard-grade weapons match its Hardness), <strong>HP 150</strong>, <strong>Broken Threshold 75</strong>. It is mounted ~15 ft up the far wall &mdash; ranged adamantine attacks reach it from the floor; a melee weapon needs the wraparound gallery (up the half-collapsed stair) or a Climb up the frost-slick wall (Athletics, off-guard while climbing).</p>\n<hr />\n<p><strong>Broken (75 HP):</strong> the Queen's channel is severed and the rime melts at once &mdash; the cold and the difficult terrain end.</p>\n<p><strong>Destroyed (0 HP):</strong> the glass shatters, the plane's gloom lifts (light functions normally), and the gateway to the Ice Palace closes for good.</p>",
+            "isComplex": true,
+            "level": {
+                "value": 14
+            },
+            "publication": {
+                "license": "OGL",
+                "remaster": false,
+                "title": "Nether World"
+            },
+            "reset": "",
+            "routine": "<p>(1 action) <strong>The Queen's Rime.</strong> Modeled on @UUID[Compendium.pf2e.spells-srd.Item.Frozen Fog]. At the <strong>start of each creature's turn</strong>, a creature within the rime (the emanation &mdash; all but the Glass and the Queen's allies) takes @Damage[6d8[cold]] damage with a basic @Check[fortitude|dc:38|basic] save. A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} (Clumsy 2 on a critical failure) and takes a &minus;10-foot status penalty to its Speeds for as long as it is clumsy. The rimed floor is <strong>difficult terrain</strong>. The rime acts every round until the Glass is <strong>Broken</strong>.</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 28
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 22
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 0
+            }
+        },
+        "statusEffects": [],
+        "traits": {
+            "rarity": "unique",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "cold",
+                "magical"
+            ]
+        }
+    },
+    "items": [
+        {
+            "_id": "nwRimeAuraAct001",
+            "_key": "!actors.items!nwGlassIcePalace.nwRimeAuraAct001",
+            "img": "icons/magic/water/snowflake-ice-blue.webp",
+            "name": "Queen's Rime",
+            "sort": 0,
+            "type": "action",
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": null,
+                "description": {
+                    "value": "<p>While the Glass stands, the Queen of Shadows' power bleeds through it, sheathing the hall in creeping frost. Creatures caught in the emanation are coated in killing cold &mdash; resolve the damage in the hazard's routine.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [
+                    {
+                        "key": "Aura",
+                        "slug": "queens-rime",
+                        "radius": 60,
+                        "effects": [
+                            {
+                                "uuid": "Compendium.pf2e-netherworld.effects.Item.nwQueensRimeFx01",
+                                "affects": "all",
+                                "events": [
+                                    "enter",
+                                    "turn-start"
+                                ],
+                                "removeOnExit": true,
+                                "includesSelf": false
+                            }
+                        ],
+                        "appearance": {
+                            "border": {
+                                "color": "#aee3ff",
+                                "alpha": 0.6
+                            },
+                            "highlight": {
+                                "color": "#cfecff",
+                                "alpha": 0.18
+                            }
+                        }
+                    }
+                ],
+                "slug": "queens-rime",
+                "traits": {
+                    "rarity": "common",
+                    "value": [
+                        "cold"
+                    ]
+                }
+            }
+        }
+    ],
+    "ownership": {
+        "default": 0
+    }
+}

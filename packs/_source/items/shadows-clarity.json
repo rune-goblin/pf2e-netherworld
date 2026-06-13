@@ -1,0 +1,63 @@
+{
+    "_id": "nwStolenSight001",
+    "_key": "!items!nwStolenSight001",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+    "name": "Shadow's Clarity",
+    "type": "equipment",
+    "system": {
+        "description": {
+            "value": "<p>A velstrac eye set in place of the bearer's own. It is theirs now, and permanent.</p>\n<hr />\n<p><strong>The dark holds no secrets (the gift).</strong> You gain <strong>greater darkvision</strong> &mdash; you see in darkness, and even in magical gloom, as clearly as in light. You <strong>ignore the concealed condition that darkness, dim light, and shadow would impose</strong>: no creature gains cover-of-sight against you in the gloom, in this fight or any after. In the finale you see Veyrin even when he melts into shadow and can point the party straight at him &mdash; he can never use the gloom to hide from the one who carries the eye.</p>\n<hr />\n<p><strong>The chains answer (finale).</strong> Once during the finale you can call the chains of the threshold to seize and hold Veyrin &mdash; a powerful immobilize that denies him the high ground or escape through the glass. <em>(GM-adjudicated; one use.)</em></p>\n<hr />\n<p><strong>The eye and the reflection (the cost).</strong> Your own eye is gone, and your <strong>reflection</strong> with it &mdash; no glass or water ever shows you again. It cuts both ways: nothing can scry or mirror-trap you, but the things in shadow now know you on sight.</p>\n<p><strong>The light is agony (the cost that bites).</strong> The fiend-eye drinks the dark and recoils from the day. While you stand in <strong>bright light or natural daylight</strong> you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.Dazzled]{Dazzled}</strong> &mdash; everything is concealed to you, a DC 5 flat check to target anything by sight. The dark is yours, but the moment the light returns &mdash; the Glass shatters, the sun rises, an ally lifts a torch &mdash; the gift turns against you.</p>"
+        },
+        "rules": [
+            {
+                "key": "Sense",
+                "selector": "greater-darkvision"
+            }
+        ],
+        "slug": "shadows-clarity",
+        "level": {
+            "value": 14
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "magical"
+            ]
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "baseItem": null,
+        "bulk": {
+            "value": 0
+        },
+        "containerId": null,
+        "equipped": {
+            "carryType": "worn",
+            "handsHeld": 0,
+            "invested": null
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "quantity": 1,
+        "size": "med",
+        "usage": {
+            "value": "worn"
+        }
+    },
+    "ownership": {
+        "default": 0
+    }
+}

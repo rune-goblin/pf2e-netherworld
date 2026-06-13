@@ -1,0 +1,63 @@
+{
+    "_id": "nwImpalingChain1",
+    "_key": "!items!nwImpalingChain1",
+    "img": "systems/pf2e/icons/equipment/adventuring-gear/chain.webp",
+    "name": "Effect: Impaling Chain",
+    "type": "effect",
+    "system": {
+        "description": {
+            "value": "<p>Inflicted by a critical hit with the Impaling Chain Strike of @UUID[Compendium.pf2e-netherworld.items.Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The target is impaled and anchored in place, becoming @UUID[Compendium.pf2e.conditionitems.Item.Grabbed]{Grabbed} by the chain. It is <strong>unable to recover from persistent bleed damage</strong> until it gets free (Escape vs. the wielder's class DC or Athletics DC).</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 14
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "rules": [
+            {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Grabbed",
+                "onDeleteActions": {
+                    "grantee": "cascade",
+                    "granter": "cascade"
+                }
+            },
+            {
+                "key": "AdjustDegreeOfSuccess",
+                "selector": "pd-recovery-check",
+                "predicate": [
+                    "item:damage:type:bleed"
+                ],
+                "adjustment": {
+                    "criticalSuccess": "to-failure",
+                    "success": "to-failure"
+                }
+            }
+        ],
+        "slug": "impaling-chain",
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": []
+        },
+        "badge": null
+    },
+    "ownership": {
+        "default": 0
+    }
+}

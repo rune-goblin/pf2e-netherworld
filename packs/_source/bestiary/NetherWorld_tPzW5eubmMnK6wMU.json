@@ -1,0 +1,23 @@
+{
+  "type": "Actor",
+  "folder": null,
+  "name": "NetherWorld",
+  "color": "#5b2c68",
+  "sorting": "a",
+  "_id": "tPzW5eubmMnK6wMU",
+  "description": "",
+  "sort": 300000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.363",
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "createdTime": 1781281433721,
+    "modifiedTime": 1781283575567,
+    "lastModifiedBy": "rJDvcbHa2crb2UJb",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!tPzW5eubmMnK6wMU"
+}

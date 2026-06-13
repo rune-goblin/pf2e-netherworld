@@ -19,6 +19,21 @@
         "none": "No scene is currently active."
       }
     },
+    "mirror": {
+      "drag": "Drag to reposition",
+      "intact": {
+        "label": "Intact",
+        "hint": "Hide both overlays — the glass is whole"
+      },
+      "cracked": {
+        "label": "Cracked",
+        "hint": "Show the cracked glass"
+      },
+      "broken": {
+        "label": "Broken",
+        "hint": "Show the shattered glass"
+      }
+    },
     "notifications": {
       "gmOnly": "Only a GM can manage nether world scenes.",
       "saved": "Nether world scenes updated."

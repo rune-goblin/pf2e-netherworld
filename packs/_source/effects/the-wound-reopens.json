@@ -1,0 +1,61 @@
+{
+    "_id": "nwWoundReopens01",
+    "_key": "!items!nwWoundReopens01",
+    "img": "icons/skills/wounds/blood-spurt-spray-red.webp",
+    "name": "Effect: The Wound Reopens",
+    "type": "effect",
+    "system": {
+        "description": {
+            "value": "<p>Granted by @UUID[Compendium.pf2e-netherworld.items.Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The cold-iron hook tears open as the fight begins. <strong>Apply this effect when you roll initiative</strong> &mdash; you take @Damage[2d6[persistent,bleed]] damage (flat DC 15 to end). The bleed persists on its own; you can remove this effect once it is ticking, and re-apply it at the start of the next combat.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 14
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "rules": [
+            {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Persistent Damage",
+                "onDeleteActions": {
+                    "granter": "detach"
+                },
+                "alterations": [
+                    {
+                        "mode": "override",
+                        "property": "persistent-damage",
+                        "value": {
+                            "damageType": "bleed",
+                            "formula": "2d6"
+                        }
+                    }
+                ]
+            }
+        ],
+        "slug": "the-wound-reopens",
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": []
+        },
+        "badge": null
+    },
+    "ownership": {
+        "default": 0
+    }
+}

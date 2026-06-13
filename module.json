@@ -29,6 +29,40 @@
       "label": "Nether World Macros",
       "path": "packs/macros",
       "type": "Macro"
+    },
+    {
+      "name": "hazards",
+      "label": "Nether World Hazards",
+      "path": "packs/hazards",
+      "type": "Actor",
+      "system": "pf2e"
+    },
+    {
+      "name": "bestiary",
+      "label": "Nether World Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "system": "pf2e"
+    },
+    {
+      "name": "items",
+      "label": "Nether World Items",
+      "path": "packs/items",
+      "type": "Item",
+      "system": "pf2e"
+    },
+    {
+      "name": "journals",
+      "label": "Nether World Journals",
+      "path": "packs/journals",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "effects",
+      "label": "Nether World Effects",
+      "path": "packs/effects",
+      "type": "Item",
+      "system": "pf2e"
     }
   ],
   "relationships": {
