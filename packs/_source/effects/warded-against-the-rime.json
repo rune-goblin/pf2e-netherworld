@@ -1,0 +1,45 @@
+{
+    "_id": "nwRimeWardFx0001",
+    "_key": "!items!nwRimeWardFx0001",
+    "img": "icons/magic/water/barrier-ice-shield.webp",
+    "name": "Effect: Warded Against the Rime",
+    "type": "effect",
+    "system": {
+        "description": {
+            "value": "<p>The cold light of @UUID[Compendium.pf2e-netherworld.items.Item.nwShroudOfName01]{Shroud of the Nameless} wards this creature against the Queen of Shadows' rime. The Glass's emanation passes over them &mdash; the aura will not apply @UUID[Compendium.pf2e-netherworld.effects.Item.nwQueensRimeFx01]{Effect: The Queen's Rime} to a warded creature, so they take no rime damage, make no save, suffer no clumsy or Speed penalty, and ignore the rimed difficult terrain. <em>(This wards against the rime only &mdash; the creature can still be harmed by other cold during the fight.)</em></p>\n<hr />\n<p><strong>Apply to the Shroud's bearer and their whole party at the start of the Dark Mirror</strong> (Encounter 3); remove it when the fight ends.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 14
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "rules": [],
+        "slug": "rime-ward",
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "cold"
+            ]
+        },
+        "badge": null
+    },
+    "ownership": {
+        "default": 0
+    }
+}

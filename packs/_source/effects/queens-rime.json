@@ -6,7 +6,7 @@
     "type": "effect",
     "system": {
         "description": {
-            "value": "<p>Granted by @UUID[Compendium.pf2e-netherworld.hazards.Actor.nwGlassIcePalace]{The Glass to the Ice Palace}. Modeled on @UUID[Compendium.pf2e.spells-srd.Item.Frozen Fog].</p>\n<hr />\n<p>The Queen of Shadows' rime settles into your bones. At the <strong>start of your turn</strong> you take @Damage[6d8[cold]] damage with a basic @Check[fortitude|dc:38|basic] save. A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} (Clumsy 2 on a critical failure) and takes a &minus;10-foot status penalty to its Speeds for as long as it is clumsy. The rimed floor is <strong>difficult terrain</strong>.</p>\n<p>The rime ends the instant the Glass is <strong>Broken</strong> (75 HP). The Queen's own allies are unaffected.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e-netherworld.hazards.Actor.nwGlassIcePalace]{The Glass to the Ice Palace}. Modeled on @UUID[Compendium.pf2e.spells-srd.Item.nOVSmPZsCm1C1sI3]{Frozen Fog}.</p>\n<hr />\n<p>The Queen of Shadows' rime settles into your bones. At the <strong>start of your turn</strong> you take @Damage[6d8[cold]] damage with a basic @Check[fortitude|dc:38|basic] save. A creature that fails is also @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} (Clumsy 2 on a critical failure) and takes a &minus;10-foot status penalty to its Speeds for as long as it is clumsy. The rimed floor is <strong>difficult terrain</strong>.</p>\n<p>The rime ends the instant the Glass is <strong>Broken</strong> (75 HP). The Queen's own allies are unaffected.</p>"
         },
         "duration": {
             "expiry": null,

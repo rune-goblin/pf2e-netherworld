@@ -1,0 +1,68 @@
+{
+    "_id": "nwRimesGripFx001",
+    "_key": "!items!nwRimesGripFx001",
+    "img": "icons/magic/water/snowflake-ice-blue.webp",
+    "name": "Effect: Rime's Grip",
+    "type": "effect",
+    "system": {
+        "description": {
+            "value": "<p>You failed your save against @UUID[Compendium.pf2e-netherworld.effects.Item.nwQueensRimeFx01]{the Queen of Shadows' rime} &mdash; the cold locks your joints. You are @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} and take a <strong>&minus;10-foot status penalty to all your Speeds</strong> while the rime grips you.</p>\n<hr />\n<p><strong>On a critical failure</strong>, raise the granted condition to <strong>Clumsy 2</strong> (the Speed penalty is unchanged). Remove this effect once the creature is no longer clumsy from the rime &mdash; it leaves the emanation, or the Glass reaches Broken and the rime ends.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 14
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "rules": [
+            {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Clumsy",
+                "onDeleteActions": {
+                    "grantee": "cascade",
+                    "granter": "cascade"
+                },
+                "alterations": [
+                    {
+                        "mode": "override",
+                        "property": "badge-value",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "key": "FlatModifier",
+                "selector": "all-speeds",
+                "type": "status",
+                "value": -10,
+                "label": "Rime's Grip"
+            }
+        ],
+        "slug": "rimes-grip",
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "cold"
+            ]
+        },
+        "badge": null
+    },
+    "ownership": {
+        "default": 0
+    }
+}

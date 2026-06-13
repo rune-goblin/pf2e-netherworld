@@ -1,0 +1,1538 @@
+{
+    "name": "The Dark Mirror",
+    "_id": "yx63y21u1f3Ola0w",
+    "navigation": false,
+    "thumb": "worlds/stolen-lands/assets/scenes/thumb-g3UVLhieYIuHQjTQUHUn8A.webp",
+    "width": 8192,
+    "height": 4608,
+    "padding": 0.25,
+    "shiftX": 0,
+    "shiftY": 0,
+    "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+    },
+    "initialLevel": "defaultLevel0000",
+    "grid": {
+        "type": 1,
+        "size": 200,
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#308adf",
+        "alpha": 0.25,
+        "distance": 5,
+        "units": "ft"
+    },
+    "tokenVision": true,
+    "fog": {
+        "mode": 1,
+        "colors": {
+            "explored": null,
+            "unexplored": null
+        }
+    },
+    "environment": {
+        "darknessLevel": 1,
+        "darknessLock": false,
+        "globalLight": {
+            "enabled": false,
+            "alpha": 0.5,
+            "bright": false,
+            "color": null,
+            "coloration": 1,
+            "luminosity": 0,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+                "min": 0,
+                "max": 1
+            }
+        },
+        "cycle": true,
+        "base": {
+            "hue": 0,
+            "intensity": 0,
+            "luminosity": 0,
+            "saturation": 0,
+            "shadows": 0
+        },
+        "dark": {
+            "hue": 0.7138888888888889,
+            "intensity": 0,
+            "luminosity": -0.25,
+            "saturation": 0,
+            "shadows": 0
+        }
+    },
+    "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+    },
+    "drawings": [],
+    "tokens": [
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                },
+                "healthEstimate": {
+                    "dontMarkDead": false,
+                    "hideHealthEstimate": false,
+                    "hideName": false
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Veyrin",
+            "displayName": 0,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/maps/mrakovich-manor/Veyrin-Myrcovich-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 0,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "Imi7xJECTa2xz1o6",
+            "hidden": false,
+            "sort": 0,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "mZpjquL3cfVD2Bvn",
+            "delta": {
+                "_id": "mZpjquL3cfVD2Bvn",
+                "name": "Veyrin",
+                "system": {},
+                "items": [
+                    {
+                        "name": "Font",
+                        "type": "spellcastingEntry",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": ""
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "_migration": {
+                                "version": 0.959,
+                                "lastMigration": null
+                            },
+                            "traits": {
+                                "otherTags": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": false
+                            },
+                            "ability": {
+                                "value": "wis"
+                            },
+                            "spelldc": {
+                                "value": 26,
+                                "dc": 34
+                            },
+                            "tradition": {
+                                "value": "divine"
+                            },
+                            "prepared": {
+                                "value": "spontaneous"
+                            },
+                            "showSlotlessLevels": {
+                                "value": false
+                            },
+                            "proficiency": {
+                                "value": 1
+                            },
+                            "slots": {
+                                "slot0": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot1": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot2": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot3": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot4": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot5": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot6": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot7": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot8": {
+                                    "prepared": [],
+                                    "value": 6,
+                                    "max": 6
+                                },
+                                "slot9": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot10": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot11": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                }
+                            },
+                            "autoHeightenLevel": {
+                                "value": null
+                            }
+                        },
+                        "_id": "hZQq4BOBgi2yRuc0",
+                        "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+                        "effects": [],
+                        "folder": null,
+                        "sort": 0,
+                        "flags": {},
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.hZQq4BOBgi2yRuc0"
+                    },
+                    {
+                        "folder": "T8AzYUgNIAgTJ9Iz",
+                        "img": "systems/pf2e/icons/spells/harm.webp",
+                        "name": "Harm",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>You channel void energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 void damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.</p>\n<p><span class=\"action-glyph\">1</span> The spell has a range of touch.</p>\n<p><span class=\"action-glyph\">2</span> (concentrate) The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8.</p>\n<p><span class=\"action-glyph\">3</span> (concentrate) You disperse void energy in a @Template[emanation|distance:30]. This targets all living and undead creatures in the area.</p>\n<hr>\n<p><strong>Heightened (+1)</strong> The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.</p>"
+                            },
+                            "rules": [],
+                            "slug": "harm",
+                            "_migration": {
+                                "version": 0.959,
+                                "lastMigration": null,
+                                "previous": null
+                            },
+                            "traits": {
+                                "otherTags": [],
+                                "value": [
+                                    "manipulate",
+                                    "void"
+                                ],
+                                "rarity": "common",
+                                "traditions": [
+                                    "divine"
+                                ]
+                            },
+                            "publication": {
+                                "title": "Pathfinder Player Core",
+                                "authors": "",
+                                "license": "ORC",
+                                "remaster": true
+                            },
+                            "level": {
+                                "value": 1
+                            },
+                            "requirements": "",
+                            "target": {
+                                "value": "1 living creature or 1 willing undead creature"
+                            },
+                            "range": {
+                                "value": "varies"
+                            },
+                            "area": null,
+                            "time": {
+                                "value": "1 to 3"
+                            },
+                            "duration": {
+                                "value": "",
+                                "sustained": false
+                            },
+                            "damage": {
+                                "0": {
+                                    "applyMod": false,
+                                    "category": null,
+                                    "formula": "1d8",
+                                    "kinds": [
+                                        "damage",
+                                        "healing"
+                                    ],
+                                    "materials": [],
+                                    "type": "void"
+                                }
+                            },
+                            "defense": {
+                                "save": {
+                                    "basic": true,
+                                    "statistic": "fortitude"
+                                }
+                            },
+                            "cost": {
+                                "value": ""
+                            },
+                            "location": {
+                                "value": "hZQq4BOBgi2yRuc0",
+                                "heightenedLevel": 8
+                            },
+                            "counteraction": false,
+                            "heightening": {
+                                "damage": {
+                                    "0": "1d8"
+                                },
+                                "interval": 1,
+                                "type": "interval"
+                            },
+                            "overlays": {
+                                "4gyp3qlsv5ywdyjq": {
+                                    "_id": "4gyp3qlsv5ywdyjq",
+                                    "name": "Harm (vs. Undead)",
+                                    "overlayType": "override",
+                                    "sort": 3,
+                                    "system": {
+                                        "damage": {
+                                            "0": {
+                                                "formula": "1d8+8",
+                                                "kinds": [
+                                                    "healing"
+                                                ]
+                                            }
+                                        },
+                                        "defense": null,
+                                        "heightening": {
+                                            "damage": {
+                                                "0": "1d8+8"
+                                            }
+                                        },
+                                        "range": {
+                                            "value": "30 feet"
+                                        },
+                                        "target": {
+                                            "value": "1 willing undead creature"
+                                        },
+                                        "time": {
+                                            "value": "2"
+                                        },
+                                        "traits": {
+                                            "value": [
+                                                "concentrate",
+                                                "manipulate",
+                                                "void"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "pq7cxntbz4s8g5ik": {
+                                    "_id": "pq7cxntbz4s8g5ik",
+                                    "overlayType": "override",
+                                    "sort": 1,
+                                    "system": {
+                                        "range": {
+                                            "value": "touch"
+                                        },
+                                        "time": {
+                                            "value": "1"
+                                        }
+                                    }
+                                },
+                                "rvhoa43rqqqp8izn": {
+                                    "_id": "rvhoa43rqqqp8izn",
+                                    "overlayType": "override",
+                                    "sort": 4,
+                                    "system": {
+                                        "area": {
+                                            "type": "emanation",
+                                            "value": 30
+                                        },
+                                        "range": {
+                                            "value": ""
+                                        },
+                                        "target": {
+                                            "value": "all living and undead creatures"
+                                        },
+                                        "time": {
+                                            "value": "3"
+                                        },
+                                        "traits": {
+                                            "value": [
+                                                "concentrate",
+                                                "manipulate",
+                                                "void"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "z04svm1cvfcxtplb": {
+                                    "_id": "z04svm1cvfcxtplb",
+                                    "name": "Harm (vs. Living)",
+                                    "overlayType": "override",
+                                    "sort": 2,
+                                    "system": {
+                                        "damage": {
+                                            "0": {
+                                                "kinds": [
+                                                    "damage"
+                                                ]
+                                            }
+                                        },
+                                        "range": {
+                                            "value": "30 feet"
+                                        },
+                                        "target": {
+                                            "value": "1 living creature"
+                                        },
+                                        "time": {
+                                            "value": "2"
+                                        },
+                                        "traits": {
+                                            "value": [
+                                                "concentrate",
+                                                "manipulate",
+                                                "void"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "type": "spell",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "sort": 0,
+                        "flags": {},
+                        "_id": "giKIYyeEvuhnud3z",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.giKIYyeEvuhnud3z"
+                    },
+                    {
+                        "name": "Arcane Prepared Spells",
+                        "type": "spellcastingEntry",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": ""
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "_migration": {
+                                "version": 0.959,
+                                "lastMigration": null
+                            },
+                            "traits": {
+                                "otherTags": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": false
+                            },
+                            "ability": {
+                                "value": "cha"
+                            },
+                            "spelldc": {
+                                "value": 0,
+                                "dc": 0
+                            },
+                            "tradition": {
+                                "value": "arcane"
+                            },
+                            "prepared": {
+                                "value": "prepared",
+                                "flexible": false
+                            },
+                            "showSlotlessLevels": {
+                                "value": false
+                            },
+                            "proficiency": {
+                                "value": 1
+                            },
+                            "slots": {
+                                "slot0": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot1": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot2": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot3": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot4": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot5": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot6": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot7": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot8": {
+                                    "prepared": [
+                                        {
+                                            "id": "BZXk4Mun3clEP3uF",
+                                            "expended": false
+                                        }
+                                    ],
+                                    "value": 0,
+                                    "max": 1
+                                },
+                                "slot9": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot10": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                },
+                                "slot11": {
+                                    "prepared": [],
+                                    "value": 0,
+                                    "max": 0
+                                }
+                            },
+                            "autoHeightenLevel": {
+                                "value": null
+                            }
+                        },
+                        "_id": "G7jGTFyBOHnOcRVv",
+                        "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+                        "effects": [],
+                        "folder": null,
+                        "sort": 0,
+                        "flags": {},
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.G7jGTFyBOHnOcRVv"
+                    },
+                    {
+                        "_id": "BZXk4Mun3clEP3uF",
+                        "folder": "7cyoYPoPYA01mErU",
+                        "img": "systems/pf2e/icons/spells/enervation.webp",
+                        "name": "Enervation",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>Extending a finger, you fire a beam of void energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save.</p><hr><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[(floor(@item.rank/2))d8[persistent,void]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}.</p><hr><p><strong>Heightened (+2)</strong> The persistent void damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure.</p>"
+                            },
+                            "rules": [],
+                            "slug": "enervation",
+                            "_migration": {
+                                "version": 0.959,
+                                "lastMigration": null,
+                                "previous": null
+                            },
+                            "traits": {
+                                "otherTags": [],
+                                "value": [
+                                    "concentrate",
+                                    "manipulate",
+                                    "void"
+                                ],
+                                "rarity": "common",
+                                "traditions": [
+                                    "arcane",
+                                    "divine",
+                                    "occult"
+                                ]
+                            },
+                            "publication": {
+                                "title": "Pathfinder Advanced Player's Guide",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": false
+                            },
+                            "level": {
+                                "value": 4
+                            },
+                            "requirements": "",
+                            "target": {
+                                "value": ""
+                            },
+                            "range": {
+                                "value": ""
+                            },
+                            "area": {
+                                "type": "line",
+                                "value": 30
+                            },
+                            "time": {
+                                "value": "2"
+                            },
+                            "duration": {
+                                "value": "",
+                                "sustained": false
+                            },
+                            "damage": {},
+                            "defense": {
+                                "save": {
+                                    "basic": false,
+                                    "statistic": "fortitude"
+                                }
+                            },
+                            "cost": {
+                                "value": ""
+                            },
+                            "location": {
+                                "value": "G7jGTFyBOHnOcRVv"
+                            },
+                            "counteraction": false,
+                            "heightening": {
+                                "damage": {}
+                            }
+                        },
+                        "type": "spell",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "sort": 0,
+                        "flags": {},
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.BZXk4Mun3clEP3uF"
+                    },
+                    {
+                        "name": "Rogarvia Signet Ring",
+                        "type": "equipment",
+                        "effects": [],
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>House Rogarvia Signet ring.</p><p>This ancient platinum ring is set with an umbral stone that flickers with shadowy vapours. The wearer is closer to the netherworld.</p><p>Weakness 10 to void damage</p><p><strong>once per day may cast (DC 34)</strong></p><p>@UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Enervation} heighteed to level 8</p><p>@UUID[Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l]{Claim Undead}</p><p>@UUID[Compendium.pf2e.spells-srd.Item.rxvS7EMJ7qmexAyA]{Umbral Journey}</p>"
+                            },
+                            "rules": [
+                                {
+                                    "key": "Weakness",
+                                    "type": "void",
+                                    "value": 10,
+                                    "predicate": [
+                                        {
+                                            "not": "self:trait:undead"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "slug": null,
+                            "_migration": {
+                                "version": 0.959,
+                                "lastMigration": null
+                            },
+                            "traits": {
+                                "otherTags": [],
+                                "value": [],
+                                "rarity": "common"
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": false
+                            },
+                            "level": {
+                                "value": 16
+                            },
+                            "quantity": 1,
+                            "baseItem": null,
+                            "bulk": {
+                                "value": 0.1
+                            },
+                            "hp": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "hardness": 0,
+                            "price": {
+                                "value": {
+                                    "gp": 7000
+                                }
+                            },
+                            "equipped": {
+                                "carryType": "worn",
+                                "invested": null
+                            },
+                            "containerId": null,
+                            "size": "med",
+                            "material": {
+                                "type": null,
+                                "grade": null
+                            },
+                            "identification": {
+                                "status": "identified",
+                                "unidentified": {
+                                    "name": "Unusual Object",
+                                    "img": "systems/pf2e/icons/unidentified_item_icons/adventuring_gear.webp",
+                                    "data": {
+                                        "description": {
+                                            "value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "usage": {
+                                "value": "held-in-one-hand"
+                            },
+                            "subitems": []
+                        },
+                        "_id": "ExcmbySTYOBgWYhj",
+                        "img": "systems/pf2e/icons/default-icons/equipment.svg",
+                        "folder": null,
+                        "sort": 0,
+                        "flags": {},
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.ExcmbySTYOBgWYhj"
+                    },
+                    {
+                        "_id": "BpcDGANm6IPDFyXv",
+                        "img": "systems/pf2e/icons/actions/Reaction.webp",
+                        "name": "Nimble Dodge",
+                        "sort": 1400000,
+                        "system": {
+                            "actionType": {
+                                "value": "reaction"
+                            },
+                            "actions": {
+                                "value": null
+                            },
+                            "category": "defensive",
+                            "description": {
+                                "value": "<p><strong>Trigger</strong> A creature targets you with an attack and you can see the attacker.</p>\n<p><strong>Requirements</strong> You are not encumbered.</p>\n<hr>\n<p>You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack.</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": false,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "nimble-dodge",
+                            "traits": {
+                                "value": [
+                                    "rogue"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {},
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.BpcDGANm6IPDFyXv"
+                    },
+                    {
+                        "_id": "nJbSUDkNSJdgqtkl",
+                        "img": "systems/pf2e/icons/actions/Reaction.webp",
+                        "name": "Sidestep",
+                        "sort": 1450000,
+                        "system": {
+                            "actionType": {
+                                "value": "reaction"
+                            },
+                            "actions": {
+                                "value": null
+                            },
+                            "category": "defensive",
+                            "description": {
+                                "value": "<p><strong>Trigger</strong> The attack roll for a Strike targeting you fails or critically fails.</p>\n<hr>\n<p>You deftly step aside and gently redirect an attack. You redirect the triggering attack to a creature of your choice that is adjacent to you and within the attack's reach or maximum range. The attacker rerolls the Strike's attack roll against the new target.</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": false,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "sidestep",
+                            "traits": {
+                                "value": [
+                                    "rogue"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {},
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.nJbSUDkNSJdgqtkl"
+                    },
+                    {
+                        "_id": "rUARv4J0MQgCM0M4",
+                        "img": "systems/pf2e/icons/actions/TwoActions.webp",
+                        "name": "Domain of Dusk",
+                        "sort": 1300000,
+                        "system": {
+                            "actionType": {
+                                "value": "action"
+                            },
+                            "actions": {
+                                "value": 2
+                            },
+                            "category": "offensive",
+                            "description": {
+                                "value": "<p>With a wave of its hand, the strigoi calls forth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a @Template[emanation|distance:30]. Living creatures in this area take @Damage[8d6[void]|options:area-damage] damage (@Check[fortitude|dc:34|basic|options:area-effect]). A creature that fails this save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh] for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2] for 1 round and then dazzled for 1 round on a critical failure).</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "OGL",
+                                "remaster": false,
+                                "title": "Pathfinder Adventure: Shadows at Sundown",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "vampire-strigoi-domain-of-dusk",
+                            "traits": {
+                                "value": [
+                                    "divine",
+                                    "shadow"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436862,
+                            "modifiedTime": 1781368436862,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {
+                            "pf2e-reignmaker": {
+                                "abilityBenchmarks": {
+                                    "descriptionTemplate": "<p>With a wave of its hand, the strigoi calls forth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a @Template[emanation|distance:30]. Living creatures in this area take @Damage[8d6[void]|options:area-damage] damage (@Check[fortitude|dc:{0}|basic|options:area-effect]). A creature that fails this save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh] for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2] for 1 round and then dazzled for 1 round on a critical failure).</p>",
+                                    "scalableValues": [
+                                        {
+                                            "type": "dc",
+                                            "benchmark": 0,
+                                            "originalValue": "34",
+                                            "baseLevel": 16,
+                                            "checkType": "fortitude"
+                                        }
+                                    ],
+                                    "originalDescription": "<p>With a wave of its hand, the strigoi calls forth vile ruination from the surrounding shadows, causing coils of darkness and shadowy bats, rats, and wolves to lash out at living targets in a @Template[emanation|distance:30]. Living creatures in this area take @Damage[8d6[void]|options:area-damage] damage (@Check[fortitude|dc:34|basic|options:area-effect]). A creature that fails this save is also @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh] for 1 round (or @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2] for 1 round and then dazzled for 1 round on a critical failure).</p>"
+                                }
+                            }
+                        },
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.rUARv4J0MQgCM0M4"
+                    },
+                    {
+                        "_id": "odglRTvKlXTbz9jX",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.odglRTvKlXTbz9jX"
+                    },
+                    {
+                        "_id": "RjzXtddoFIK26Aab",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.RjzXtddoFIK26Aab"
+                    },
+                    {
+                        "_id": "A16Cjff3oiH2zOXv",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "name": "Surprise Attack",
+                        "sort": 2250000,
+                        "system": {
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "actions": {
+                                "value": null
+                            },
+                            "category": "offensive",
+                            "description": {
+                                "value": "<p>The strigoi springs into combat faster than foes can react. On the first round of combat, if it rolls Deception or Stealth for initiative, creatures that haven't acted are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg] to it.</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": false,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "surprise-attack",
+                            "traits": {
+                                "value": [
+                                    "rogue"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436863,
+                            "modifiedTime": 1781368436863,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {},
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.A16Cjff3oiH2zOXv"
+                    },
+                    {
+                        "_id": "CD0h4siZNV2IlAjV",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.CD0h4siZNV2IlAjV"
+                    },
+                    {
+                        "_id": "xjzFJyBoDfcpjrut",
+                        "img": "systems/pf2e/icons/actions/OneAction.webp",
+                        "name": "Conceal Spell",
+                        "sort": 2400000,
+                        "system": {
+                            "actionType": {
+                                "value": "action"
+                            },
+                            "actions": {
+                                "value": 1
+                            },
+                            "category": "offensive",
+                            "description": {
+                                "value": "<p>If the strigoi's next action is to Cast a Spell, the spell gains the subtle trait, hiding the manifestations that would usually give away its spellcasting. The trait hides only the spell's spellcasting actions and manifestations, not its effects.</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": false,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "conceal-spell",
+                            "traits": {
+                                "value": [
+                                    "concentrate",
+                                    "spellshape",
+                                    "wizard"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436863,
+                            "modifiedTime": 1781368436863,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {},
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.xjzFJyBoDfcpjrut"
+                    },
+                    {
+                        "_id": "LzLQayl9QcVEU8c0",
+                        "img": "systems/pf2e/icons/actions/OneAction.webp",
+                        "name": "Tumbling Strike",
+                        "sort": 1200000,
+                        "system": {
+                            "actionType": {
+                                "value": "action"
+                            },
+                            "actions": {
+                                "value": 1
+                            },
+                            "category": "offensive",
+                            "description": {
+                                "value": "<p><strong>Requirements</strong> The strigoi is adjacent to an enemy.</p>\n<hr>\n<p>Attempt an Acrobatics check against the Reflex DC of an enemy adjacent to the strigoi.</p>\n<p><strong>Critical Success</strong> The strigoi moves through the enemy's space to an unoccupied space on the other side. This movement doesn't trigger reactions. The strigoi can't move farther than its Speed and must end movement adjacent to the enemy. It then makes a melee Strike against that enemy, and the enemy is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg] against the Strike.</p>\n<p><strong>Success</strong> As critical success, but the enemy isn't off-guard against the Strike.</p>\n<p><strong>Failure</strong> The strigoi remains in its original space but can still Strike.</p>\n<p><strong>Critical Failure</strong> The strigoi neither moves nor Strikes.</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": false,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "rules": [],
+                            "slug": "tumbling-strike",
+                            "traits": {
+                                "value": [
+                                    "archetype",
+                                    "flourish",
+                                    "move"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": 0.955,
+                                    "foundry": "14.361",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436863,
+                            "modifiedTime": 1781368436863,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "flags": {},
+                        "folder": null,
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.LzLQayl9QcVEU8c0"
+                    },
+                    {
+                        "img": "systems/pf2e/icons/conditions/concealed.webp",
+                        "name": "Concealed",
+                        "system": {
+                            "description": {
+                                "value": "<p>You are difficult for one or more creatures to see due to thick fog or some other obscuring feature. You can be concealed to some creatures but not others. While concealed, you can still be @UUID[Compendium.pf2e.conditionitems.Item.1wQY3JYyhMYeeV2G]{Observed}, but you're tougher to target. A creature that you're concealed from must succeed at a @Check[flat|showDC:all|dc:5] when targeting you with an attack, spell, or other effect. If the check fails, you aren't affected. Area effects aren't subject to this flat check.</p>",
+                                "gm": ""
+                            },
+                            "group": "senses",
+                            "overrides": [],
+                            "publication": {
+                                "license": "ORC",
+                                "remaster": true,
+                                "title": "Pathfinder Player Core",
+                                "authors": ""
+                            },
+                            "references": {
+                                "children": [],
+                                "overriddenBy": [],
+                                "overrides": [],
+                                "parent": null
+                            },
+                            "rules": [],
+                            "traits": {
+                                "value": [],
+                                "otherTags": []
+                            },
+                            "value": {
+                                "isValued": false,
+                                "value": null
+                            },
+                            "slug": "concealed",
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": null
+                            },
+                            "fromSpell": false,
+                            "persistent": null
+                        },
+                        "type": "condition",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436863,
+                            "modifiedTime": 1781368436863,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "sort": 0,
+                        "flags": {},
+                        "_id": "Oyb8yWvvmH7XTPax",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn.Oyb8yWvvmH7XTPax"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "type": null,
+                "img": null,
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn.mZpjquL3cfVD2Bvn"
+            },
+            "x": 5200,
+            "y": 3800,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn"
+        }
+    ],
+    "levels": [
+        {
+            "_id": "defaultLevel0000",
+            "name": "Level",
+            "elevation": {
+                "bottom": 0,
+                "top": 20
+            },
+            "background": {
+                "color": "#0a1520",
+                "src": "modules/pf2e-netherworld/assets/the-dark-mirror/icy-hall-start.webp",
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "foreground": {
+                "src": null,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "fog": {
+                "src": null,
+                "tint": "#ffffff"
+            },
+            "textures": {
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "offsetX": 0,
+                "offsetY": 0,
+                "fit": "fill",
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0
+            },
+            "visibility": {
+                "levels": []
+            },
+            "sort": 0,
+            "flags": {},
+            "_key": "!scenes.levels!yx63y21u1f3Ola0w.defaultLevel0000"
+        }
+    ],
+    "lights": [],
+    "notes": [],
+    "sounds": [],
+    "regions": [],
+    "tiles": [
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/the-dark-mirror/icy-hall-cracked.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 6404,
+            "y": 2282,
+            "width": 3840,
+            "height": 2160,
+            "sort": 0,
+            "elevation": 0,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [],
+                "alpha": 0
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "6vWfIgPkX4DKC9oy",
+            "rotation": 0,
+            "hidden": true,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!yx63y21u1f3Ola0w.6vWfIgPkX4DKC9oy"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/the-dark-mirror/icy-hall-broken.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 6404,
+            "y": 2282,
+            "width": 3840,
+            "height": 2160,
+            "sort": 0,
+            "elevation": 0,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [],
+                "alpha": 0
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "rotation": 0,
+            "hidden": true,
+            "locked": false,
+            "name": "",
+            "_id": "RmhBE99gvcFxLbXj",
+            "_key": "!scenes.tiles!yx63y21u1f3Ola0w.RmhBE99gvcFxLbXj"
+        }
+    ],
+    "walls": [],
+    "playlist": null,
+    "playlistSound": null,
+    "journal": null,
+    "journalEntryPage": null,
+    "weather": "",
+    "folder": null,
+    "flags": {
+        "world-explorer": {
+            "enabled": false,
+            "image": "",
+            "color": "#000000",
+            "position": "behindDrawings",
+            "opacityGM": 0.7,
+            "opacityPlayer": 1,
+            "partialColor": "",
+            "partialOpacityPlayer": 0.4,
+            "persistExploredAreas": false,
+            "revealRadius": 0,
+            "gridRevealRadius": 0,
+            "schemaVersion": "2.1.0"
+        },
+        "pf2e": {
+            "rulesBasedVision": null,
+            "hearingRange": null,
+            "environmentTypes": [],
+            "syncDarkness": "default"
+        },
+        "pf2e-netherworld": {
+            "enabled": true
+        }
+    },
+    "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "createdTime": 1781368436860,
+        "modifiedTime": 1781368436860,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+    },
+    "navName": "",
+    "ownership": {
+        "default": 0
+    },
+    "active": false,
+    "navOrder": 0,
+    "sort": 0,
+    "_key": "!scenes!yx63y21u1f3Ola0w",
+    "templates": [],
+    "background": {
+        "src": "modules/pf2e-netherworld/assets/the-dark-mirror/icy-hall-start.webp",
+        "anchorX": 0,
+        "anchorY": 0,
+        "fit": "fill",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0
+    }
+}

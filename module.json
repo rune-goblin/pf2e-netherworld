@@ -58,11 +58,33 @@
       "type": "JournalEntry"
     },
     {
+      "name": "scenes",
+      "label": "Nether World Scenes",
+      "path": "packs/scenes",
+      "type": "Scene"
+    },
+    {
       "name": "effects",
       "label": "Nether World Effects",
       "path": "packs/effects",
       "type": "Item",
       "system": "pf2e"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Netherworld",
+      "sorting": "a",
+      "color": "#5b2c68",
+      "packs": [
+        "bestiary",
+        "hazards",
+        "items",
+        "effects",
+        "journals",
+        "scenes",
+        "macros"
+      ]
     }
   ],
   "relationships": {

@@ -1,12 +1,12 @@
 {
     "_id": "nwShroudOfName01",
     "_key": "!items!nwShroudOfName01",
-    "img": "icons/magic/death/silhouette-robe-evil-glow.webp",
+    "img": "modules/pf2e-netherworld/assets/threshold-of-pain/shroud-of-the-nameless.webp",
     "name": "Shroud of the Nameless",
     "type": "equipment",
     "system": {
         "description": {
-            "value": "<p>The Flesh Shaper drew the threshold's cold light into this one, and a thread of it never left. The dark took a name in payment, and the world half-forgot the bearer to seal the bargain.</p>\n<hr />\n<p><strong>Wrapped in cold light (the gift).</strong> You gain <strong>resistance 10 to cold</strong>, permanently &mdash; it blunts the Queen of Shadows' rime in the finale, and any cold that comes after.</p>\n<hr />\n<p><strong>Voice of the gulf.</strong> <span class=\"action-glyph\">2</span> <strong>(once per day)</strong> You loose the despair of the lightless plane, casting @UUID[Compendium.pf2e.spells-srd.Item.Wave of Despair]{Wave of Despair} as an innate spell (a 30-foot cone, Will save). Use a <strong>spell DC appropriate to your level</strong> &mdash; your own spell DC if you have one, otherwise the standard innate DC for a creature of your level. <em>(Tracked by hand: once per day.)</em></p>\n<hr />\n<p><strong>The name given to the dark (the cost).</strong> You surrendered your name to the gulf, and the world half-forgets you: allies grope for what to call you, and you take a <strong>&minus;2 status penalty to Diplomacy</strong> &mdash; until you win the name back.</p>"
+            "value": "<p>The Flesh Shaper wove the cold of the void through your soul, and a thread of it never left. The dark took your name in payment, and it drifted away.</p>\n<hr />\n<p><strong>Wrapped in cold light (the gift).</strong> You gain <strong>resistance 10 to cold</strong>, permanently.</p>\n<hr />\n<p><strong>Voice of the gulf.</strong> <span class=\"action-glyph\">2</span> <strong>(once per day)</strong> You loose the despair of the lightless plane, casting @UUID[Compendium.pf2e.spells-srd.Item.GaRQlC9Yw1BGKHfN]{Wave of Despair} as an innate spell (a 30-foot cone, Will save). Use a <strong>spell DC appropriate to your level</strong> &mdash; your own spell DC if you have one, otherwise the standard innate DC for a creature of your level.</p>\n<hr />\n<p><strong>The name given to the dark (the cost).</strong> You surrendered your name to the gulf, and the world half-forgets you: allies grope for what to call you, and you take a permanent <strong>&minus;2 status penalty to Diplomacy</strong>. You may take a new name.</p>\n<hr />\n<p><strong>The cold does not bite its own (the finale).</strong> During the battle with Veyrin, you and your party are <strong>not affected by the Queen of Shadows' bone-chilling rime</strong>.</p>"
         },
         "rules": [
             {

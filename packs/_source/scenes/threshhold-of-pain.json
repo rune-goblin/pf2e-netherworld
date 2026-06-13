@@ -1,0 +1,640 @@
+{
+    "folder": null,
+    "name": "Threshhold of Pain",
+    "_id": "QGFC0kT0Ts93Ag67",
+    "navigation": false,
+    "thumb": "worlds/stolen-lands/assets/scenes/thumb-AXIfaSBOw1E3o_LmtzdA-A.webp",
+    "width": 7680,
+    "height": 4320,
+    "padding": 0.25,
+    "shiftX": 0,
+    "shiftY": 0,
+    "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+    },
+    "initialLevel": "defaultLevel0000",
+    "grid": {
+        "type": 1,
+        "size": 125,
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.2,
+        "distance": 5,
+        "units": "ft"
+    },
+    "tokenVision": true,
+    "fog": {
+        "mode": 1,
+        "colors": {
+            "explored": null,
+            "unexplored": null
+        }
+    },
+    "environment": {
+        "darknessLevel": 1,
+        "darknessLock": false,
+        "globalLight": {
+            "enabled": false,
+            "alpha": 0.5,
+            "bright": false,
+            "color": null,
+            "coloration": 1,
+            "luminosity": 0,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+                "min": 0,
+                "max": 1
+            }
+        },
+        "cycle": true,
+        "base": {
+            "hue": 0,
+            "intensity": 0,
+            "luminosity": 0,
+            "saturation": 0,
+            "shadows": 0
+        },
+        "dark": {
+            "hue": 0.7138888888888889,
+            "intensity": 0,
+            "luminosity": -0.25,
+            "saturation": 0,
+            "shadows": 0
+        }
+    },
+    "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+    },
+    "drawings": [],
+    "tokens": [
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                },
+                "healthEstimate": {
+                    "dontMarkDead": false,
+                    "hideHealthEstimate": false,
+                    "hideName": false
+                }
+            },
+            "height": 0.5,
+            "width": 0.5,
+            "name": "Isla",
+            "displayName": 0,
+            "actorLink": false,
+            "depth": 0.5,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/maps/mrakovich-manor/isla-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 0,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "foq5ZMkP0vHjjDAk",
+            "hidden": false,
+            "sort": 1,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "WnKKTriYR909z88c",
+            "delta": null,
+            "x": 8063,
+            "y": 3156,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!QGFC0kT0Ts93Ag67.WnKKTriYR909z88c"
+        },
+        {
+            "name": "Sacristan",
+            "displayName": 0,
+            "actorLink": false,
+            "width": 1,
+            "height": 1,
+            "depth": 1,
+            "texture": {
+                "src": "modules/pf2e-tokens-bestiaries/tokens/fiendish/sacristan.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.5,
+                "scaleY": 1.5,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": true,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1.5,
+                    "texture": "modules/pf2e-tokens-bestiaries/subjects/fiendish/sacristan.webp"
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": false
+                }
+            },
+            "actorId": "QzaFQrJY46GNrGJ9",
+            "hidden": false,
+            "sort": 2,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "JIGN6P18x3NqU8Po",
+            "delta": null,
+            "x": 8500,
+            "y": 2875,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!QGFC0kT0Ts93Ag67.JIGN6P18x3NqU8Po"
+        },
+        {
+            "name": "Sacristan",
+            "displayName": 0,
+            "actorLink": false,
+            "width": 1,
+            "height": 1,
+            "depth": 1,
+            "texture": {
+                "src": "modules/pf2e-tokens-bestiaries/tokens/fiendish/sacristan.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.5,
+                "scaleY": 1.5,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": true,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1.5,
+                    "texture": "modules/pf2e-tokens-bestiaries/subjects/fiendish/sacristan.webp"
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": false
+                }
+            },
+            "actorId": "QzaFQrJY46GNrGJ9",
+            "hidden": false,
+            "sort": 2,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "delta": {
+                "system": {
+                    "attributes": {
+                        "hp": {
+                            "value": 175
+                        },
+                        "adjustment": null
+                    }
+                },
+                "_id": "ax7lZKwssxRvuFR4",
+                "name": null,
+                "type": null,
+                "img": null,
+                "items": [],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!QGFC0kT0Ts93Ag67.ax7lZKwssxRvuFR4.ax7lZKwssxRvuFR4"
+            },
+            "x": 8750,
+            "y": 3500,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_id": "ax7lZKwssxRvuFR4",
+            "_key": "!scenes.tokens!QGFC0kT0Ts93Ag67.ax7lZKwssxRvuFR4"
+        },
+        {
+            "name": "Interlocutor",
+            "displayName": 0,
+            "actorLink": true,
+            "width": 3,
+            "height": 3,
+            "depth": 3,
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/threshold-of-pain/intolocutor-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.2,
+                "scaleY": 1.2,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 0,
+                "subject": {
+                    "scale": 2,
+                    "texture": "modules/pf2e-tokens-bestiaries/subjects/fiendish/interlocutor.webp"
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": false
+                }
+            },
+            "actorId": "h8SoiRMj7Sb7sdhC",
+            "hidden": false,
+            "sort": 3,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "mHIgqWADfRQPoImF",
+            "delta": null,
+            "x": 8500,
+            "y": 3125,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!QGFC0kT0Ts93Ag67.mHIgqWADfRQPoImF"
+        }
+    ],
+    "levels": [
+        {
+            "_id": "defaultLevel0000",
+            "name": "Level",
+            "elevation": {
+                "bottom": 0,
+                "top": 20
+            },
+            "background": {
+                "color": "#999999",
+                "src": "modules/pf2e-netherworld/assets/threshold-of-pain/threshold-of-pain.webp",
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "foreground": {
+                "src": null,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "fog": {
+                "src": null,
+                "tint": "#ffffff"
+            },
+            "textures": {
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "offsetX": 0,
+                "offsetY": 0,
+                "fit": "fill",
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0
+            },
+            "visibility": {
+                "levels": []
+            },
+            "sort": 0,
+            "flags": {},
+            "_key": "!scenes.levels!QGFC0kT0Ts93Ag67.defaultLevel0000"
+        }
+    ],
+    "lights": [],
+    "notes": [],
+    "sounds": [],
+    "regions": [],
+    "tiles": [],
+    "walls": [],
+    "playlist": null,
+    "playlistSound": null,
+    "journal": null,
+    "journalEntryPage": null,
+    "weather": "",
+    "flags": {
+        "world-explorer": {
+            "enabled": false,
+            "image": "",
+            "color": "#000000",
+            "position": "behindDrawings",
+            "opacityGM": 0.7,
+            "opacityPlayer": 1,
+            "partialColor": "",
+            "partialOpacityPlayer": 0.4,
+            "persistExploredAreas": false,
+            "revealRadius": 0,
+            "gridRevealRadius": 0,
+            "schemaVersion": "2.1.0"
+        },
+        "pf2e": {
+            "rulesBasedVision": null,
+            "hearingRange": null,
+            "environmentTypes": [],
+            "syncDarkness": "default"
+        },
+        "pf2e-netherworld": {
+            "enabled": true
+        }
+    },
+    "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "createdTime": 1781368436920,
+        "modifiedTime": 1781368436920,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+    },
+    "navName": "",
+    "ownership": {
+        "default": 0
+    },
+    "active": false,
+    "navOrder": 0,
+    "sort": 0,
+    "_key": "!scenes!QGFC0kT0Ts93Ag67",
+    "templates": [],
+    "background": {
+        "src": "modules/pf2e-netherworld/assets/threshold-of-pain/threshold-of-pain.webp",
+        "anchorX": 0,
+        "anchorY": 0,
+        "fit": "fill",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0
+    }
+}

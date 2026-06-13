@@ -8,7 +8,7 @@ For a party of four at 14th level.
 
 ## Overview
 
-The strigoi Lord Veyrin flees into the Shadow Plane, and the party follows through a tall looking-glass. Beyond it lies a drained, lightless echo of the world. Somewhere ahead, a second mirror opens onto the frozen palace of Natalia, the Queen of Shadows; Veyrin's coffin lies safely stowed somewhere in this demiplane.
+The strigoi Lord Veyrin flees into the Shadow Plane, and the party follows through a tall looking-glass. Beyond it lies a drained, lightless echo of the world. Somewhere ahead, a second mirror opens onto the frozen palace of Natalia, Queen of Shadows; Veyrin's coffin lies safely stowed somewhere in this demiplane.
 
 The arc runs in three scenes:
 
@@ -145,7 +145,7 @@ The hook also *answers*: once per day the bearer can lash out with it as a **cha
 *Cost:* the bearer gives their **name** to the dark. The world half-forgets them — allies grope for what to call them, and they take a permanent **−2 status penalty to Diplomacy** — until they win it back.
 
 **Shadow's Clarity — he can't hide, he can't run.** A velstrac eye grafted in place of the bearer's, and it is **permanent**: the bearer gains **greater darkvision** and forever **ignores the concealed condition from darkness, dim light, and shadow** — no creature gains cover-of-sight against them in the gloom, in this fight or any after. In the finale the bearer sees Veyrin even when he melts into shadow and can point the party straight at him, so **he can never use the gloom to hide from the one who carries the eye** — and once in the fight the bearer can call the chains to **seize and hold him** (a powerful immobilize), denying him the high ground or escape through the glass.
-*Cost:* the bearer's own eye, and their **reflection** — no glass or water ever shows them again (nothing can scry or mirror-trap them, but the things in shadow now know them on sight). And the eye recoils from the day: **while in bright light or natural daylight the bearer is dazzled** — the dark is theirs, but the instant the Glass shatters and the light returns, and ever after in sunlight, the gift turns against them.
+*Cost:* the bearer's own eye, and their **reflection** — no glass or water ever shows them again. And the eye recoils from the sun: **while in natural daylight the bearer is dazzled** — not from torches, magical light, or the restored light when the Glass breaks, only true daylight. The dark is theirs; the cost waits for them back on the Material Plane.
 
 *In Foundry, **Shroud of the Nameless** and **Shadow's Clarity** ship as @UUID-linked equipment in `pf2e-netherworld.items`. The Shroud auto-applies the **cold resistance 10** and the **−2 status penalty to Diplomacy** (the* Wave of Despair *cast is tracked by hand); Shadow's Clarity grants **greater darkvision** (the dazzled-in-light cost is the standard Dazzled condition, applied by the GM). The remaining flavor costs — the lost name, the lost eye and reflection — and the finale chain-seize are GM-adjudicated.*
 
@@ -184,7 +184,7 @@ The Queen of Shadows channels her power through the glass, sheathing the hall in
 - **Cold, not void.** Void would auto-justify his immunity (undead are healed by void, not harmed), but it's off-theme for the Queen of Shadows — and ice is cooler. Keep it cold and spare him by fiat.
 - **Ends at Broken.** The instant the mirror reaches Broken, the channel is cut and the rime melts away — no more cold, no more difficult terrain.
 
-*In Foundry this ships as the hazard below: the Glass emits the rime as an **aura** that grants a* Frozen Fog*-style effect to everything caught in it (the module's `pf2e-netherworld.hazards` and `.effects` compendiums). The recurring 6d8 + basic save is run from the hazard's routine each round.*
+*In Foundry this ships as the hazard below: the Glass emits the rime as an **aura** that grants a* Frozen Fog*-style effect to everything caught in it (the module's `pf2e-netherworld.hazards` and `.effects` compendiums). The recurring 6d8 + basic save is run from the hazard's routine each round. To exempt the Shroud's party, drop **Effect: Warded Against the Rime** on each of them — the aura is predicated to skip any creature carrying it, so the rime never applies to them (it wards against the rime only, not other cold). On a failed save, drop **Effect: Rime's Grip** on the target to apply the clumsy and the −10-foot status penalty to Speeds in a single bundle (bump it to clumsy 2 on a critical failure).*
 
 ### Veyrin
 

@@ -1,0 +1,1760 @@
+{
+    "name": "Hall of Reflections",
+    "_id": "9tRQ2QuatnZeFEQy",
+    "navigation": false,
+    "thumb": "worlds/stolen-lands/assets/scenes/thumb-ghdMrrRit3mXocJeI5vcxg.webp",
+    "width": 7680,
+    "height": 4320,
+    "padding": 0.25,
+    "shiftX": 0,
+    "shiftY": 0,
+    "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+    },
+    "initialLevel": "defaultLevel0000",
+    "grid": {
+        "type": 1,
+        "size": 200,
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#ec5f5f",
+        "alpha": 0.85,
+        "distance": 5,
+        "units": "ft"
+    },
+    "tokenVision": true,
+    "fog": {
+        "mode": 1,
+        "colors": {
+            "explored": null,
+            "unexplored": null
+        }
+    },
+    "environment": {
+        "darknessLevel": 1,
+        "darknessLock": false,
+        "globalLight": {
+            "enabled": false,
+            "alpha": 0.5,
+            "bright": false,
+            "color": null,
+            "coloration": 1,
+            "luminosity": 0,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+                "min": 0,
+                "max": 1
+            }
+        },
+        "cycle": true,
+        "base": {
+            "hue": 0,
+            "intensity": 0,
+            "luminosity": 0,
+            "saturation": 0,
+            "shadows": 0
+        },
+        "dark": {
+            "hue": 0.7138888888888889,
+            "intensity": 0,
+            "luminosity": -0.25,
+            "saturation": 0,
+            "shadows": 0
+        }
+    },
+    "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+    },
+    "drawings": [],
+    "tokens": [
+        {
+            "displayName": 20,
+            "displayBars": 20,
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": false,
+                    "autoscale": false
+                },
+                "healthEstimate": {
+                    "dontMarkDead": false,
+                    "hideHealthEstimate": false,
+                    "hideName": false
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "actorLink": true,
+            "sight": {
+                "enabled": true,
+                "range": 1,
+                "angle": 360,
+                "visionMode": "basic",
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0,
+                "color": null
+            },
+            "name": "The Party",
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/party-token.webp",
+                "scaleX": 2,
+                "scaleY": 2,
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": 1,
+            "bar1": {
+                "attribute": null
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 80,
+                "coloration": 1,
+                "dim": 80,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 1,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                },
+                "negative": false,
+                "priority": 0,
+                "color": null
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 0,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "depth": 1,
+            "actorId": "xxxPF2ExPARTYxxx",
+            "hidden": false,
+            "sort": 0,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "DWrptNwMJOvGXvWL",
+            "delta": null,
+            "x": 3400,
+            "y": 3200,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.DWrptNwMJOvGXvWL"
+        },
+        {
+            "name": "Devasance",
+            "displayName": 0,
+            "actorLink": false,
+            "width": 1,
+            "height": 1,
+            "depth": 1,
+            "texture": {
+                "src": "systems/pf2e/icons/default-icons/npc.svg",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 0,
+            "alpha": 1,
+            "disposition": -1,
+            "displayBars": 0,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "actorId": "xrtjmAxb2bfAOdk0",
+            "hidden": true,
+            "sort": 1,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "2ukQ7Yrj5bLzqL7J",
+            "delta": {
+                "_id": "2ukQ7Yrj5bLzqL7J",
+                "name": "vortex-holder",
+                "type": null,
+                "img": null,
+                "system": {
+                    "details": {
+                        "level": {
+                            "value": 0
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "_id": "HfbSs7SLOD6VU1zU",
+                        "img": "systems/pf2e/icons/default-icons/action.svg",
+                        "name": "Vortex of Souls",
+                        "sort": 900000,
+                        "system": {
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "actions": {
+                                "value": null
+                            },
+                            "category": "defensive",
+                            "description": {
+                                "value": "<p>30 feet. A living creature that that enters the Vortex of Souls or starts its turn within takes takes @Damage[2d8[void]] damage and must succeed at a @Check[will|dc:32] save or become @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} (or @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} on a critical failure).</p><p>Creatures with the shadow trait are immune<br>Creatiure with negative haling are immune to the slow effect, but are healed @Damage[2d8[void]]  by the void energy</p>",
+                                "gm": ""
+                            },
+                            "publication": {
+                                "license": "OGL",
+                                "remaster": false,
+                                "title": "",
+                                "authors": ""
+                            },
+                            "rules": [
+                                {
+                                    "key": "Aura",
+                                    "radius": 30,
+                                    "traits": [
+                                        "void"
+                                    ],
+                                    "appearance": {
+                                        "border": {},
+                                        "highlight": {
+                                            "alpha": 0.4
+                                        }
+                                    }
+                                }
+                            ],
+                            "slug": null,
+                            "traits": {
+                                "value": [
+                                    "aura",
+                                    "void"
+                                ],
+                                "otherTags": []
+                            },
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": null
+                            },
+                            "deathNote": false
+                        },
+                        "type": "action",
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436938,
+                            "modifiedTime": 1781368436938,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.2ukQ7Yrj5bLzqL7J.2ukQ7Yrj5bLzqL7J.HfbSs7SLOD6VU1zU"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.2ukQ7Yrj5bLzqL7J.2ukQ7Yrj5bLzqL7J"
+            },
+            "x": 5697,
+            "y": 3179,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.2ukQ7Yrj5bLzqL7J"
+        },
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Reflection of Aldric",
+            "displayName": 20,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/alderic-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.2,
+                "scaleY": 1.2,
+                "tint": "#694d93",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": true,
+            "rotation": 0,
+            "alpha": 0.85,
+            "disposition": -1,
+            "displayBars": 20,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "HIwFRjJ5QRta5eDp",
+            "hidden": false,
+            "sort": 2,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "U4H7OnD9H1dbVvib",
+            "delta": {
+                "_id": "U4H7OnD9H1dbVvib",
+                "name": null,
+                "type": null,
+                "img": null,
+                "system": {},
+                "items": [
+                    {
+                        "_id": "I6OpIOmihiwl6bWg",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.U4H7OnD9H1dbVvib.U4H7OnD9H1dbVvib.I6OpIOmihiwl6bWg"
+                    },
+                    {
+                        "name": "Shattered Echo",
+                        "type": "action",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>If the original does something the reflection genuinely cannot follow or breaks the line of sight to the reflection, — the reflection has nothing to echo and is </p><p>@UUID[Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "traits": {
+                                "otherTags": [],
+                                "value": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": true
+                            },
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "category": "defensive",
+                            "actions": {
+                                "value": null
+                            },
+                            "deathNote": false,
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": null,
+                                    "foundry": "14.363",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "sort": 0,
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436939,
+                            "modifiedTime": 1781368436939,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "_id": "YLXcLo4Aad7hdA1I",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.U4H7OnD9H1dbVvib.U4H7OnD9H1dbVvib.YLXcLo4Aad7hdA1I"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.U4H7OnD9H1dbVvib.U4H7OnD9H1dbVvib"
+            },
+            "x": 5400,
+            "y": 2400,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.U4H7OnD9H1dbVvib"
+        },
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Reflection of Argent",
+            "displayName": 20,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/silver.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#694d93",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": true,
+            "rotation": 0,
+            "alpha": 0.85,
+            "disposition": -1,
+            "displayBars": 20,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "NVjuWq7EtQMEsUR1",
+            "hidden": false,
+            "sort": 3,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "90MFs3GOsj9h4BxU",
+            "delta": {
+                "_id": "90MFs3GOsj9h4BxU",
+                "name": null,
+                "type": null,
+                "img": null,
+                "system": {},
+                "items": [
+                    {
+                        "_id": "uX0DyYqQtwQNumKL",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.90MFs3GOsj9h4BxU.90MFs3GOsj9h4BxU.uX0DyYqQtwQNumKL"
+                    },
+                    {
+                        "name": "Shattered Echo",
+                        "type": "action",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>If the original does something the reflection genuinely cannot follow or breaks the line of sight to the reflection, — the reflection has nothing to echo and is </p><p>@UUID[Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "traits": {
+                                "otherTags": [],
+                                "value": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": true
+                            },
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "category": "defensive",
+                            "actions": {
+                                "value": null
+                            },
+                            "deathNote": false,
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": null,
+                                    "foundry": "14.363",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "sort": 0,
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436939,
+                            "modifiedTime": 1781368436939,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "_id": "CC2Xb39S6btPQvGY",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.90MFs3GOsj9h4BxU.90MFs3GOsj9h4BxU.CC2Xb39S6btPQvGY"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.90MFs3GOsj9h4BxU.90MFs3GOsj9h4BxU"
+            },
+            "x": 5000,
+            "y": 2600,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.90MFs3GOsj9h4BxU"
+        },
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Reflection of Edrum",
+            "displayName": 20,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/edrum-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.2,
+                "scaleY": 1.2,
+                "tint": "#694d93",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": true,
+            "rotation": 0,
+            "alpha": 0.85,
+            "disposition": -1,
+            "displayBars": 20,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "3uDa19lIRnpjrVXD",
+            "hidden": false,
+            "sort": 4,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "deC38PG0UHO7A1QA",
+            "delta": {
+                "_id": "deC38PG0UHO7A1QA",
+                "name": null,
+                "type": null,
+                "img": null,
+                "system": {},
+                "items": [
+                    {
+                        "_id": "ejeAo36x6g0j7HqN",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.deC38PG0UHO7A1QA.deC38PG0UHO7A1QA.ejeAo36x6g0j7HqN"
+                    },
+                    {
+                        "name": "Shattered Echo",
+                        "type": "action",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>If the original does something the reflection genuinely cannot follow or breaks the line of sight to the reflection, — the reflection has nothing to echo and is </p><p>@UUID[Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "traits": {
+                                "otherTags": [],
+                                "value": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": true
+                            },
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "category": "defensive",
+                            "actions": {
+                                "value": null
+                            },
+                            "deathNote": false,
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": null,
+                                    "foundry": "14.363",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "sort": 0,
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436940,
+                            "modifiedTime": 1781368436940,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "_id": "Qf0JZs2yIBIyLPjT",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.deC38PG0UHO7A1QA.deC38PG0UHO7A1QA.Qf0JZs2yIBIyLPjT"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.deC38PG0UHO7A1QA.deC38PG0UHO7A1QA"
+            },
+            "x": 5000,
+            "y": 3600,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.deC38PG0UHO7A1QA"
+        },
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Reflection of Gene",
+            "displayName": 20,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/gene-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 0.9,
+                "scaleY": 0.9,
+                "tint": "#694d93",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": true,
+            "rotation": 0,
+            "alpha": 0.85,
+            "disposition": -1,
+            "displayBars": 20,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "zJCXiaerV5qd0Mxd",
+            "hidden": false,
+            "sort": 5,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "efaIgCA0pl7oz9ZA",
+            "delta": {
+                "_id": "efaIgCA0pl7oz9ZA",
+                "name": null,
+                "type": null,
+                "img": null,
+                "system": {
+                    "resources": {
+                        "focus": {
+                            "value": 0,
+                            "max": 0
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "_id": "hwFyxuo5cFHrYYtf",
+                        "name": "Shattered Echo",
+                        "type": "action",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>If the original does something the reflection genuinely cannot follow or breaks the line of sight to the reflection, — the reflection has nothing to echo and is </p><p>@UUID[Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "traits": {
+                                "otherTags": [],
+                                "value": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": true
+                            },
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "category": "defensive",
+                            "actions": {
+                                "value": null
+                            },
+                            "deathNote": false,
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": null,
+                                    "foundry": "14.363",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "sort": 0,
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436940,
+                            "modifiedTime": 1781368436940,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.efaIgCA0pl7oz9ZA.efaIgCA0pl7oz9ZA.hwFyxuo5cFHrYYtf"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.efaIgCA0pl7oz9ZA.efaIgCA0pl7oz9ZA"
+            },
+            "x": 5600,
+            "y": 4000,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.efaIgCA0pl7oz9ZA"
+        },
+        {
+            "flags": {
+                "pf2e": {
+                    "linkToActorSize": true,
+                    "autoscale": true
+                }
+            },
+            "height": 1,
+            "width": 1,
+            "name": "Reflection of Harrow",
+            "displayName": 20,
+            "actorLink": false,
+            "depth": 1,
+            "texture": {
+                "src": "worlds/stolen-lands/sessions/party/harrow-token.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "fit": "contain",
+                "scaleX": 1.2,
+                "scaleY": 1.2,
+                "tint": "#694d93",
+                "alphaThreshold": 0.75
+            },
+            "lockRotation": true,
+            "rotation": 0,
+            "alpha": 0.85,
+            "disposition": -1,
+            "displayBars": 20,
+            "bar1": {
+                "attribute": "attributes.hp"
+            },
+            "bar2": {
+                "attribute": null
+            },
+            "light": {
+                "negative": false,
+                "priority": 0,
+                "alpha": 0.5,
+                "angle": 360,
+                "bright": 0,
+                "color": null,
+                "coloration": 1,
+                "dim": 0,
+                "attenuation": 0.5,
+                "luminosity": 0.5,
+                "saturation": 0,
+                "contrast": 0,
+                "shadows": 0,
+                "animation": {
+                    "type": null,
+                    "speed": 5,
+                    "intensity": 5,
+                    "reverse": false
+                },
+                "darkness": {
+                    "min": 0,
+                    "max": 1
+                }
+            },
+            "sight": {
+                "enabled": false,
+                "range": 0,
+                "angle": 360,
+                "visionMode": "basic",
+                "color": null,
+                "attenuation": 0.1,
+                "brightness": 0,
+                "saturation": 0,
+                "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+                "radius": 0
+            },
+            "ring": {
+                "enabled": false,
+                "colors": {
+                    "ring": null,
+                    "background": null
+                },
+                "effects": 1,
+                "subject": {
+                    "scale": 1,
+                    "texture": null
+                }
+            },
+            "turnMarker": {
+                "mode": 1,
+                "animation": null,
+                "src": null,
+                "disposition": false
+            },
+            "movementAction": null,
+            "actorId": "S3IXkwFAzLC1Hz9Y",
+            "hidden": false,
+            "sort": 6,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "_id": "Kj35zmkzCME7Ylvc",
+            "delta": {
+                "_id": "Kj35zmkzCME7Ylvc",
+                "name": null,
+                "type": null,
+                "img": null,
+                "system": {},
+                "items": [
+                    {
+                        "_id": "I24h47nO5DPoYDhM",
+                        "_tombstone": true,
+                        "effects": [],
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.Kj35zmkzCME7Ylvc.Kj35zmkzCME7Ylvc.I24h47nO5DPoYDhM"
+                    },
+                    {
+                        "name": "Shattered Echo",
+                        "type": "action",
+                        "img": "systems/pf2e/icons/actions/Passive.webp",
+                        "system": {
+                            "description": {
+                                "gm": "",
+                                "value": "<p>If the original does something the reflection genuinely cannot follow or breaks the line of sight to the reflection, — the reflection has nothing to echo and is </p><p>@UUID[Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+                            },
+                            "rules": [],
+                            "slug": null,
+                            "traits": {
+                                "otherTags": [],
+                                "value": []
+                            },
+                            "publication": {
+                                "title": "",
+                                "authors": "",
+                                "license": "OGL",
+                                "remaster": true
+                            },
+                            "actionType": {
+                                "value": "passive"
+                            },
+                            "category": "defensive",
+                            "actions": {
+                                "value": null
+                            },
+                            "deathNote": false,
+                            "_migration": {
+                                "version": 0.959,
+                                "previous": {
+                                    "schema": null,
+                                    "foundry": "14.363",
+                                    "system": "8.1.2"
+                                }
+                            }
+                        },
+                        "effects": [],
+                        "folder": null,
+                        "flags": {},
+                        "sort": 0,
+                        "_stats": {
+                            "coreVersion": "14.363",
+                            "systemId": "pf2e",
+                            "systemVersion": "8.2.0",
+                            "createdTime": 1781368436940,
+                            "modifiedTime": 1781368436940,
+                            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                            "exportSource": null,
+                            "compendiumSource": null,
+                            "duplicateSource": null
+                        },
+                        "_id": "wQPpUtwCqR97XDZe",
+                        "ownership": {
+                            "default": 0
+                        },
+                        "_key": "!scenes.tokens.delta.items!9tRQ2QuatnZeFEQy.Kj35zmkzCME7Ylvc.Kj35zmkzCME7Ylvc.wQPpUtwCqR97XDZe"
+                    }
+                ],
+                "effects": [],
+                "flags": {},
+                "ownership": null,
+                "_key": "!scenes.tokens.delta!9tRQ2QuatnZeFEQy.Kj35zmkzCME7Ylvc.Kj35zmkzCME7Ylvc"
+            },
+            "x": 4800,
+            "y": 3200,
+            "elevation": 0,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_key": "!scenes.tokens!9tRQ2QuatnZeFEQy.Kj35zmkzCME7Ylvc"
+        }
+    ],
+    "levels": [
+        {
+            "_id": "defaultLevel0000",
+            "name": "Level",
+            "elevation": {
+                "bottom": 0,
+                "top": 20
+            },
+            "background": {
+                "color": "#0e1014",
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-hall.webp",
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "foreground": {
+                "src": null,
+                "tint": "#ffffff",
+                "alphaThreshold": 0.75
+            },
+            "fog": {
+                "src": null,
+                "tint": "#ffffff"
+            },
+            "textures": {
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "offsetX": 0,
+                "offsetY": 0,
+                "fit": "fill",
+                "scaleX": 1,
+                "scaleY": 1,
+                "rotation": 0
+            },
+            "visibility": {
+                "levels": []
+            },
+            "sort": 0,
+            "flags": {},
+            "_key": "!scenes.levels!9tRQ2QuatnZeFEQy.defaultLevel0000"
+        }
+    ],
+    "lights": [],
+    "notes": [],
+    "sounds": [],
+    "regions": [
+        {
+            "name": "Votex of Souls",
+            "color": "#261529",
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "restriction": {
+                "enabled": true,
+                "type": "move",
+                "priority": 0
+            },
+            "visibility": 1,
+            "highlightMode": "coverage",
+            "displayMeasurements": true,
+            "_id": "QAf2Hp74NYhpLlon",
+            "shapes": [
+                {
+                    "type": "circle",
+                    "hole": false,
+                    "x": 5823.334511106514,
+                    "y": 3326.1902014850134,
+                    "radius": 1200,
+                    "gridBased": false
+                }
+            ],
+            "elevation": {
+                "bottom": null,
+                "top": null,
+                "topInclusive": false
+            },
+            "attachment": {
+                "token": null
+            },
+            "behaviors": [
+                {
+                    "_id": "YXcebJQjQ1zRwYMS",
+                    "name": "Vortex of Souls — effect",
+                    "type": "executeScript",
+                    "system": {
+                        "events": [
+                            "tokenEnter",
+                            "tokenTurnStart"
+                        ],
+                        "source": "const WILL_DC = 32;\nconst DAMAGE = \"2d8[void]\";                  // tune the vortex's damage here\nconst HOLDER_TOKEN_ID = \"2ukQ7Yrj5bLzqL7J\"; // placeholder anchor that carried the aura — skip it\n\nif (game.user !== game.users.activeGM) return; // GM posts the card once for everyone\n\nconst token = event?.data?.token;\nconst actor = token?.actor;\nif (!actor?.isOfType?.(\"creature\")) return;\nif (token.id === HOLDER_TOKEN_ID) return;\n\n// Shadow creatures are immune to the Vortex of Souls.\nif (actor.traits?.has?.(\"shadow\")) return;\n\n// At most once per creature per combat round (enter + turn-start must not double up).\nconst combat = game.combat;\nif (combat) {\n  const stamp = combat.id + \":\" + combat.round;\n  if (actor.getFlag(\"world\", \"vortexOfSoulsStamp\") === stamp) return;\n  await actor.setFlag(\"world\", \"vortexOfSoulsStamp\", stamp);\n}\n\n// Negative-healing creatures (undead, dhampirs, …) are healed by the void and ignore the slow.\nconst healed = !!actor.system?.attributes?.hp?.negativeHealing;\nconst dmg = \"@Damage[\" + DAMAGE + \"]\";\nconst content = healed\n  ? \"<strong>\" + token.name + \"</strong> is bathed in the <strong>Vortex of Souls</strong> and is <em>healed</em> by the void energy: \" + dmg + \" <em>(immune to the slow)</em>.\"\n  : \"<strong>\" + token.name + \"</strong> is caught in the <strong>Vortex of Souls</strong>: takes \" + dmg + \" and must succeed at a @Check[will|dc:\" + WILL_DC + \"] save or become <strong>Slowed 1</strong> (<strong>Slowed 2</strong> on a critical failure).\";\n\nawait ChatMessage.create({ speaker: ChatMessage.getSpeaker({ token }), content });"
+                    },
+                    "disabled": false,
+                    "flags": {},
+                    "_stats": {
+                        "coreVersion": "14.363",
+                        "systemId": "pf2e",
+                        "systemVersion": "8.2.0",
+                        "createdTime": 1781368436941,
+                        "modifiedTime": 1781368436941,
+                        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+                        "compendiumSource": null,
+                        "duplicateSource": null,
+                        "exportSource": null
+                    },
+                    "_key": "!scenes.regions.behaviors!9tRQ2QuatnZeFEQy.QAf2Hp74NYhpLlon.YXcebJQjQ1zRwYMS"
+                }
+            ],
+            "hidden": false,
+            "locked": false,
+            "flags": {
+                "pf2e": {
+                    "areaShape": null
+                }
+            },
+            "_shapeConstraints": null,
+            "ownership": {
+                "default": 0
+            },
+            "_key": "!scenes.regions!9tRQ2QuatnZeFEQy.QAf2Hp74NYhpLlon"
+        }
+    ],
+    "tiles": [
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-1.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0
+            },
+            "x": 6649,
+            "y": 2275,
+            "width": 296,
+            "height": 558,
+            "sort": 0,
+            "elevation": 5,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [
+                    4
+                ],
+                "alpha": 0.75
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "Ga2mOlNiC77KM5SN",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.Ga2mOlNiC77KM5SN"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-2.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0
+            },
+            "x": 7434,
+            "y": 3391,
+            "width": 290,
+            "height": 617,
+            "sort": 1,
+            "elevation": 5,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [
+                    4
+                ],
+                "alpha": 0.75
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "BG1I4CvBmtlW8nKS",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.BG1I4CvBmtlW8nKS"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-3.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 4890,
+            "y": 4637,
+            "width": 300,
+            "height": 578,
+            "sort": 2,
+            "elevation": 5,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [
+                    4
+                ],
+                "alpha": 0.75
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "hREYUTphFwzd8tO8",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.hREYUTphFwzd8tO8"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-4.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 4263,
+            "y": 3720,
+            "width": 285,
+            "height": 633,
+            "sort": 3,
+            "elevation": 5,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [
+                    4
+                ],
+                "alpha": 0.75
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "IBtAEWPrdE0PVzCH",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.IBtAEWPrdE0PVzCH"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-5.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 4694,
+            "y": 2226,
+            "width": 324,
+            "height": 597,
+            "sort": 4,
+            "elevation": 5,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 1,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [
+                    4
+                ],
+                "alpha": 0.75
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "oY4rh87P2lqYrgJN",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.oY4rh87P2lqYrgJN"
+        },
+        {
+            "texture": {
+                "src": "modules/pf2e-netherworld/assets/hall-of-reflection/double-fog.webp",
+                "anchorX": 0.5,
+                "anchorY": 0.5,
+                "scaleX": 1,
+                "scaleY": 1,
+                "tint": "#ffffff",
+                "fit": "fill",
+                "alphaThreshold": 0.75
+            },
+            "x": 5767,
+            "y": 3321,
+            "width": 2768,
+            "height": 2768,
+            "sort": 5,
+            "elevation": 15,
+            "levels": [
+                "defaultLevel0000"
+            ],
+            "alpha": 0.85,
+            "restrictions": {
+                "light": false,
+                "weather": false
+            },
+            "occlusion": {
+                "modes": [],
+                "alpha": 0
+            },
+            "video": {
+                "loop": true,
+                "autoplay": true,
+                "volume": 0
+            },
+            "flags": {},
+            "_id": "nr5NnmLyfgzloJJp",
+            "rotation": 25,
+            "hidden": false,
+            "locked": false,
+            "name": "",
+            "_key": "!scenes.tiles!9tRQ2QuatnZeFEQy.nr5NnmLyfgzloJJp"
+        }
+    ],
+    "walls": [],
+    "playlist": null,
+    "playlistSound": null,
+    "journal": null,
+    "journalEntryPage": null,
+    "weather": "",
+    "folder": null,
+    "flags": {
+        "world-explorer": {
+            "enabled": false,
+            "image": "",
+            "color": "#000000",
+            "position": "behindDrawings",
+            "opacityGM": 0.7,
+            "opacityPlayer": 1,
+            "partialColor": "",
+            "partialOpacityPlayer": 0.4,
+            "persistExploredAreas": false,
+            "revealRadius": 0,
+            "gridRevealRadius": 0,
+            "schemaVersion": "2.1.0"
+        },
+        "pf2e": {
+            "rulesBasedVision": null,
+            "hearingRange": null,
+            "environmentTypes": [],
+            "syncDarkness": "default"
+        },
+        "pf2e-netherworld": {
+            "enabled": true
+        }
+    },
+    "_stats": {
+        "coreVersion": "14.363",
+        "systemId": "pf2e",
+        "systemVersion": "8.2.0",
+        "createdTime": 1781368436937,
+        "modifiedTime": 1781368436937,
+        "lastModifiedBy": "rJDvcbHa2crb2UJb",
+        "exportSource": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+    },
+    "navName": "",
+    "ownership": {
+        "default": 0
+    },
+    "active": false,
+    "navOrder": 0,
+    "sort": 0,
+    "_key": "!scenes!9tRQ2QuatnZeFEQy",
+    "templates": [],
+    "background": {
+        "src": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-hall.webp",
+        "anchorX": 0,
+        "anchorY": 0,
+        "fit": "fill",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0
+    }
+}
