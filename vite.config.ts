@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -8,11 +8,28 @@ const id = moduleJSON.id;
 
 const FOUNDRY = 'http://localhost:30000';
 
+// In dev, Vite injects every style through the JS entry (the global styles.css import and
+// each Svelte <style> block), so the built dist CSS that module.json's <link> targets never
+// exists and that one request would 404. Answer it with empty CSS — the styles are already
+// live via JS. Serve-only; `vite build` emits the real file.
+const devCssStub: Plugin = {
+  name: 'foundry-dev-css-stub',
+  apply: 'serve',
+  configureServer(server) {
+    const href = `/modules/${id}/dist/${id}.css`;
+    server.middlewares.use((req, res, next) => {
+      if (req.url !== href) return next();
+      res.writeHead(200, { 'Content-Type': 'text/css' });
+      res.end('');
+    });
+  },
+};
+
 export default defineConfig({
   root: 'src/',
   base: `/modules/${id}/dist/`,
   // root is src/, so point the plugin at the repo-root config (shared with svelte-check).
-  plugins: [svelte({ configFile: fileURLToPath(new URL('./svelte.config.ts', import.meta.url)) })],
+  plugins: [svelte({ configFile: fileURLToPath(new URL('./svelte.config.ts', import.meta.url)) }), devCssStub],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },

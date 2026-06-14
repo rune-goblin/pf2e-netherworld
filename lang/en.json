@@ -42,6 +42,12 @@
     "shadow": {
       "name": "Reflection of {name}"
     },
+    "reflection": {
+      "create": "Create Reflection",
+      "hint": "Reflect the selected player character(s) — or the whole party if none are selected",
+      "noPcs": "No player characters to reflect — select PC token(s), or add player characters to the world.",
+      "created": "Created {count} reflection(s)."
+    },
     "settings": {
       "picker": {
         "name": "Nether World",

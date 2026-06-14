@@ -1,0 +1,23 @@
+{
+  "type": "Scene",
+  "folder": null,
+  "name": "NetherWorld",
+  "color": "#5b2c68",
+  "sorting": "a",
+  "_id": "nwNetherSceneFld",
+  "description": "",
+  "sort": 300000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.363",
+    "systemId": "pf2e",
+    "systemVersion": "8.2.0",
+    "createdTime": 1781281433721,
+    "modifiedTime": 1781281433721,
+    "lastModifiedBy": "rJDvcbHa2crb2UJb",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!folders!nwNetherSceneFld"
+}

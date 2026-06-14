@@ -33,6 +33,9 @@ jobs:
           npm run check
           npm run build
 
+      - name: Compile compendium packs
+        run: npm run build:packs
+
       - name: Build release zip
         run: |
           zip -r pf2e-netherworld.zip \

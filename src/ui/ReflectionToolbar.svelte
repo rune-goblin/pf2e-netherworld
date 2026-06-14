@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { MODULE_ID } from '../constants';
-  import { MIRROR_STATES, currentState, setMirrorState, type MirrorState } from '../mirror';
+  import { makeShadow } from '../shadow';
   import type { FloatingToolbarApp } from './FloatingToolbarApp';
   import { toolbarDrag } from './toolbarDrag.svelte';
 
@@ -10,27 +9,35 @@
 
   const t = (key: string): string => game.i18n.localize(`${MODULE_ID}.${key}`);
 
-  const ICON: Record<MirrorState, string> = {
-    intact: 'fa-gem',
-    cracked: 'fa-bolt',
-    broken: 'fa-burst',
-  };
+  let busy = $state(false);
 
-  const scene = canvas.scene as Scene;
-  let current = $state<MirrorState>(currentState(scene));
+  // Selected PC tokens, else the whole party — so the GM can reflect a chosen few or all at once.
+  function targets() {
+    const selected = canvas.tokens.controlled
+      .map((tk) => tk.actor)
+      .filter((a): a is NonNullable<typeof a> => a?.type === 'character');
+    return selected.length
+      ? selected
+      : game.actors.filter((a) => a.type === 'character' && a.hasPlayerOwner);
+  }
 
-  // A tile's visibility can flip from elsewhere (another GM, undo); keep the highlight honest.
-  onMount(() => {
-    const refresh = (doc: TileDocument<Scene>): void => {
-      if (doc.parent?.id === scene.id) current = currentState(scene);
-    };
-    Hooks.on('updateTile', refresh);
-    return () => Hooks.off('updateTile', refresh);
-  });
-
-  async function choose(next: MirrorState): Promise<void> {
-    current = next;
-    await setMirrorState(scene, next);
+  async function create(): Promise<void> {
+    if (busy) return;
+    busy = true;
+    try {
+      const pcs = targets();
+      if (!pcs.length) {
+        ui.notifications.warn(t('reflection.noPcs'));
+        return;
+      }
+      let made = 0;
+      for (const pc of pcs) {
+        if (await makeShadow(pc)) made += 1;
+      }
+      if (made) ui.notifications.info(game.i18n.format(`${MODULE_ID}.reflection.created`, { count: made }));
+    } finally {
+      busy = false;
+    }
   }
 </script>
 
@@ -43,17 +50,10 @@
     onpointermove={drag.move}
     onpointerup={drag.end}
   ></i>
-  {#each MIRROR_STATES as s (s)}
-    <button
-      type="button"
-      class:active={current === s}
-      title={t(`mirror.${s}.hint`)}
-      onclick={() => choose(s)}
-    >
-      <i class="fa-solid {ICON[s]}"></i>
-      <span>{t(`mirror.${s}.label`)}</span>
-    </button>
-  {/each}
+  <button type="button" title={t('reflection.hint')} disabled={busy} onclick={create}>
+    <i class="fa-solid fa-clone"></i>
+    <span>{t('reflection.create')}</span>
+  </button>
 </div>
 
 <style>
@@ -97,13 +97,12 @@
     cursor: pointer;
     white-space: nowrap;
   }
-  button:hover {
+  button:hover:not(:disabled) {
     background: #ffffff1f;
   }
-  button.active {
-    border-color: var(--pf2e-netherworld-accent);
-    background: color-mix(in srgb, var(--pf2e-netherworld-accent) 30%, transparent);
-    color: #fff;
+  button:disabled {
+    opacity: 0.6;
+    cursor: progress;
   }
   button i {
     font-size: 0.85em;

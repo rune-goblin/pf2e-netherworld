@@ -62,7 +62,13 @@ Code style: global `~/.claude/CLAUDE.md` — comment only the non-obvious *why*.
   Cross-references to imported docs are **world** UUIDs (`@UUID[Actor.<id>]` / `Item.<id>`).
 - **`effects` stays a separate Item pack** — a runtime library granted in place by rule elements
   (the Queen's Rime aura's `Compendium.pf2e-netherworld.effects.Item.…`), never imported. Edit
-  `packs/_source/effects` then `npm run pack -- effects --in packs/_source/effects --out packs`.
+  `packs/_source/effects`, then `npm run build:packs` (compiles both the adventure and effects into
+  a clean target). For the effects pack alone with Foundry closed:
+  `npm run pack -- effects --in packs/_source/effects --out packs`.
+- **Compiled packs are gitignored build output, like `dist`.** Only `packs/_source` (diffable JSON)
+  is tracked; the LevelDB under `packs/netherworld` and `packs/effects` is not — it churns its
+  filenames on every compaction. `build:packs` runs in `deploy` and the release workflow; run it
+  yourself before launching a dev world (the `setup` scaffold reminds you).
 - compatibility `minimum "14"`, `verified "14"`; author `Mark Pearce`, org `rune-goblin`, MIT license.
 - Release: tag `vX.Y.Z` → `release.yml` stamps the version, type-checks, builds, publishes `module.json` + `pf2e-netherworld.zip` (zip ships `dist lang packs assets` — must include the art).
 

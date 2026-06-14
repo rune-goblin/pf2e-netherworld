@@ -46,6 +46,9 @@ if (!foundryData) {
 
 console.log('Building…');
 execFileSync('npm', ['run', 'build'], { stdio: 'inherit', cwd: repo });
+// Packs are gitignored build output (like dist) — compile from _source so the copy below
+// ships current LevelDB, not a stale or missing one on a fresh clone.
+execFileSync('npm', ['run', 'build:packs'], { stdio: 'inherit', cwd: repo });
 
 const dest = join(foundryData, 'modules', ID);
 const existing = lstatSync(dest, { throwIfNoEntry: false });

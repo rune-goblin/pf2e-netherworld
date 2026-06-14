@@ -1,12 +1,20 @@
 import './styles.css';
 import {
-  MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING, ADVENTURE_UUID, INTRO_JOURNAL_ID,
+  MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING, REFLECTION_TOOLBAR_POSITION_SETTING,
+  ADVENTURE_UUID, INTRO_JOURNAL_ID,
 } from './constants';
 import { installLightPatch, registerSceneSync, setNetherworld } from './lightPatch';
 import { NetherWorldApp } from './ui/NetherWorldApp';
 import { MirrorToolbarApp } from './ui/MirrorToolbarApp';
+import { ReflectionToolbarApp } from './ui/ReflectionToolbarApp';
 import { setMirrorState, type MirrorState } from './mirror';
 import { makeShadow } from './shadow';
+
+/** Mount/unmount both scene-bound toolbars for the current canvas. */
+function syncToolbars(): void {
+  MirrorToolbarApp.sync();
+  ReflectionToolbarApp.sync();
+}
 
 interface ModuleApi {
   version: string;
@@ -61,8 +69,16 @@ Hooks.once('init', () => {
     default: {},
   });
 
-  // One scene-load hook gates the toolbar: it mounts on a dark-mirror scene and unmounts on leave.
-  Hooks.on('canvasReady', () => MirrorToolbarApp.sync());
+  game.settings.register(MODULE_ID, REFLECTION_TOOLBAR_POSITION_SETTING, {
+    name: 'Reflection toolbar position',
+    scope: 'client',
+    config: false,
+    type: Object,
+    default: {},
+  });
+
+  // One scene-load hook gates the toolbars: each mounts on its scene and unmounts on leave.
+  Hooks.on('canvasReady', () => syncToolbars());
 
   // Open the intro journal the moment the adventure import creates it. Its id is preserved by the
   // import, so this fires once (re-import updates rather than creates) without an adventure-hook.
@@ -100,7 +116,7 @@ Hooks.once('ready', () => {
   if (module) (module as { api?: ModuleApi }).api = api;
 
   // canvasReady usually fires before this, but covers a code reload while a scene is already up.
-  MirrorToolbarApp.sync();
+  syncToolbars();
   void promptAdventureImport();
   console.log(`${MODULE_ID} | ready (v${version})`);
 });

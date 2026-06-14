@@ -6,6 +6,15 @@ export const ENABLED_FLAG = 'enabled';
 /** Client setting holding the mirror toolbar's dragged `{left, top}` (null until first moved). */
 export const TOOLBAR_POSITION_SETTING = 'mirrorToolbarPosition';
 
+/** Client setting holding the reflection toolbar's dragged `{left, top}`. */
+export const REFLECTION_TOOLBAR_POSITION_SETTING = 'reflectionToolbarPosition';
+
+/**
+ * The Hall of Reflections scene the Create-Reflection toolbar binds to. Stable only because the
+ * scene ships in the bundled Adventure (keepId) — see {@link DARK_MIRROR_SCENE_ID}.
+ */
+export const HALL_OF_REFLECTIONS_SCENE_ID = '9tRQ2QuatnZeFEQy';
+
 /**
  * The Dark Mirror scene the toolbar is bound to. This id is only stable because the scene ships
  * inside the bundled Adventure, which imports with keepId — loose pack import would mint a new id

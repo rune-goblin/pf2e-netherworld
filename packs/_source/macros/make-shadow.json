@@ -1,0 +1,13 @@
+{
+    "_id": "nwMakeShadow0001",
+    "_key": "!macros!nwMakeShadow0001",
+    "name": "Nether World: Make Shadow",
+    "type": "script",
+    "author": "rgnetherworld001",
+    "img": "icons/magic/control/silhouette-hold-beam-blue.webp",
+    "scope": "global",
+    "command": "/*\n * Make Shadow — spawn a hostile glass Reflection of a PC (pf2e v8.1.2).\n *\n * Clones the selected player character as a level-2-weaker, hostile `character`\n * actor: adds the shadow trait + glass tint, embeds the Mirror Echo / Shattered\n * Echo / Glass Body / Shatter actions, and auto-links it to its source so Mirror\n * Cast works at once. Filed under the \"Shadow Reflections\" folder.\n *\n * Use: select the PC token (or assign yourself a character) -> run this macro.\n */\n\nconst pc = canvas.tokens.controlled[0]?.actor ?? game.user.character;\nconst api = game.modules.get(\"pf2e-netherworld\")?.api;\nif (!api?.makeShadow) {\n  ui.notifications.error(\"Make Shadow: the Nether World module isn't active.\");\n  return;\n}\n\nconst shadow = await api.makeShadow(pc);\nif (shadow) {\n  ui.notifications.info(`${shadow.name} created.`);\n  shadow.sheet.render(true);\n}",
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "_id": "nwEntranceGlass1",
+    "_key": "!actors!nwEntranceGlass1",
+    "img": "modules/pf2e-netherworld/assets/hall-of-reflection/mirror-1.webp",
+    "name": "The Threshold Glass",
+    "type": "hazard",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": 33
+            },
+            "emitsSound": "",
+            "hardness": 14,
+            "hp": {
+                "details": "Broken Threshold 75 &mdash; it crazes as it loses HP, and is Destroyed at 0 HP. Shatter it and the way back shatters with it (see The Way Back).",
+                "max": 150,
+                "temp": 0,
+                "value": 150
+            },
+            "immunities": [
+                {
+                    "type": "object-immunities"
+                }
+            ],
+            "stealth": {
+                "details": "<p>(no roll &mdash; it is the looking-glass the party stepped through, in plain view by the hall's entrance)</p>",
+                "value": 0
+            }
+        },
+        "creatureType": "",
+        "details": {
+            "description": "<p>A tall looking-glass in a frame of dull silver, standing by the entrance to the Hall of Reflections &mdash; the twin of the Glass to the Ice Palace, and the pane the party stepped through to cross into the Shadow Plane. Its surface keeps each reflection a half-beat too long. Unlike the Queen's mirror, no rime bleeds through it: the killing cold does not gather here, and the floor before it stays bare.</p>",
+            "disable": "<p>It is an <strong>object</strong>: <strong>Hardness 14</strong> (halved to <strong>7</strong> against adamantine), <strong>HP 150</strong>, <strong>Broken Threshold 75</strong>; attacks resolve against <strong>AC 33</strong>. It can be defaced with @Check[thievery|dc:38|name:Deface the Glass] or simply battered apart. It carries no Queen's Rime, so there is no channel to sever &mdash; harming it is purely a matter of breaking glass.</p>\n<hr />\n<p><strong>Broken (75 HP):</strong> the pane spiderwebs and the reflections splinter, but it holds &mdash; and still works as a doorway.</p>\n<p><strong>Destroyed (0 HP):</strong> the glass shatters and the way back to the waking world goes with it. Anyone still in the Shadow Plane is <strong>trapped</strong> in this hall and must find another path out (see <strong>The Way Back</strong>).</p>",
+            "isComplex": false,
+            "level": {
+                "value": 14
+            },
+            "publication": {
+                "license": "OGL",
+                "remaster": false,
+                "title": "Nether World"
+            },
+            "reset": "",
+            "routine": ""
+        },
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 28
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 22
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 0
+            }
+        },
+        "statusEffects": [],
+        "traits": {
+            "rarity": "unique",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "magical"
+            ]
+        }
+    },
+    "items": [
+        {
+            "_id": "nwGlassWayBack01",
+            "_key": "!actors.items!nwEntranceGlass1.nwGlassWayBack01",
+            "img": "icons/magic/movement/portal-vortex-blue.webp",
+            "name": "The Way Back",
+            "sort": 0,
+            "type": "action",
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": null,
+                "description": {
+                    "value": "<p>This looking-glass is the doorway the party stepped through &mdash; their one route back to the waking world. Cracked or Broken, it still serves; but if it is <strong>Destroyed</strong> (reduced to 0 Hit Points) the pane shatters and the doorway closes. Anyone still in the Shadow Plane is <strong>trapped</strong> in the Hall of Reflections, with no way back through this glass &mdash; they must press on to the Glass to the Ice Palace or find another path out. Make sure the players grasp what they are smashing before they commit to it.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": "the-way-back",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                }
+            }
+        }
+    ],
+    "ownership": {
+        "default": 0
+    }
+}

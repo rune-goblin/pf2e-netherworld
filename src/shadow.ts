@@ -94,11 +94,12 @@ export async function makeShadow(pc: Actor): Promise<Actor | null> {
 
   const data = {
     ...source,
+    type: source.type,
     name,
     folder: folder?.id ?? null,
     // Strip player owners: the reflection is a hostile, GM-run actor, and dropping ownership keeps
     // it out of the PC pickers (Link/Mirror Cast filter on hasPlayerOwner).
-    ownership: { default: 0 },
+    ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.NONE },
     system: foundry.utils.mergeObject(source.system, {
       details: { level: { value: level } },
       traits: { value: [...traits], rarity: 'unique' },

@@ -26,7 +26,7 @@
   "packs": [
     {
       "name": "netherworld",
-      "label": "Through the Glass",
+      "label": "NetherWorld",
       "path": "packs/netherworld",
       "type": "Adventure",
       "system": "pf2e"

@@ -8,8 +8,8 @@
 // elements (e.g. the Queen's Rime aura) via compendium UUID, never imported into the world.
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { packCompendium } from './pack-leveldb.ts';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SRC = join(ROOT, 'packs/_source');
@@ -33,56 +33,92 @@ const SOURCE_DIRS = ['scenes', 'journals', 'macros', 'bestiary', 'hazards', 'ite
 // Adventure field it belongs in (scenes, journal, actors, items, macros, folders, …). Routing
 // by `_key` rather than by directory keeps the bestiary's folder docs out of `actors`.
 type Doc = { _key?: string } & Record<string, unknown>;
-const adventure: Record<string, unknown> = {
-  ...ADVENTURE,
-  folders: [], actors: [], items: [], journal: [], scenes: [], macros: [],
-  sort: 0,
-  flags: {},
-  _key: `!adventures!${ADVENTURE._id}`,
+
+// Unfiled docs are filed under their type's root "NetherWorld" folder so the adventure imports
+// into tidy per-sidebar folders instead of dumping loose docs into each tab.
+const FOLDER_TYPE: Record<string, string> = {
+  actors: 'Actor', scenes: 'Scene', journal: 'JournalEntry', macros: 'Macro', items: 'Item',
 };
 
-const counts: Record<string, number> = {};
-for (const dir of SOURCE_DIRS) {
-  const abs = join(SRC, dir);
-  for (const file of readdirSync(abs)) {
-    if (!file.endsWith('.json')) continue;
-    const { _key, ...doc } = JSON.parse(readFileSync(join(abs, file), 'utf8')) as Doc;
-    const collection = _key?.split('!')[1];
-    if (!collection || !Array.isArray(adventure[collection])) {
-      throw new Error(`${dir}/${file}: unroutable _key ${JSON.stringify(_key)}`);
+export function buildAdventure(): void {
+  const adventure: Record<string, unknown> = {
+    ...ADVENTURE,
+    folders: [], actors: [], items: [], journal: [], scenes: [], macros: [],
+    sort: 0,
+    flags: {},
+    _key: `!adventures!${ADVENTURE._id}`,
+  };
+
+  const counts: Record<string, number> = {};
+  for (const dir of SOURCE_DIRS) {
+    const abs = join(SRC, dir);
+    for (const file of readdirSync(abs)) {
+      if (!file.endsWith('.json')) continue;
+      const { _key, ...doc } = JSON.parse(readFileSync(join(abs, file), 'utf8')) as Doc;
+      const collection = _key?.split('!')[1];
+      if (!collection || !Array.isArray(adventure[collection])) {
+        throw new Error(`${dir}/${file}: unroutable _key ${JSON.stringify(_key)}`);
+      }
+      (adventure[collection] as Doc[]).push(doc);
+      counts[collection] = (counts[collection] ?? 0) + 1;
     }
-    (adventure[collection] as Doc[]).push(doc);
-    counts[collection] = (counts[collection] ?? 0) + 1;
+  }
+
+  // Explicit assignments (the Shadow Reflections actor subfolder, actors already in NetherWorld)
+  // are left as-is. There's no way to express "sits at a sidebar root" here — for this adventure
+  // everything is meant to be foldered.
+  const rootFolderByType: Record<string, string> = {};
+  for (const f of adventure.folders as Doc[]) {
+    if (f.folder == null && f.name === 'NetherWorld') rootFolderByType[f.type as string] = f._id as string;
+  }
+  for (const [collection, type] of Object.entries(FOLDER_TYPE)) {
+    const root = rootFolderByType[type];
+    const docs = adventure[collection] as Doc[] | undefined;
+    if (!root || !Array.isArray(docs)) continue;
+    for (const doc of docs) {
+      if (doc.folder == null) doc.folder = root;
+    }
+  }
+
+  // Scenes ship with their encounter tokens placed. Keep only tokens whose actor travels in this
+  // adventure and make those linked (so each token derives from the imported actor); drop the rest —
+  // the world party placeholder and any NPC whose actor isn't bundled would otherwise import as a
+  // broken, actorless token on a fresh world.
+  const actorIds = new Set((adventure.actors as Doc[]).map((a) => a._id as string));
+  for (const scene of adventure.scenes as Doc[]) {
+    const tokens = (scene.tokens as Doc[] | undefined) ?? [];
+    const kept = tokens.filter((t) => actorIds.has(t.actorId as string));
+    // A unique actor's token links to it (HP tracked on the world actor); multiple tokens of one
+    // actor (mooks — e.g. the two Sacristans) stay unlinked so each derives its own independent HP.
+    const perActor: Record<string, number> = {};
+    for (const t of kept) perActor[t.actorId as string] = (perActor[t.actorId as string] ?? 0) + 1;
+    for (const t of kept) {
+      if (perActor[t.actorId as string] === 1) {
+        t.actorLink = true;
+        delete t.delta; // the unlinked snapshot is dead weight once it derives from the world actor
+      } else {
+        t.actorLink = false;
+      }
+    }
+    scene.tokens = kept;
+    if (tokens.length !== kept.length) {
+      console.log(`  ${String(scene.name)}: kept ${kept.length}, dropped ${tokens.length - kept.length} unbundled token(s)`);
+    }
+  }
+
+  const outDir = join(SRC, PACK);
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, 'through-the-glass.json'), JSON.stringify(adventure, null, 2) + '\n');
+  console.log('assembled adventure:', Object.entries(counts).map(([k, v]) => `${v} ${k}`).join(', '));
+
+  if (packCompendium(PACK, outDir, join(ROOT, 'packs'))) {
+    console.log(`✓ packs/${PACK} built`);
+  } else {
+    console.warn(`⚠ adventure "${PACK}" not rebuilt (is Foundry holding it open? LevelDB lock) — keeping the existing build.`);
   }
 }
 
-// Scenes ship with their encounter tokens placed. Keep only tokens whose actor travels in this
-// adventure and make those linked (so each token derives from the imported actor); drop the rest —
-// the world party placeholder and any NPC whose actor isn't bundled would otherwise import as a
-// broken, actorless token on a fresh world.
-const actorIds = new Set((adventure.actors as Doc[]).map((a) => a._id as string));
-for (const scene of adventure.scenes as Doc[]) {
-  const tokens = (scene.tokens as Doc[] | undefined) ?? [];
-  const kept = tokens.filter((t) => actorIds.has(t.actorId as string));
-  for (const t of kept) {
-    t.actorLink = true;
-    delete t.delta; // a linked token derives from the world actor; the unlinked snapshot is dead weight
-  }
-  scene.tokens = kept;
-  if (tokens.length !== kept.length) {
-    console.log(`  ${String(scene.name)}: linked ${kept.length}, dropped ${tokens.length - kept.length} unbundled token(s)`);
-  }
+// Run standalone: `node scripts/build-adventure.ts`.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  buildAdventure();
 }
-
-const outDir = join(SRC, PACK);
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'through-the-glass.json'), JSON.stringify(adventure, null, 2) + '\n');
-console.log('assembled adventure:', Object.entries(counts).map(([k, v]) => `${v} ${k}`).join(', '));
-
-// Compile to LevelDB. Foundry must be closed (it holds the pack LOCK).
-console.log('packing…');
-execFileSync('npx', ['fvtt', 'package', 'pack', PACK, '--in', outDir, '--out', join(ROOT, 'packs')], {
-  stdio: 'inherit',
-  cwd: ROOT,
-});
-console.log(`\n✓ packs/${PACK} built`);

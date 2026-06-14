@@ -215,6 +215,9 @@ function scaffoldDevModule(modulesDir: string): void {
   link(join(dest, 'packs'), join(repo, 'packs'));
   link(join(dest, 'assets'), join(repo, 'assets'));
   console.log(`scaffolded dev module → ${dest}`);
+  // dist/ and the compiled packs are gitignored build output — the symlinks resolve only
+  // once these run. Foundry sees no esmodule or compendium content until then.
+  console.log('  before launching: `npm run build` (esmodule) and `npm run build:packs` (compendia)');
 }
 
 const cfg = readConfig();
