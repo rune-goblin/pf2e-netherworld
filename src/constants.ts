@@ -9,6 +9,9 @@ export const TOOLBAR_POSITION_SETTING = 'mirrorToolbarPosition';
 /** Client setting holding the reflection toolbar's dragged `{left, top}`. */
 export const REFLECTION_TOOLBAR_POSITION_SETTING = 'reflectionToolbarPosition';
 
+/** Client setting holding the reflect-actions panel's dragged `{left, top}`. */
+export const REFLECT_ACTIONS_TOOLBAR_POSITION_SETTING = 'reflectActionsToolbarPosition';
+
 /**
  * The Hall of Reflections scene the Create-Reflection toolbar binds to. Stable only because the
  * scene ships in the bundled Adventure (keepId) — see {@link DARK_MIRROR_SCENE_ID}.
@@ -29,3 +32,11 @@ export const ADVENTURE_UUID = `Compendium.${MODULE_ID}.${ADVENTURE_PACK}.Adventu
 
 /** The "Through the Glass" intro journal, opened once the adventure import finishes. */
 export const INTRO_JOURNAL_ID = 'nwThroughGlassJE';
+
+/**
+ * The bundled Actor sidebar folders, stable only because the adventure imports with keepId (see
+ * {@link DARK_MIRROR_SCENE_ID}). `makeShadow` reuses the "Shadow Reflections" subfolder and, when it
+ * has to recreate it, nests it under the "NetherWorld" root so reflections never land loose at root.
+ */
+export const NETHERWORLD_ACTOR_FOLDER_ID = 'tPzW5eubmMnK6wMU';
+export const SHADOW_REFLECTIONS_FOLDER_ID = 'LhHwLWCUztAvLTXN';

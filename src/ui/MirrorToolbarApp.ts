@@ -1,6 +1,5 @@
 import type { Component } from 'svelte';
-import { TOOLBAR_POSITION_SETTING } from '../constants';
-import { isMirrorScene } from '../mirror';
+import { DARK_MIRROR_SCENE_ID, TOOLBAR_POSITION_SETTING } from '../constants';
 import { FloatingToolbarApp } from './FloatingToolbarApp';
 import MirrorToolbar from './MirrorToolbar.svelte';
 
@@ -19,13 +18,14 @@ export class MirrorToolbarApp extends FloatingToolbarApp {
 
   protected readonly component = MirrorToolbar as Component<{ app: FloatingToolbarApp }>;
   protected readonly positionSetting = TOOLBAR_POSITION_SETTING;
+  protected static override readonly sceneIds = [DARK_MIRROR_SCENE_ID];
 
   static sync(): void {
     const scene = canvas.scene;
     this.refresh(
       this.DEFAULT_OPTIONS.id,
       () => new MirrorToolbarApp(),
-      game.user.isGM && isMirrorScene(scene),
+      this.visibleOn(scene),
       scene,
     );
   }

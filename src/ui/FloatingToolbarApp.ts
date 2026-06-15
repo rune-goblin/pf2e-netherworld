@@ -21,6 +21,19 @@ export abstract class FloatingToolbarApp extends ApplicationV2 {
   protected abstract readonly component: Component<{ app: FloatingToolbarApp }>;
   protected abstract readonly positionSetting: string;
 
+  /**
+   * Scene ids this palette may appear on, or '*' for every scene. Declared per subclass so the
+   * binding is explicit — the base default `[]` fails closed (shows nowhere) rather than leaking
+   * onto unrelated scenes if a subclass forgets to set it.
+   */
+  protected static readonly sceneIds: readonly string[] | '*' = [];
+
+  /** GM-only and on an allowed scene — the common gate every toolbar's `sync()` folds in. */
+  protected static visibleOn(scene: Scene | null): scene is Scene {
+    if (!game.user.isGM || !scene) return false;
+    return this.sceneIds === '*' || this.sceneIds.includes(scene.id);
+  }
+
   #component?: ReturnType<typeof mount>;
   #root?: HTMLElement;
   sceneId?: string;

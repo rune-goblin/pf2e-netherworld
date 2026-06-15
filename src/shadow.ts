@@ -1,4 +1,4 @@
-import { MODULE_ID } from './constants';
+import { MODULE_ID, NETHERWORLD_ACTOR_FOLDER_ID, SHADOW_REFLECTIONS_FOLDER_ID } from './constants';
 
 const SHADOW_TINT = '#694d93';
 const SHADOW_TOKEN_ALPHA = 0.85;
@@ -67,11 +67,95 @@ const SHADOW_ACTIONS = SHADOW_ACTION_TEXT.map((a) => ({
   },
 }));
 
+// A character's prepareBaseData resets system.traits.value to [], wiping any trait set in the
+// clone's source — so the shadow trait has to be re-granted in *derived* data prep, which this
+// effect's ActiveEffectLike does. The trait is what makes the Hall of Reflections' Vortex of Souls
+// pass the reflection by (its region behavior skips creatures with the shadow trait).
+const SHADOW_TRAIT_EFFECT = {
+  name: 'Glass Reflection',
+  type: 'effect',
+  img: 'icons/magic/control/silhouette-hold-beam-blue.webp',
+  system: {
+    description: {
+      value:
+        '<p>This figure is a glass reflection: it bears the <strong>shadow</strong> trait, so the '
+        + 'Vortex of Souls in the Hall of Reflections passes it by.</p>',
+    },
+    rules: [{ key: 'ActiveEffectLike', mode: 'add', path: 'system.traits.value', value: SHADOW_TRAIT }],
+    duration: { expiry: null, sustained: false, unit: 'unlimited', value: -1 },
+    tokenIcon: { show: true },
+    traits: { rarity: 'unique', value: [] },
+    slug: 'glass-reflection',
+  },
+};
+
+/** First grid cell free of a token, spiralling out from the GM's current view centre, so a batch
+ *  of reflections fills neighbouring squares instead of stacking on one. */
+function freeDropPoint(scene: Scene): { x: number; y: number } {
+  const grid = scene.grid;
+  const dims = scene.dimensions;
+  const centre = canvas.scene?.id === scene.id
+    ? { x: canvas.stage.pivot.x, y: canvas.stage.pivot.y }
+    : { x: dims.sceneX + dims.sceneWidth / 2, y: dims.sceneY + dims.sceneHeight / 2 };
+  const origin = grid.getOffset(centre);
+  const taken = new Set(scene.tokens.map((t) => {
+    const o = grid.getOffset({ x: t.x, y: t.y });
+    return `${o.i},${o.j}`;
+  }));
+  for (let r = 0; r < 64; r++) {
+    for (let di = -r; di <= r; di++) {
+      for (let dj = -r; dj <= r; dj++) {
+        if (Math.max(Math.abs(di), Math.abs(dj)) !== r) continue;
+        const cell = { i: origin.i + di, j: origin.j + dj };
+        if (!taken.has(`${cell.i},${cell.j}`)) return grid.getTopLeftPoint(cell);
+      }
+    }
+  }
+  return grid.getTopLeftPoint(origin);
+}
+
+/** The Reflection already made for this PC, matched by the mirrorSource flag, or null. */
+export function findReflection(pc: Actor): Actor | null {
+  return game.actors.find((a) => a.getFlag(MODULE_ID, 'mirrorSource') === pc.uuid) ?? null;
+}
+
 /**
- * Clone a PC into a hostile glass Reflection: a `character` actor two levels weaker, with the
- * shadow trait + glass tint and the four shadow actions embedded, auto-linked to its source so
+ * The "Shadow Reflections" folder reflections file under. The adventure ships it as a subfolder of
+ * the "NetherWorld" Actor folder (both keepId), so prefer that bundled folder. If it's gone
+ * (adventure not imported, or deleted) recreate it nested under NetherWorld — and pull a stray
+ * root-level one back under NetherWorld — so reflections never sit loose at the sidebar root.
+ */
+async function shadowFolder(): Promise<Folder | null | undefined> {
+  const bundled = game.folders.get(SHADOW_REFLECTIONS_FOLDER_ID);
+  if (bundled) return bundled;
+
+  const parent =
+    game.folders.get(NETHERWORLD_ACTOR_FOLDER_ID)
+    ?? game.folders.find((f) => f.type === 'Actor' && f.name === 'NetherWorld');
+
+  const existing = game.folders.find((f) => f.type === 'Actor' && f.name === SHADOW_FOLDER);
+  if (existing) {
+    if (parent && !existing.folder) await existing.update({ folder: parent.id });
+    return existing;
+  }
+  return Folder.create({ name: SHADOW_FOLDER, type: 'Actor', folder: parent?.id ?? null });
+}
+
+// Drop the reflection's token on the active scene, skipping it when one is already present so a
+// repeat click doesn't litter duplicate linked tokens.
+async function placeOnMap(reflection: Actor): Promise<void> {
+  const scene = canvas.scene;
+  if (!scene || scene.tokens.some((t) => t.actorId === reflection.id)) return;
+  const token = await reflection.getTokenDocument(freeDropPoint(scene), { parent: scene });
+  await scene.createEmbeddedDocuments('Token', [token.toObject()]);
+}
+
+/**
+ * Clone a PC into a hostile glass Reflection: a `character` actor two levels weaker, with a glass
+ * tint, the four shadow actions, and a Glass Reflection effect granting the shadow trait, auto-linked to its source so
  * Mirror Cast works at once. Kept as a `character` (not rebuilt as an NPC) so the reflection
- * literally owns the same feats/spells/strikes the Mirror Echo gimmick replays. GM-only.
+ * literally owns the same feats/spells/strikes the Mirror Echo gimmick replays. Drops a token on
+ * the active scene so the reflection steps straight out of the glass. GM-only.
  */
 export async function makeShadow(pc: Actor): Promise<Actor | null> {
   if (!game.user.isGM) {
@@ -83,14 +167,18 @@ export async function makeShadow(pc: Actor): Promise<Actor | null> {
     return null;
   }
 
+  // One reflection per PC: if it already exists, just bring it onto the map instead of duplicating.
+  const existing = findReflection(pc);
+  if (existing) {
+    await placeOnMap(existing);
+    return existing;
+  }
+
   const { _id, ...source } = pc.toObject() as Record<string, any>;
   const name = game.i18n.format(`${MODULE_ID}.shadow.name`, { name: pc.name });
   const level = Math.max(1, (source.system?.details?.level?.value ?? 1) - LEVEL_REDUCTION);
-  const traits = new Set<string>([...(source.system?.traits?.value ?? []), SHADOW_TRAIT]);
 
-  const folder =
-    game.folders.find((f) => f.type === 'Actor' && f.name === SHADOW_FOLDER)
-    ?? (await Folder.create({ name: SHADOW_FOLDER, type: 'Actor' }));
+  const folder = await shadowFolder();
 
   const data = {
     ...source,
@@ -100,9 +188,10 @@ export async function makeShadow(pc: Actor): Promise<Actor | null> {
     // Strip player owners: the reflection is a hostile, GM-run actor, and dropping ownership keeps
     // it out of the PC pickers (Link/Mirror Cast filter on hasPlayerOwner).
     ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.NONE },
+    // A cloned character defaults to the party alliance; force opposition so the reflection counts
+    // as an enemy for flanking, targeting, and aura automation, not just a hostile token disposition.
     system: foundry.utils.mergeObject(source.system, {
-      details: { level: { value: level } },
-      traits: { value: [...traits], rarity: 'unique' },
+      details: { level: { value: level }, alliance: 'opposition' },
     }),
     prototypeToken: foundry.utils.mergeObject(source.prototypeToken, {
       name,
@@ -112,10 +201,12 @@ export async function makeShadow(pc: Actor): Promise<Actor | null> {
       texture: { tint: SHADOW_TINT },
     }),
     // Source items keep their _ids (preserving spell-location / granted-by cross-references); the
-    // shadow actions carry none, so Foundry mints fresh ids for them.
-    items: [...(source.items ?? []), ...SHADOW_ACTIONS],
-    flags: foundry.utils.mergeObject(source.flags ?? {}, { world: { mirrorSource: pc.uuid } }),
+    // shadow actions and trait effect carry none, so Foundry mints fresh ids for them.
+    items: [...(source.items ?? []), ...SHADOW_ACTIONS, SHADOW_TRAIT_EFFECT],
+    flags: foundry.utils.mergeObject(source.flags ?? {}, { [MODULE_ID]: { mirrorSource: pc.uuid } }),
   };
 
-  return (await Actor.create(data)) ?? null;
+  const reflection = (await Actor.create(data)) ?? null;
+  if (reflection) await placeOnMap(reflection);
+  return reflection;
 }

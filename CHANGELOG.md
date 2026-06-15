@@ -5,6 +5,18 @@ All notable changes to **PF2e Netherworld** are documented here. The format foll
 [Semantic Versioning](https://semver.org/). Install/update from the manifest:
 `https://github.com/rune-goblin/pf2e-netherworld/releases/latest/download/module.json`.
 
+## [Unreleased]
+
+### Added
+- **Reflection Reflected Actions panel** — a floating, GM-only panel that auto-shows
+  during combat and lists every Reflection fighting in the encounter. Expand one to see
+  the actions its original took on the previous round (the Mirror Echo window), then
+  click each to replay it from the Reflection's own stat block: spells recast at the
+  Reflection's reduced rank, weapon **Strikes** rolled with the matching weapon at the
+  same multiple-attack penalty. Performed actions are checked off; ↻ re-reads the round.
+  Turns the manual *Mirror Cast* macro into one-click turn-running and extends it to
+  Strikes.
+
 ## [0.4.0] — 2026-06-14
 
 ### Added

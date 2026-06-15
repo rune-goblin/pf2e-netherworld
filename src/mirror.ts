@@ -1,4 +1,4 @@
-import { MODULE_ID, DARK_MIRROR_SCENE_ID } from './constants';
+import { MODULE_ID } from './constants';
 
 export type MirrorState = 'intact' | 'cracked' | 'broken';
 
@@ -23,10 +23,6 @@ function tileState(tile: MirrorTile): MirrorState | null {
 
 export function mirrorTiles(scene: Scene): MirrorTile[] {
   return scene.tiles.filter((t) => tileState(t) !== null);
-}
-
-export function isMirrorScene(scene: Scene | null | undefined): scene is Scene {
-  return scene?.id === DARK_MIRROR_SCENE_ID;
 }
 
 /** The state shown right now: the one visible overlay, or `intact` when both overlays are hidden. */

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { MODULE_ID } from '../constants';
-  import { makeShadow } from '../shadow';
+  import { findReflection, makeShadow } from '../shadow';
   import type { FloatingToolbarApp } from './FloatingToolbarApp';
   import { toolbarDrag } from './toolbarDrag.svelte';
 
@@ -11,14 +11,13 @@
 
   let busy = $state(false);
 
-  // Selected PC tokens, else the whole party — so the GM can reflect a chosen few or all at once.
+  // Only the selected PC tokens — the button requires a selection. Reflections (themselves
+  // `character` actors) are excluded so you can't reflect a reflection.
   function targets() {
-    const selected = canvas.tokens.controlled
+    return canvas.tokens.controlled
       .map((tk) => tk.actor)
-      .filter((a): a is NonNullable<typeof a> => a?.type === 'character');
-    return selected.length
-      ? selected
-      : game.actors.filter((a) => a.type === 'character' && a.hasPlayerOwner);
+      .filter((a): a is NonNullable<typeof a> =>
+        a?.type === 'character' && !a.getFlag(MODULE_ID, 'mirrorSource'));
   }
 
   async function create(): Promise<void> {
@@ -27,14 +26,19 @@
     try {
       const pcs = targets();
       if (!pcs.length) {
-        ui.notifications.warn(t('reflection.noPcs'));
+        ui.notifications.warn(t('reflection.noSelection'));
         return;
       }
-      let made = 0;
+      let created = 0;
+      let placed = 0;
       for (const pc of pcs) {
-        if (await makeShadow(pc)) made += 1;
+        const existed = findReflection(pc) !== null;
+        if (!(await makeShadow(pc))) continue;
+        if (existed) placed += 1;
+        else created += 1;
       }
-      if (made) ui.notifications.info(game.i18n.format(`${MODULE_ID}.reflection.created`, { count: made }));
+      if (created) ui.notifications.info(game.i18n.format(`${MODULE_ID}.reflection.created`, { count: created }));
+      if (placed) ui.notifications.info(game.i18n.format(`${MODULE_ID}.reflection.placed`, { count: placed }));
     } finally {
       busy = false;
     }

@@ -44,9 +44,25 @@
     },
     "reflection": {
       "create": "Create Reflection",
-      "hint": "Reflect the selected player character(s) — or the whole party if none are selected",
-      "noPcs": "No player characters to reflect — select PC token(s), or add player characters to the world.",
-      "created": "Created {count} reflection(s)."
+      "hint": "Reflect the selected player character token(s)",
+      "noSelection": "Select one or more player character tokens first.",
+      "created": "Created {count} reflection(s).",
+      "placed": "Placed {count} existing reflection(s) on the map."
+    },
+    "reflectActions": {
+      "title": "Reflected Actions",
+      "empty": "No reflections in this encounter.",
+      "noActions": "Nothing to echo — its original did nothing it can copy.",
+      "refresh": "Re-read this round's actions",
+      "rank": "rank {rank}",
+      "map1": "2nd attack",
+      "map2": "3rd attack",
+      "spellHint": "Recast this spell from the reflection at its reduced rank",
+      "strikeHint": "Strike with the reflection's matching weapon, at the same multiple-attack penalty",
+      "actionHint": "Use this ability from the reflection — rolls against your target where it can, otherwise posts its card",
+      "noStrike": "{name}: the reflection has no matching weapon to strike with.",
+      "noAction": "{name}: the reflection has no matching ability to use.",
+      "entryName": "Mirror Casting"
     },
     "settings": {
       "picker": {

@@ -2,8 +2,10 @@
   --pf2e-netherworld-accent: #6b21a8;
 }
 
-/* The frameless toolbar carries its own chrome (the .bar) — strip the default window box. */
-#pf2e-netherworld-mirror-toolbar {
+/* The frameless toolbars carry their own chrome — strip the default window box. */
+#pf2e-netherworld-mirror-toolbar,
+#pf2e-netherworld-reflection-toolbar,
+#pf2e-netherworld-reflect-actions-toolbar {
   background: none;
   border: none;
   box-shadow: none;

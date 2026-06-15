@@ -1,19 +1,23 @@
 import './styles.css';
+import type { ChatMessagePF2e } from 'foundry-pf2e';
 import {
   MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING, REFLECTION_TOOLBAR_POSITION_SETTING,
-  ADVENTURE_UUID, INTRO_JOURNAL_ID,
+  REFLECT_ACTIONS_TOOLBAR_POSITION_SETTING, ADVENTURE_UUID, INTRO_JOURNAL_ID,
 } from './constants';
 import { installLightPatch, registerSceneSync, setNetherworld } from './lightPatch';
 import { NetherWorldApp } from './ui/NetherWorldApp';
 import { MirrorToolbarApp } from './ui/MirrorToolbarApp';
 import { ReflectionToolbarApp } from './ui/ReflectionToolbarApp';
+import { ReflectActionsToolbarApp } from './ui/ReflectActionsToolbarApp';
 import { setMirrorState, type MirrorState } from './mirror';
 import { makeShadow } from './shadow';
+import { captureSourceAction, clearCaptures } from './reflection';
 
-/** Mount/unmount both scene-bound toolbars for the current canvas. */
+/** Mount/unmount the floating toolbars for the current canvas and combat state. */
 function syncToolbars(): void {
   MirrorToolbarApp.sync();
   ReflectionToolbarApp.sync();
+  ReflectActionsToolbarApp.sync();
 }
 
 interface ModuleApi {
@@ -27,7 +31,7 @@ interface ModuleApi {
   toggle: (scene?: Scene | null) => Promise<boolean>;
   /** Set the dark-mirror overlay on the active scene (intact/cracked/broken). GM-only. */
   mirror: (state: MirrorState) => Promise<void>;
-  /** Clone a PC into a hostile, level-2-weaker glass Reflection with the shadow abilities. GM-only. */
+  /** Clone a PC into a hostile, level-2-weaker glass Reflection and drop its token on the active scene. GM-only. */
   makeShadow: (pc: Actor) => Promise<Actor | null>;
 }
 
@@ -77,8 +81,28 @@ Hooks.once('init', () => {
     default: {},
   });
 
+  game.settings.register(MODULE_ID, REFLECT_ACTIONS_TOOLBAR_POSITION_SETTING, {
+    name: 'Reflect-actions panel position',
+    scope: 'client',
+    config: false,
+    type: Object,
+    default: {},
+  });
+
   // One scene-load hook gates the toolbars: each mounts on its scene and unmounts on leave.
   Hooks.on('canvasReady', () => syncToolbars());
+
+  // The reflect-actions panel is combat-gated, so re-evaluate on combat lifecycle changes too.
+  // updateCombat covers the start/round/turn transitions that combatStart alone misses (the panel
+  // not appearing until a reload was a missing updateCombat).
+  for (const event of ['combatStart', 'updateCombat', 'deleteCombat', 'createCombatant', 'deleteCombatant']) {
+    Hooks.on(event, () => syncToolbars());
+  }
+
+  // Capture each original's actions onto the active combat as they happen, so its Reflection can
+  // replay that round; wipe the captures when a new encounter begins.
+  Hooks.on('createChatMessage', (message: ChatMessagePF2e) => captureSourceAction(message));
+  Hooks.on('combatStart', (combat: Combat) => void clearCaptures(combat));
 
   // Open the intro journal the moment the adventure import creates it. Its id is preserved by the
   // import, so this fires once (re-import updates rather than creates) without an adventure-hook.

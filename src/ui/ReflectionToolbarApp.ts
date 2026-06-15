@@ -15,13 +15,14 @@ export class ReflectionToolbarApp extends FloatingToolbarApp {
 
   protected readonly component = ReflectionToolbar as Component<{ app: FloatingToolbarApp }>;
   protected readonly positionSetting = REFLECTION_TOOLBAR_POSITION_SETTING;
+  protected static override readonly sceneIds = [HALL_OF_REFLECTIONS_SCENE_ID];
 
   static sync(): void {
     const scene = canvas.scene;
     this.refresh(
       this.DEFAULT_OPTIONS.id,
       () => new ReflectionToolbarApp(),
-      game.user.isGM && scene?.id === HALL_OF_REFLECTIONS_SCENE_ID,
+      this.visibleOn(scene),
       scene,
     );
   }
