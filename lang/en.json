@@ -34,6 +34,25 @@
         "hint": "Show the shattered glass"
       }
     },
+    "offer": {
+      "title": "The Interlocutor's Offer",
+      "button": "Show Offer",
+      "buttonHint": "Open the Interlocutor's offer of three gifts",
+      "send": "Send to Players",
+      "update": "Update Players",
+      "close": "Close",
+      "live": "Live to players",
+      "liveHint": "The players are seeing this card; your tab changes are pushed to them.",
+      "presented": "The Interlocutor lays these before you…",
+      "loading": "Summoning the offer…",
+      "empty": "The offered gifts aren't in this world yet — import the adventure first.",
+      "itemLevel": "Item",
+      "tag": {
+        "boon": "Boon",
+        "cost": "Cost",
+        "action": "Action"
+      }
+    },
     "notifications": {
       "gmOnly": "Only a GM can manage nether world scenes.",
       "saved": "Nether world scenes updated.",

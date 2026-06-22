@@ -3,10 +3,7 @@ import { DARK_MIRROR_SCENE_ID, TOOLBAR_POSITION_SETTING } from '../constants';
 import { FloatingToolbarApp } from './FloatingToolbarApp';
 import MirrorToolbar from './MirrorToolbar.svelte';
 
-/**
- * The dark-mirror overlay palette (intact/cracked/broken), shown to the GM only on a mirror scene.
- * It drives nothing itself — the Svelte component reads/writes tile state.
- */
+/** The dark-mirror overlay palette (intact/cracked/broken), GM-only on the mirror scene. */
 export class MirrorToolbarApp extends FloatingToolbarApp {
   static override DEFAULT_OPTIONS = {
     id: 'pf2e-netherworld-mirror-toolbar',

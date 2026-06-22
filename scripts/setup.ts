@@ -1,11 +1,10 @@
 // Dev environment setup. Idempotent. Run with `npm run setup`.
-//   1. Find the Foundry data dir — detect per-platform, else ask for the path.
-//   2. Resolve the PF2e system source — detect, clone foundryvtt/pf2e, point at a
-//      checkout, or skip (types also ship via the foundry-pf2e dep, so it's optional).
-//   3. Symlink references INTO the repo, then scaffold a *real* module dir in Foundry's
-//      modules/ whose entries symlink back to the repo (see scaffoldDevModule).
-// Resolved paths cache in .dev-paths.json (gitignored) so re-runs don't re-ask.
-// Flags: --reconfigure (ask again), --no-link (resolve+cache only), --yes (no prompts).
+//   1. Find the Foundry data dir (detect per-platform, else ask).
+//   2. Resolve the PF2e system source (detect, clone, point at a checkout, or skip — types also
+//      ship via the foundry-pf2e dep, so it's optional).
+//   3. Symlink references into the repo, then scaffold a real module dir in Foundry's modules/ whose
+//      entries symlink back (see scaffoldDevModule).
+// Resolved paths cache in .dev-paths.json (gitignored). Flags: --reconfigure, --no-link, --yes.
 import {
   existsSync, symlinkSync, lstatSync, unlinkSync, readFileSync, writeFileSync, mkdirSync,
 } from 'node:fs';
@@ -74,9 +73,8 @@ function readConfig(): DevPaths {
   return {};
 }
 
-// Foundry's default user-data folders per platform. Recent desktop builds version the
-// folder (FoundryVTT-v14); older/server installs use a plain FoundryVTT. v14-only — we
-// check the v14 folder first, then the plain one, and use the first that resolves.
+// Foundry's default user-data folders per platform. Recent desktop builds version the folder
+// (FoundryVTT-v14); older/server installs use a plain FoundryVTT. Check the v14 folder first.
 function userDataDirs(): string[] {
   let base: string;
   if (process.platform === 'darwin') base = join(home, 'Library/Application Support');
@@ -85,8 +83,8 @@ function userDataDirs(): string[] {
   return ['FoundryVTT-v14', 'FoundryVTT'].map((n) => join(base, n));
 }
 
-// The configured data dir lives in Config/options.json's `dataPath` (which may point
-// elsewhere than the folder holding it), with content under `<dataPath>/Data`.
+// The configured data dir lives in Config/options.json's `dataPath` (which may point elsewhere than
+// the folder holding it), with content under `<dataPath>/Data`.
 function dataDirFor(userData: string): string | null {
   const options = join(userData, 'Config', 'options.json');
   if (existsSync(options)) {
@@ -173,8 +171,7 @@ async function resolvePf2eSource(cfg: DevPaths): Promise<string | undefined> {
 // Windows can't make plain dir symlinks without admin; junctions need no privilege.
 const symlinkType = process.platform === 'win32' ? 'junction' : undefined;
 
-// allowMissing lets us link dist/ before it's built — a dangling link that resolves once
-// `npm run build` (or the Vite dev server) produces it.
+// allowMissing lets us link dist/ before it's built — a dangling link that resolves once the build produces it.
 function link(linkPath: string, target: string, allowMissing = false): void {
   if (!allowMissing && !existsSync(target)) {
     console.log(`skip (missing target): ${basename(linkPath)} → ${target}`);
@@ -192,13 +189,10 @@ function link(linkPath: string, target: string, allowMissing = false): void {
   console.log(`linked ${basename(linkPath)} → ${target}`);
 }
 
-// Dev install: a *real* module dir whose entries symlink back to the repo, NOT one symlink
-// pointing at the whole repo. The whole-repo form exposes node_modules/.git to Foundry's file
-// picker, makes the repo's module.json the one Foundry loads, and ships nothing on its own —
-// so any non-symlink install (a release, a copied folder) had no assets. Per-entry symlinks
-// keep live edits and the Vite proxy's HMR while matching the shape `npm run deploy` copies.
-// We link the content dirs (assets/lang/packs) + the manifest + dist; the TypeScript sources
-// under src/ stay out of the module.
+// Dev install: a *real* module dir whose entries symlink back to the repo, NOT one symlink to the
+// whole repo. The whole-repo form exposed node_modules/.git to Foundry, made the repo's module.json
+// the one Foundry loaded, and shipped no assets on a non-symlink install. Per-entry symlinks keep
+// live edits + Vite HMR while matching the shape `npm run deploy` copies; src/ stays out of the module.
 function scaffoldDevModule(modulesDir: string): void {
   const dest = join(modulesDir, ID);
   const st = lstatSync(dest, { throwIfNoEntry: false });
@@ -215,8 +209,7 @@ function scaffoldDevModule(modulesDir: string): void {
   link(join(dest, 'packs'), join(repo, 'packs'));
   link(join(dest, 'assets'), join(repo, 'assets'));
   console.log(`scaffolded dev module → ${dest}`);
-  // dist/ and the compiled packs are gitignored build output — the symlinks resolve only
-  // once these run. Foundry sees no esmodule or compendium content until then.
+  // dist/ and the compiled packs are gitignored build output — the symlinks resolve only once these run.
   console.log('  before launching: `npm run build` (esmodule) and `npm run build:packs` (compendia)');
 }
 

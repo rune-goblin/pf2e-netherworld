@@ -1,11 +1,9 @@
 import { readFileSync } from "node:fs";
 
-// A plain `npm install` on macOS prunes the top-level @emnapi/* nodes that the
-// rolldown/oxc wasm bindings declare as peerDependencies — the lock then installs
-// fine locally but breaks `npm ci` on the linux CI/release runners ("Missing from
-// lock file"). Only `rm -rf node_modules package-lock.json && npm install`
-// regenerates them. This guards the committed lock against that silent regression
-// by reading it directly (never regenerating — that's what strips the nodes).
+// A plain `npm install` on macOS prunes the top-level @emnapi/* nodes that rolldown/oxc's wasm
+// bindings declare as peerDependencies — the lock then installs fine locally but breaks `npm ci` on
+// linux CI ("Missing from lock file"). Only `rm -rf node_modules package-lock.json && npm install`
+// regenerates them. This guards the committed lock by reading it directly (never regenerating).
 
 const lock = JSON.parse(
   readFileSync(new URL("../package-lock.json", import.meta.url), "utf8"),

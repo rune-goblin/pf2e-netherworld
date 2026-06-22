@@ -18,13 +18,12 @@
     return { id: s.id, name: s.name, enabled, baseline: enabled };
   };
 
-  // Navigable scenes are the pickable set; the active scene joins them even if it's off-nav, so the
-  // This Scene tab can always toggle wherever you're standing.
+  // Navigable scenes are pickable; the active scene joins them even if off-nav, so This Scene can always toggle.
   const scenes = game.scenes.filter((s) => s.navigation);
   if (activeScene && !scenes.some((s) => s.id === activeScene.id)) scenes.push(activeScene);
 
-  // Snapshot each scene's saved flag; `baseline` lets the footer and save apply only the diff. Both
-  // tabs bind to these same rows, so a This Scene toggle stages straight into the All Scenes list.
+  // Snapshot each scene's saved flag; `baseline` lets save apply only the diff. Both tabs bind these
+  // same rows, so a This Scene toggle stages into the All Scenes list.
   let rows = $state<Row[]>(scenes.map(toRow).sort((a, b) => a.name.localeCompare(b.name)));
 
   let tab = $state<Tab>('scene');

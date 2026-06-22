@@ -27,9 +27,8 @@ export class NetherWorldApp extends ApplicationV2 {
     return app;
   }
 
-  // AppV2 runs _renderHTML on every render; mount once and reuse the node, so a
-  // re-render neither leaks a second component (the first is never unmounted) nor
-  // discards Svelte's reactive state. Svelte drives all updates from here.
+  // AppV2 calls _renderHTML on every render; mount once and reuse the node so a re-render neither leaks
+  // a second component nor discards Svelte's reactive state.
   protected override async _renderHTML(): Promise<HTMLElement> {
     if (!this.#component) {
       this.#root = document.createElement('div');

@@ -4,8 +4,8 @@ export type MirrorState = 'intact' | 'cracked' | 'broken';
 
 export const MIRROR_STATES: readonly MirrorState[] = ['intact', 'cracked', 'broken'];
 
-// 'intact' is the scene background (no overlay); the damaged states are the placed tiles,
-// matched by the art the module ships. Toggling these tiles' visibility is the whole feature.
+// 'intact' is the bare scene; the damaged states are placed tiles, matched by their shipped art.
+// Toggling these tiles' visibility is the whole feature.
 const STATE_FILE: Partial<Record<MirrorState, string>> = {
   cracked: 'icy-hall-cracked.webp',
   broken: 'icy-hall-broken.webp',

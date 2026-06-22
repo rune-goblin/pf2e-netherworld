@@ -6,9 +6,8 @@ const LEVEL_REDUCTION = 2;
 const SHADOW_TRAIT = 'shadow';
 const SHADOW_FOLDER = 'Shadow Reflections';
 
-// The glass-reflection rules, embedded on every shadow so the one-round echo and shatter-on-death
-// travel with the clone. Lifted verbatim from the bundled Reflection actors. The DC/damage in
-// Shatter are GM-read flavor, not automated rule elements, so they stay as fixed text.
+// Glass-reflection rules embedded on every shadow, so the one-round echo and shatter-on-death travel
+// with the clone. The DC/damage in Shatter are GM-read flavor, not automated rule elements.
 const SHADOW_ACTION_TEXT = [
   {
     name: 'Mirror Echo',
@@ -67,10 +66,9 @@ const SHADOW_ACTIONS = SHADOW_ACTION_TEXT.map((a) => ({
   },
 }));
 
-// A character's prepareBaseData resets system.traits.value to [], wiping any trait set in the
-// clone's source — so the shadow trait has to be re-granted in *derived* data prep, which this
-// effect's ActiveEffectLike does. The trait is what makes the Hall of Reflections' Vortex of Souls
-// pass the reflection by (its region behavior skips creatures with the shadow trait).
+// A character's prepareBaseData resets system.traits.value to [], wiping any trait set on the clone's
+// source — so the shadow trait is re-granted in *derived* prep via this effect's ActiveEffectLike.
+// The trait is what makes the Hall's Vortex of Souls (a region behavior) skip the reflection.
 const SHADOW_TRAIT_EFFECT = {
   name: 'Glass Reflection',
   type: 'effect',
@@ -120,10 +118,9 @@ export function findReflection(pc: Actor): Actor | null {
 }
 
 /**
- * The "Shadow Reflections" folder reflections file under. The adventure ships it as a subfolder of
- * the "NetherWorld" Actor folder (both keepId), so prefer that bundled folder. If it's gone
- * (adventure not imported, or deleted) recreate it nested under NetherWorld — and pull a stray
- * root-level one back under NetherWorld — so reflections never sit loose at the sidebar root.
+ * The "Shadow Reflections" folder, preferring the bundled one (a NetherWorld subfolder, both keepId).
+ * If it's gone, recreate it under NetherWorld — and pull a stray root-level one back under it — so
+ * reflections never sit loose at the sidebar root.
  */
 async function shadowFolder(): Promise<Folder | null | undefined> {
   const bundled = game.folders.get(SHADOW_REFLECTIONS_FOLDER_ID);
@@ -141,8 +138,8 @@ async function shadowFolder(): Promise<Folder | null | undefined> {
   return Folder.create({ name: SHADOW_FOLDER, type: 'Actor', folder: parent?.id ?? null });
 }
 
-// Drop the reflection's token on the active scene, skipping it when one is already present so a
-// repeat click doesn't litter duplicate linked tokens.
+// Drop the reflection's token on the active scene, skipping it if one's already there so a repeat
+// click doesn't litter duplicates.
 async function placeOnMap(reflection: Actor): Promise<void> {
   const scene = canvas.scene;
   if (!scene || scene.tokens.some((t) => t.actorId === reflection.id)) return;
@@ -151,11 +148,10 @@ async function placeOnMap(reflection: Actor): Promise<void> {
 }
 
 /**
- * Clone a PC into a hostile glass Reflection: a `character` actor two levels weaker, with a glass
- * tint, the four shadow actions, and a Glass Reflection effect granting the shadow trait, auto-linked to its source so
- * Mirror Cast works at once. Kept as a `character` (not rebuilt as an NPC) so the reflection
- * literally owns the same feats/spells/strikes the Mirror Echo gimmick replays. Drops a token on
- * the active scene so the reflection steps straight out of the glass. GM-only.
+ * Clone a PC into a hostile glass Reflection: a `character` two levels weaker, glass-tinted, with the
+ * four shadow actions and the shadow-trait effect, auto-linked to its source. Kept a `character` (not
+ * rebuilt as an NPC) so it owns the same feats/spells/strikes the Mirror Echo replays. Drops a token
+ * on the active scene. GM-only.
  */
 export async function makeShadow(pc: Actor): Promise<Actor | null> {
   if (!game.user.isGM) {
@@ -167,7 +163,7 @@ export async function makeShadow(pc: Actor): Promise<Actor | null> {
     return null;
   }
 
-  // One reflection per PC: if it already exists, just bring it onto the map instead of duplicating.
+  // One reflection per PC: if it exists, bring it onto the map instead of duplicating.
   const existing = findReflection(pc);
   if (existing) {
     await placeOnMap(existing);

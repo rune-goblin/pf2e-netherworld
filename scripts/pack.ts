@@ -1,15 +1,7 @@
-// Build the compendium packs module.json registers, from their JSON sources. Run by
-// `npm run build:packs`, so the shipped LevelDB always matches the tracked sources — built packs
-// are gitignored, like dist/.
-//
-// What ships is driven by module.json `packs`, not the source layout:
-//   - an `Adventure` pack is *derived* from the per-type sources (scripts/build-adventure.ts)
-//   - every other pack is compiled from packs/_source/<name>
-// Here: the `netherworld` Adventure plus the `effects` runtime library (its own Item compendium,
-// never imported — granted in place by rule elements via compendium UUID).
-//
-// If Foundry holds a pack open (LevelDB lock), the existing build is kept and we warn rather than
-// fail; close Foundry to refresh it. Manual single-pack rebuild:
+// Build the compendium packs module.json registers, from their JSON sources (run by `npm run
+// build:packs`). Built packs are gitignored, like dist/. What ships is driven by module.json `packs`:
+// an `Adventure` pack is derived from the per-type sources (build-adventure.ts); every other is
+// compiled from packs/_source/<name>. A LevelDB lock keeps the existing build and warns. Single pack:
 //   npm run pack -- <name> --in packs/_source/<name> --out packs
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';

@@ -12,19 +12,16 @@ interface SavedPosition {
 const live = new Map<string, FloatingToolbarApp>();
 
 /**
- * Base for the frameless, draggable palettes pinned over the canvas — GM-only and scene-bound.
- * A subclass supplies the Svelte component to mount and the client setting its dragged position
- * persists to; its static `sync()` calls {@link refresh} with the show condition. The component
- * receives `{ app }` and drives the actual behavior.
+ * Base for the frameless, draggable, GM-only palettes pinned over the canvas. A subclass supplies the
+ * Svelte component, its position setting, and its scene binding; its static `sync()` calls {@link refresh}.
  */
 export abstract class FloatingToolbarApp extends ApplicationV2 {
   protected abstract readonly component: Component<{ app: FloatingToolbarApp }>;
   protected abstract readonly positionSetting: string;
 
   /**
-   * Scene ids this palette may appear on, or '*' for every scene. Declared per subclass so the
-   * binding is explicit — the base default `[]` fails closed (shows nowhere) rather than leaking
-   * onto unrelated scenes if a subclass forgets to set it.
+   * Scene ids this palette may appear on, or '*' for any. The base default `[]` fails closed (shows
+   * nowhere) so a subclass that forgets to set it can't leak onto unrelated scenes.
    */
   protected static readonly sceneIds: readonly string[] | '*' = [];
 

@@ -1,8 +1,7 @@
-// Build, then copy a clean, self-contained module into Foundry's modules/ — the same shape
-// the release zip ships (module.json + dist + lang + packs + assets). Unlike `npm run
-// setup`, which symlinks back to the repo for live editing, this leaves a real, link-free
-// directory: assets and packs travel with it, so it works without the repo present. Run with
-// `npm run deploy`. Override the target with FOUNDRY_DATA, else it reuses .dev-paths.json.
+// Build, then copy a clean, self-contained module into Foundry's modules/ — the same shape the
+// release zip ships (module.json + dist + lang + packs + assets). Unlike `npm run setup`'s symlinks,
+// this leaves a real, link-free dir that works without the repo. Override the target with FOUNDRY_DATA,
+// else it reuses .dev-paths.json.
 import {
   existsSync, readFileSync, lstatSync, unlinkSync, rmSync, mkdirSync, cpSync, copyFileSync,
 } from 'node:fs';
@@ -46,8 +45,8 @@ if (!foundryData) {
 
 console.log('Building…');
 execFileSync('npm', ['run', 'build'], { stdio: 'inherit', cwd: repo });
-// Packs are gitignored build output (like dist) — compile from _source so the copy below
-// ships current LevelDB, not a stale or missing one on a fresh clone.
+// Packs are gitignored build output (like dist) — compile from _source so the copy ships current
+// LevelDB, not a stale or missing one on a fresh clone.
 execFileSync('npm', ['run', 'build:packs'], { stdio: 'inherit', cwd: repo });
 
 const dest = join(foundryData, 'modules', ID);

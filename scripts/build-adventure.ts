@@ -1,11 +1,8 @@
-// Assemble the per-type pack sources under packs/_source/* into a single Adventure document,
-// then compile it to packs/netherworld. The Adventure importer creates world documents with
-// keepId, so every _id (scene, journal, actor, …) is preserved on every install — that is what
-// keeps the hardcoded Dark Mirror scene id and all the @UUID cross-links valid after a fresh
-// import. Loose per-pack import (what we shipped before) mints new ids and breaks them.
-//
-// `effects` is deliberately excluded: those are a runtime library granted in place by rule
-// elements (e.g. the Queen's Rime aura) via compendium UUID, never imported into the world.
+// Assemble the per-type sources under packs/_source/* into a single Adventure document, then compile
+// it to packs/netherworld. The importer creates world docs with keepId, so every _id survives a fresh
+// import and the hardcoded scene ids + @UUID cross-links stay valid (loose per-pack import minted new
+// ids and broke them). `effects` is excluded: a runtime library granted in place via compendium UUID,
+// never imported.
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -29,13 +26,12 @@ const ADVENTURE = {
 // Every source dir except `effects` (a runtime library, shipped as its own compendium).
 const SOURCE_DIRS = ['scenes', 'journals', 'macros', 'bestiary', 'hazards', 'items'];
 
-// Each unpacked doc carries a `_key` of `!collection!id`; the collection name is also the
-// Adventure field it belongs in (scenes, journal, actors, items, macros, folders, …). Routing
-// by `_key` rather than by directory keeps the bestiary's folder docs out of `actors`.
+// Each unpacked doc's `_key` (`!collection!id`) names the Adventure field it belongs in. Routing by
+// `_key` rather than directory keeps the bestiary's folder docs out of `actors`.
 type Doc = { _key?: string } & Record<string, unknown>;
 
-// Unfiled docs are filed under their type's root "NetherWorld" folder so the adventure imports
-// into tidy per-sidebar folders instead of dumping loose docs into each tab.
+// Unfiled docs go under their type's root "NetherWorld" folder, so the adventure imports into tidy
+// per-sidebar folders instead of dumping loose docs into each tab.
 const FOLDER_TYPE: Record<string, string> = {
   actors: 'Actor', scenes: 'Scene', journal: 'JournalEntry', macros: 'Macro', items: 'Item',
 };
@@ -64,9 +60,8 @@ export function buildAdventure(): void {
     }
   }
 
-  // Explicit assignments (the Shadow Reflections actor subfolder, actors already in NetherWorld)
-  // are left as-is. There's no way to express "sits at a sidebar root" here — for this adventure
-  // everything is meant to be foldered.
+  // Explicit assignments (the Shadow Reflections subfolder, actors already in NetherWorld) are left
+  // as-is. Everything in this adventure is meant to be foldered, so unfiled docs get the root folder.
   const rootFolderByType: Record<string, string> = {};
   for (const f of adventure.folders as Doc[]) {
     if (f.folder == null && f.name === 'NetherWorld') rootFolderByType[f.type as string] = f._id as string;
@@ -81,15 +76,14 @@ export function buildAdventure(): void {
   }
 
   // Scenes ship with their encounter tokens placed. Keep only tokens whose actor travels in this
-  // adventure and make those linked (so each token derives from the imported actor); drop the rest —
-  // the world party placeholder and any NPC whose actor isn't bundled would otherwise import as a
-  // broken, actorless token on a fresh world.
+  // adventure; drop the rest (the party placeholder, NPCs whose actor isn't bundled), which would
+  // otherwise import as broken, actorless tokens.
   const actorIds = new Set((adventure.actors as Doc[]).map((a) => a._id as string));
   for (const scene of adventure.scenes as Doc[]) {
     const tokens = (scene.tokens as Doc[] | undefined) ?? [];
     const kept = tokens.filter((t) => actorIds.has(t.actorId as string));
-    // A unique actor's token links to it (HP tracked on the world actor); multiple tokens of one
-    // actor (mooks — e.g. the two Sacristans) stay unlinked so each derives its own independent HP.
+    // A lone token links to its actor (HP on the world actor); mooks — multiple tokens of one actor,
+    // e.g. the two Sacristans — stay unlinked so each tracks its own HP.
     const perActor: Record<string, number> = {};
     for (const t of kept) perActor[t.actorId as string] = (perActor[t.actorId as string] ?? 0) + 1;
     for (const t of kept) {

@@ -5,9 +5,8 @@ import { FloatingToolbarApp } from './FloatingToolbarApp';
 import ReflectActionsToolbar from './ReflectActionsToolbar.svelte';
 
 /**
- * GM-only panel for running Reflection turns: while an encounter is live and at least one
- * Reflection is fighting in it, lists those Reflections and replays each one's source PC's
- * previous-round actions from its own stat block.
+ * GM-only panel for running Reflection turns: while an encounter is live with at least one Reflection
+ * fighting, lists them and replays each one's source PC's previous-round actions from its own stat block.
  */
 export class ReflectActionsToolbarApp extends FloatingToolbarApp {
   static override DEFAULT_OPTIONS = {

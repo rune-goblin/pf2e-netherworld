@@ -36,14 +36,14 @@ export function reflectionCombatants(): ActorPF2e[] {
   return out;
 }
 
-// Who acted: speaker first, then the pf2e origin actor (covers messages without a speaker token).
+// Speaker first, then the pf2e origin actor — covers messages with no speaker token.
 function actingActor(m: ChatMessagePF2e): ActorPF2e | null {
   const origin = m.flags.pf2e?.origin?.actor;
   return (m.speakerActor as ActorPF2e | null) ?? (origin ? (fromUuidSync(origin) as ActorPF2e | null) : null);
 }
 
-// Weapon + MAP for a strike message. The slug rides the attack roll's identifier
-// (`itemId.slug.meleeOrRanged`); mapIncreases is on the context flag but omitted from its type.
+// Weapon + MAP for a strike. The slug rides the attack roll's identifier (`itemId.slug.meleeOrRanged`);
+// mapIncreases is on the context flag but omitted from its type.
 function strikeInfo(m: ChatMessagePF2e): { slug: string | null; meleeOrRanged: string | null; map: number } {
   const rollOptions = m.rolls?.[0]?.options as { identifier?: string } | undefined;
   const context = m.flags.pf2e?.context as { identifier?: string; mapIncreases?: number } | undefined;
@@ -52,8 +52,8 @@ function strikeInfo(m: ChatMessagePF2e): { slug: string | null; meleeOrRanged: s
   return { slug, meleeOrRanged, map: typeof context?.mapIncreases === 'number' ? context.mapIncreases : 0 };
 }
 
-// Per-original capture, stored on the combat keyed by the original's actor id. Holds one round only:
-// the chat-message ids of the actions it took that round, for its Reflection to replay.
+// Per-original capture on the combat, keyed by the original's actor id: one round's action message
+// ids, for its Reflection to replay.
 const CAPTURES_FLAG = 'captures';
 interface Capture {
   round: number;
@@ -65,14 +65,13 @@ function hasReflection(actor: ActorPF2e): boolean {
   return game.actors.some((a) => a.getFlag(MODULE_ID, 'mirrorSource') === actor.uuid);
 }
 
-// Serialise capture writes: createChatMessage fires synchronously per message, so chaining keeps two
-// quick actions from each reading the same pre-write flag and one clobbering the other's append.
+// Serialise capture writes: createChatMessage fires per message, so chaining stops two quick actions
+// from both reading the pre-write flag and one clobbering the other.
 let captureQueue: Promise<unknown> = Promise.resolve();
 
 /**
- * Record one of an original's actions onto the active combat so its Reflection can replay it. Keeps
- * exactly one round per original: the first action of a new round replaces the prior round's capture,
- * further actions that round append. GM-only — a single writer keeps the shared flag consistent.
+ * Record an original's action onto the active combat for its Reflection to replay. One round per
+ * original: a new round's first action replaces the prior capture, later ones append. GM-only writer.
  */
 export function captureSourceAction(m: ChatMessagePF2e): void {
   if (!game.user.isGM) return;
@@ -104,11 +103,9 @@ export async function clearCaptures(combat: Combat): Promise<void> {
 }
 
 /**
- * Classify a chat message as the one discrete action it represents, or null. The general rule that
- * keeps a single spell/strike/ability from listing two or three times — and keeps reactive rolls out
- * entirely: an entry is an action the creature *initiated*. A damage roll rides on a cast/strike/use
- * already listed, and a saving throw is a roll the creature was *forced* to make; neither is an
- * initiated action, so reject both up front. (`isDamageRoll` also catches context-less damage rolls.)
+ * Classify a chat message as the one action it represents, or null. An entry is an action the creature
+ * *initiated* — so reject damage rolls (they ride a cast/strike already listed) and saving throws
+ * (forced, not initiated) up front, which keeps a single action from listing two or three times.
  */
 function actionFromMessage(m: ChatMessagePF2e): MirroredAction | null {
   const pf2e = m.flags.pf2e as
@@ -118,7 +115,7 @@ function actionFromMessage(m: ChatMessagePF2e): MirroredAction | null {
 
   if (m.isDamageRoll || ctx === 'saving-throw') return null;
 
-  // Spell cast card — carries the `casting` flag; the cast's own attack roll is a separate message.
+  // Spell cast card — has the `casting` flag; its own attack roll is a separate message.
   if (pf2e?.casting?.id && ctx !== 'attack-roll') {
     return { message: m, kind: 'spell', name: m.item?.name ?? 'Spell', rank: pf2e.origin?.castRank ?? 0, map: 0, slug: null };
   }
@@ -127,8 +124,7 @@ function actionFromMessage(m: ChatMessagePF2e): MirroredAction | null {
     const { slug, map } = strikeInfo(m);
     return { message: m, kind: 'strike', name: m.item?.name ?? prettify(slug), rank: 0, map, slug };
   }
-  // Any other ability the source used — Raise a Symbol, Demoralize, a feat: a use-action / self-effect
-  // card or a skill check.
+  // Any other ability used — Raise a Symbol, Demoralize, a feat: a use-action/self-effect card or skill check.
   if (ctx === 'self-effect' || pf2e?.origin?.type === 'action' || pf2e?.origin?.type === 'feat') {
     return { message: m, kind: 'action', name: m.item?.name ?? 'Action', rank: 0, map: 0, slug: m.item?.slug ?? null };
   }
@@ -136,9 +132,9 @@ function actionFromMessage(m: ChatMessagePF2e): MirroredAction | null {
 }
 
 /**
- * The one round this Reflection echoes: its source's captured actions. The capture only updates when
- * the source actually acts, so it is naturally "this round" when the source's initiative precedes the
- * Reflection's (it has already acted) and "last round" otherwise — empty until the source acts at all.
+ * The round this Reflection echoes: its source's captured actions. The capture updates only when the
+ * source acts, so it reads as "this round" once the source's initiative has passed and "last round"
+ * otherwise — empty until the source acts at all.
  */
 export function mirroredActions(reflection: ActorPF2e): MirroredAction[] {
   const combat = game.combat;
@@ -160,11 +156,9 @@ function prettify(slug: string | null): string {
 }
 
 /**
- * Recast a mirrored spell from the Reflection at its own (reduced) rank — ranks above the
- * Reflection's ceiling clamp down. The Reflection is a full clone of the PC's spellbook, so it
- * normally owns this spell already: casting its *own* persisted spell is what keeps the posted
- * card live (the Save / Roll Damage buttons and target capture re-resolve the spell by uuid, which
- * a throwaway clone's uuid can't satisfy — that left a dead card).
+ * Recast a mirrored spell from the Reflection at its own (reduced) rank. The Reflection clones the PC's
+ * spellbook, so it normally owns the spell — casting its *own* persisted spell keeps the card live
+ * (Save / Roll Damage re-resolve by uuid, which a throwaway clone can't satisfy — that left a dead card).
  */
 export async function castMirroredSpell(reflection: ActorPF2e, m: ChatMessagePF2e): Promise<boolean> {
   if (!reflection.isOfType('character')) return false;
@@ -181,8 +175,8 @@ export async function castMirroredSpell(reflection: ActorPF2e, m: ChatMessagePF2
     return true;
   }
 
-  // Fallback: a spell the Reflection lacks (cast from a consumable, or a one-off innate). Clone it
-  // into a spellcasting entry, then embed the spell on the message so its card still re-resolves.
+  // Fallback: a spell the Reflection lacks (from a consumable, or a one-off innate). Clone it into a
+  // spellcasting entry, then embed it on the message so the card still re-resolves.
   let entryId: string | undefined = reflection.itemTypes.spellcastingEntry[0]?.id;
   if (!entryId) {
     const dc = (reflection.getFlag(MODULE_ID, 'mirrorSpellDC') as number | undefined) ?? 32;
@@ -241,10 +235,9 @@ export async function rollMirroredStrike(reflection: ActorPF2e, m: ChatMessagePF
 }
 
 /**
- * Replay a mirrored ability from the Reflection. A recognized skill/basic action (Demoralize, Trip,
- * Feint, …) is run through PF2e's action API so it actually rolls — using the Reflection's own
- * statistics — against the GM's current target. Anything else (Raise a Symbol, a bespoke class
- * feat) has no such roll, so its card is re-posted for the GM to resolve by hand.
+ * Replay a mirrored ability. A recognized skill/basic action (Demoralize, Trip, …) runs through PF2e's
+ * action API so it actually rolls — using the Reflection's own stats — at the GM's target. Anything
+ * else (Raise a Symbol, a bespoke feat) has no such roll, so its card is re-posted to resolve by hand.
  */
 export async function postMirroredAction(reflection: ActorPF2e, m: ChatMessagePF2e): Promise<boolean> {
   const slug = m.item?.slug ?? null;

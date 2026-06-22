@@ -53,9 +53,8 @@
     const roster = (): void => {
       version += 1;
     };
-    // Combat updates cover both turn changes and a source's capture being written (a combat-flag
-    // update), so re-read the panel to always reflect the source's latest captured round. Ticks
-    // persist — `done` is keyed by message id, and a new round's actions are new ids shown unchecked.
+    // Combat updates cover turn changes and a capture being written (a combat-flag update), so re-read
+    // the panel. Ticks persist — `done` is keyed by message id, and a new round's actions are new ids.
     const sync = (): void => {
       version += 1;
       snapshot();

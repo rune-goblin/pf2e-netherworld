@@ -1,14 +1,10 @@
 // Compile one compendium pack from its JSON source into the LevelDB the manifest registers.
 //
-// `fvtt package pack` opens the *destination* to clear it before writing, so a destination left
-// in a bad state — an uncompacted write-ahead log from a Foundry session, a half-written DB —
-// makes it throw `LEVEL_ITERATOR_NOT_OPEN`. That is the same error a genuine Foundry lock raises,
-// so the two are indistinguishable; naively catching it silently keeps a stale pack.
-//
-// So we never pack into the live pack dir: compile into a fresh temp dir (always clean → never
-// chokes) and swap it into place only once it's complete. If the swap can't happen because
-// Foundry actually holds the pack open (a real file lock), the existing build is left intact and
-// we return false — the caller warns and the author closes Foundry to refresh.
+// `fvtt package pack` opens the *destination* to clear it before writing, so a destination left in a
+// bad state (an uncompacted write-ahead log from a Foundry session) throws `LEVEL_ITERATOR_NOT_OPEN` —
+// indistinguishable from a real Foundry lock. So we never pack into the live dir: compile into a fresh
+// temp dir (always clean) and swap it in only once complete. If the swap can't happen because Foundry
+// holds the pack open, the existing build is left intact and we return false.
 import { rmSync, mkdirSync, renameSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
