@@ -4,9 +4,7 @@
   import {
     resolveOfferItems,
     buildOfferCard,
-    buildOfferCardFromParts,
     type OfferBlockKind,
-    type OfferParts,
   } from '../offer';
   import { offerStore } from './offerStore.svelte';
   import type { OfferDialogApp } from './OfferDialogApp';
@@ -15,79 +13,6 @@
 
   const t = (key: string): string => game.i18n.localize(`${MODULE_ID}.${key}`);
   const isGM = game.user.isGM;
-
-  // TEMP draft-editing mode: while DRAFT_MODE is true the GM's cards render from OFFER_DRAFTS below
-  // instead of the item descriptions, so edits here hot-swap into the open dialog (or show on reopen)
-  // without rebuilding the pack or re-importing. Each card is named sections — description / gift /
-  // cost / finale — and finale applies only in the final battle against Veyrin. When the copy is
-  // final, the text moves back into packs/_source/items/*.json and this whole block is deleted.
-  const DRAFT_MODE = true;
-  const OFFER_DRAFTS: Record<string, OfferParts> = {
-    nwStolenSight001: {
-    description: `<p>The Shaper of Ecstasy embeds a nether-forged mechanical eye in place of one of your own.</p>`,
-    abilities: [
-      {
-        name: 'The Dark Holds No Secrets',
-        kind: 'boon',
-        effect: `<p>You permanently gain Greater Darkvision and @UUID[Compendium.pf2e.spell-effects.Item.T5bk6UH7yuYog1Fp]{See the Unseen}: invisible creatures are merely concealed to you.</p>`,
-      },
-      {
-        name: 'Revealing Gaze',
-        kind: 'finale',
-        actions: 1,
-        effect: `<p>During the final battle, Veyrin cannot be concealed from you by shadows. You can cast @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light}; once you do, you cannot do so again for 1d4 rounds.</p>`,
-      },
-      {
-        name: 'Wither in the Light',
-        kind: 'cost',
-        effect: `<p>While in natural sunlight you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}</strong> and <strong>@UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}</strong>.</p>`,
-      },
-    ],
-  },
-  nwShroudOfName01: {
-    description: `<p>Your soul is interwoven with the cold of the void. The Shaper of Ecstasy took your name in exchange.</p>`,
-    abilities: [
-      {
-        name: 'Bound by Cold',
-        kind: 'boon',
-        effect: `<p>You gain permanent resistance 10 to cold.</p>`,
-      },
-      {
-        name: 'The Name Given to the Dark',
-        kind: 'cost',
-        effect: `<p>The world forgets you: you take a permanent &minus;2 status penalty to Diplomacy. Those who were closest to you have the feeling they know you from somewhere. You may take a new name.</p>`,
-      },
-      {
-        name: 'The Cold Does Not Bite Its Own',
-        kind: 'finale',
-        effect: `<p>You and your party ignore the Queen of Shadows' bone-chilling rime.</p>`,
-      },
-    ],
-  },
-  nwSurgeonsGraft1: {
-    description: `<p>The shaper of ecstasy buries a serpentine spiked chain into your chest cavity. You may call upon it to strike your foes.</p>`,
-    abilities: [
-      {
-        name: 'Impaling Chain',
-        kind: 'boon',
-        actions: 1,
-        effect: `<p>A <strong>+2 greater striking wounding cold iron</strong> bursts out of your body to strike.</p>
-<p>When you strike with the chain you take 1d8 piercing damage as it tears free. Then you cannot use it again for 1d4 rounds. A critical with the chain applies
-  @UUID[Compendium.pf2e-netherworld.effects.Item.nwImpalingChain1]{Effect: Impaled} to your victim.</p>`,
-      },
-      {
-        name: 'The Wound Never Closes',
-        kind: 'cost',
-        effect: `<p>When you roll initiative it tears — you take @Damage[1d8[persistent,bleed]] damage (flat DC 15 to end).</p>`,
-      },
-      {
-        name: 'Last Embrace',
-        kind: 'finale',
-        effect: `<p>Your Strikes ignore Veyrin's physical resistances, and once you draw his blood his fast healing never returns.</p>`,
-      },
-    ],
-  },
-  };
 
   let loading = $state(true);
 
@@ -131,17 +56,9 @@
   );
 
   onMount(async () => {
-    if (DRAFT_MODE && isGM) {
-      // Rebuild from OFFER_DRAFTS on every mount so a hot-swap (or close/reopen) shows the new copy.
-      offerStore.cards = await Promise.all(
-        resolveOfferItems().map((item) => {
-          const parts = OFFER_DRAFTS[item.id];
-          return parts ? buildOfferCardFromParts(item, parts) : buildOfferCard(item);
-        }),
-      );
-    } else if (offerStore.cards.length === 0) {
-      // The GM's preview starts empty, so build the cards here; a player's client already has them
-      // injected from the broadcast (see OfferDialogApp.#receive).
+    // The GM's preview starts empty, so build the cards here; a player's client already has them
+    // injected from the broadcast (see OfferDialogApp.#receive).
+    if (offerStore.cards.length === 0) {
       offerStore.cards = await Promise.all(resolveOfferItems().map((item) => buildOfferCard(item)));
     }
     if (!offerStore.activeId && offerStore.cards[0]) offerStore.activeId = offerStore.cards[0].id;

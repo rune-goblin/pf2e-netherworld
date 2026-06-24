@@ -10001,12 +10001,38 @@
       "type": "equipment",
       "system": {
         "description": {
-          "value": "<p>A nether-forged mechanical eye embedded into your socket.</p>\n<hr />\n<p><strong>The dark holds no secrets.</strong> You gain <strong>greater darkvision</strong>: you see in darkness and magical gloom as clearly as in light, and you <strong>ignore the concealed condition imposed by darkness, dim light, and shadow</strong>. Nothing hides from you in the gloom, in this fight or any after. In the finale you see Veyrin even as he melts into shadow, and can point the party straight at him.</p>\n<hr />\n<p><strong>Revealing Light</strong> <span class=\"action-glyph\">1</span> <strong>(finale).</strong> In the battle with Veyrin you can cast @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light} as a single action &mdash; the eye drags the light to wherever he hides.</p>\n<hr />\n<p><strong>The eye and the reflection (the cost).</strong> Your eye is gone, and your <strong>reflection</strong> with it: no glass or water shows you again.</p>\n<p><strong>The light is agony.</strong> The fiend-eye recoils from the sun. In <strong>natural daylight</strong> you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}</strong> &mdash; everything is concealed, a DC 5 flat check to target by sight. <em>(Only true daylight bites: not torches, magical light, or the restored light when the Glass breaks.)</em></p>"
+          "value": "<p>The Shaper of Ecstasy embeds a nether-forged mechanical eye in place of one of your own.</p>\n<hr />\n<p><strong>The Dark Holds No Secrets (the gift).</strong> You permanently gain Greater Darkvision and @UUID[Compendium.pf2e.spell-effects.Item.T5bk6UH7yuYog1Fp]{See the Unseen}: invisible creatures are merely concealed to you.</p>\n<hr />\n<p><strong>Wither in the Light (the cost).</strong> While in natural sunlight you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}</strong> and <strong>@UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}</strong>.</p>\n<hr />\n<p><strong>Revealing Gaze</strong> <span class=\"action-glyph\">1</span> <strong>(the finale).</strong> During the final battle, Veyrin cannot be concealed from you by shadows. You can cast @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light}; once you do, you cannot do so again for 1d4 rounds.</p>"
         },
         "rules": [
           {
             "key": "Sense",
             "selector": "greater-darkvision"
+          },
+          {
+            "key": "Sense",
+            "selector": "see-invisibility"
+          },
+          {
+            "key": "RollOption",
+            "option": "wither-in-the-light",
+            "toggleable": true,
+            "label": "In natural sunlight"
+          },
+          {
+            "key": "GrantItem",
+            "inMemoryOnly": true,
+            "predicate": [
+              "wither-in-the-light"
+            ],
+            "uuid": "Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR"
+          },
+          {
+            "key": "GrantItem",
+            "inMemoryOnly": true,
+            "predicate": [
+              "wither-in-the-light"
+            ],
+            "uuid": "Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv"
           }
         ],
         "slug": "shadows-clarity",
@@ -10016,6 +10042,7 @@
         "traits": {
           "rarity": "unique",
           "value": [
+            "graft",
             "magical"
           ]
         },
@@ -10030,7 +10057,7 @@
         },
         "containerId": null,
         "equipped": {
-          "carryType": "worn",
+          "carryType": "implanted",
           "handsHeld": 0,
           "invested": null
         },
@@ -10049,7 +10076,7 @@
         "quantity": 1,
         "size": "med",
         "usage": {
-          "value": "worn"
+          "value": "implanted"
         }
       },
       "ownership": {
@@ -10064,7 +10091,7 @@
       "type": "equipment",
       "system": {
         "description": {
-          "value": "<p>The Flesh Shaper wove the void's cold through your soul, and a thread of it stayed. The dark took your name in payment.</p>\n<hr />\n<p><strong>Wrapped in cold light (the gift).</strong> You gain permanent <strong>resistance 10 to cold</strong>.</p>\n<hr />\n<p><strong>Voice of the gulf.</strong> <span class=\"action-glyph\">2</span> <strong>(once per day)</strong> You cast @UUID[Compendium.pf2e.spells-srd.Item.GaRQlC9Yw1BGKHfN]{Wave of Despair} as an innate spell &mdash; a 30-foot cone, Will save. Use your own spell DC, or the standard innate DC for your level if you have none.</p>\n<hr />\n<p><strong>The name given to the dark (the cost).</strong> The world half-forgets you; allies grope for what to call you. You take a permanent <strong>&minus;2 status penalty to Diplomacy</strong>, and may take a new name.</p>\n<hr />\n<p><strong>The cold does not bite its own (the finale).</strong> In the battle with Veyrin, you and your party <strong>ignore the Queen of Shadows' bone-chilling rime</strong>.</p>"
+          "value": "<p>Your soul is interwoven with the cold of the void. The Shaper of Ecstasy took your name in exchange.</p>\n<hr />\n<p><strong>Bound by Cold (the gift).</strong> You gain permanent resistance 10 to cold.</p>\n<hr />\n<p><strong>Mantle of the Frozen Heart</strong> <span class=\"action-glyph\">2</span> <strong>(the gift).</strong> Once per day, you cast @UUID[Compendium.pf2e.spells-srd.Item.CcXtbTxtdV9MKQfu]{Mantle of the Frozen Heart} as an innate spell &mdash; for 1 minute your skin and armor turn to the void's blue ice. Choose two of its four aspects; the frost-resistance is already yours, so spend the gift on claws, retaliation, or the glide of ice.</p>\n<hr />\n<p><strong>The Name Given to the Dark (the cost).</strong> The world forgets you: you take a permanent &minus;2 status penalty to Diplomacy. Those who were closest to you have the feeling they know you from somewhere. You may take a new name.</p>\n<hr />\n<p><strong>The Cold Does Not Bite Its Own (the finale).</strong> You and your party ignore the Queen of Shadows' bone-chilling rime.</p>"
         },
         "rules": [
           {
@@ -10138,7 +10165,7 @@
       "type": "weapon",
       "system": {
         "description": {
-          "value": "<p>The Shaper of Ecstasy buries a serpentine spiked chain into your chest cavity. You may call upon it to strike your foes.</p>\n<hr />\n<p><strong>Impaling Chain (the gift).</strong> A <strong>+2 greater striking wounding cold iron</strong> chain bursts from your body to Strike. When you Strike with the chain you take @Damage[1d8[piercing]] damage as it tears free, then it can't Strike again for <strong>1d4 rounds</strong>. On a critical hit, apply @UUID[Item.nwImpalingChain1]{Effect: Impaled}.</p>\n<hr />\n<p><strong>The Wound Never Closes (the cost).</strong> When you roll initiative it tears &mdash; you take @Damage[1d8[persistent,bleed]] damage (flat DC 15 to end).</p>\n<hr />\n<p><strong>Last Embrace (the finale).</strong> Your Strikes <strong>ignore Veyrin's physical resistances</strong>, and once you draw his blood <strong>his fast healing never returns</strong>.</p>"
+          "value": "<p>The Shaper of Ecstasy buries a serpentine spiked chain into your chest cavity. You may call upon it to strike your foes.</p>\n<hr />\n<p><strong>Impaling Chain</strong> <span class=\"action-glyph\">1</span> <strong>(the gift).</strong> Spend a single action to Strike with a <strong>+2 greater striking wounding cold iron</strong> chain that bursts from your body. When you Strike with the chain you take @Damage[1d8[piercing]] damage as it tears free, then it can't Strike again for <strong>1d4 rounds</strong>. On a critical hit, apply @UUID[Item.nwImpalingChain1]{Effect: Impaled}.</p>\n<hr />\n<p><strong>The Wound Never Closes (the cost).</strong> When you roll initiative it tears &mdash; you take @Damage[2d6[persistent,bleed]] damage (flat DC 15 to end).</p>\n<hr />\n<p><strong>Last Embrace (the finale).</strong> Your Strikes <strong>ignore Veyrin's physical resistances</strong>, and once you draw his blood <strong>his fast healing never returns</strong>.</p>"
         },
         "rules": [],
         "slug": "the-sacrament-of-pain",
@@ -10195,8 +10222,8 @@
           "value": null
         },
         "equipped": {
-          "carryType": "held",
-          "handsHeld": 1,
+          "carryType": "implanted",
+          "handsHeld": 0,
           "invested": null
         },
         "hardness": 0,
@@ -10210,7 +10237,7 @@
         "quantity": 1,
         "size": "med",
         "usage": {
-          "value": "held-in-one-hand"
+          "value": "implanted"
         }
       },
       "ownership": {

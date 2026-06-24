@@ -6,12 +6,38 @@
     "type": "equipment",
     "system": {
         "description": {
-            "value": "<p>A nether-forged mechanical eye embedded into your socket.</p>\n<hr />\n<p><strong>The dark holds no secrets.</strong> You gain <strong>greater darkvision</strong>: you see in darkness and magical gloom as clearly as in light, and you <strong>ignore the concealed condition imposed by darkness, dim light, and shadow</strong>. Nothing hides from you in the gloom, in this fight or any after. In the finale you see Veyrin even as he melts into shadow, and can point the party straight at him.</p>\n<hr />\n<p><strong>Revealing Light</strong> <span class=\"action-glyph\">1</span> <strong>(finale).</strong> In the battle with Veyrin you can cast @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light} as a single action &mdash; the eye drags the light to wherever he hides.</p>\n<hr />\n<p><strong>The eye and the reflection (the cost).</strong> Your eye is gone, and your <strong>reflection</strong> with it: no glass or water shows you again.</p>\n<p><strong>The light is agony.</strong> The fiend-eye recoils from the sun. In <strong>natural daylight</strong> you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}</strong> &mdash; everything is concealed, a DC 5 flat check to target by sight. <em>(Only true daylight bites: not torches, magical light, or the restored light when the Glass breaks.)</em></p>"
+            "value": "<p>The Shaper of Ecstasy embeds a nether-forged mechanical eye in place of one of your own.</p>\n<hr />\n<p><strong>The Dark Holds No Secrets (the gift).</strong> You permanently gain Greater Darkvision and @UUID[Compendium.pf2e.spell-effects.Item.T5bk6UH7yuYog1Fp]{See the Unseen}: invisible creatures are merely concealed to you.</p>\n<hr />\n<p><strong>Wither in the Light (the cost).</strong> While in natural sunlight you are <strong>@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}</strong> and <strong>@UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed 1}</strong>.</p>\n<hr />\n<p><strong>Revealing Gaze</strong> <span class=\"action-glyph\">1</span> <strong>(the finale).</strong> During the final battle, Veyrin cannot be concealed from you by shadows. You can cast @UUID[Compendium.pf2e.spells-srd.Item.0qaqksrGGDj74HXE]{Revealing Light}; once you do, you cannot do so again for 1d4 rounds.</p>"
         },
         "rules": [
             {
                 "key": "Sense",
                 "selector": "greater-darkvision"
+            },
+            {
+                "key": "Sense",
+                "selector": "see-invisibility"
+            },
+            {
+                "key": "RollOption",
+                "option": "wither-in-the-light",
+                "toggleable": true,
+                "label": "In natural sunlight"
+            },
+            {
+                "key": "GrantItem",
+                "inMemoryOnly": true,
+                "predicate": [
+                    "wither-in-the-light"
+                ],
+                "uuid": "Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR"
+            },
+            {
+                "key": "GrantItem",
+                "inMemoryOnly": true,
+                "predicate": [
+                    "wither-in-the-light"
+                ],
+                "uuid": "Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv"
             }
         ],
         "slug": "shadows-clarity",
@@ -21,6 +47,7 @@
         "traits": {
             "rarity": "unique",
             "value": [
+                "graft",
                 "magical"
             ]
         },
@@ -35,7 +62,7 @@
         },
         "containerId": null,
         "equipped": {
-            "carryType": "worn",
+            "carryType": "implanted",
             "handsHeld": 0,
             "invested": null
         },
@@ -54,7 +81,7 @@
         "quantity": 1,
         "size": "med",
         "usage": {
-            "value": "worn"
+            "value": "implanted"
         }
     },
     "ownership": {

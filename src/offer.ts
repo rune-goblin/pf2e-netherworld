@@ -33,24 +33,6 @@ export interface OfferCard {
   blocks: OfferBlock[];
 }
 
-/** A single named ability on a card; `kind` becomes the tag shown at the right of the name. */
-export interface OfferAbility {
-  name: string;
-  /** boon = a gift, cost = a price, finale = applies only in the final battle against Veyrin. */
-  kind: 'boon' | 'cost' | 'finale';
-  /** HTML effect text. */
-  effect: string;
-  /** Action-cost glyph (1–3) for an activity; omit for a passive boon/cost. */
-  actions?: number;
-}
-
-/** A card authored as a lede plus named abilities, rather than one `<hr>`-split blob. */
-export interface OfferParts {
-  /** Flavor lede, shown large at the top of the card; carries no name or tag. */
-  description: string;
-  abilities: OfferAbility[];
-}
-
 /** PF2e equipment surfaces we read for the card; typed narrowly to dodge the ItemPF2e union. */
 interface OfferItemSystem {
   description?: { value?: string };
@@ -98,7 +80,26 @@ function classify(html: string, index: number): OfferBlockKind {
   return 'note';
 }
 
-/** Shipped path: enrich the item description and split it on `<hr>` into classified blocks. */
+const ROLE_MARKER = /\(the (?:gift|cost|finale)\)/i;
+
+// Each ability block is authored as `<p><strong>Name (the gift).</strong> body…</p>`, with an
+// optional action-glyph span before the marker. Pull the title and action cost back out of that
+// header — and drop it from the body — so the card renders titled-and-tagged rather than repeating
+// the bold "Name (the gift)." inline beside its kind tag.
+function parseAbilityBlock(html: string): { name?: string; actions?: number; html: string } {
+  const actions = Number(html.match(/action-glyph">(\d+)</)?.[1]) || undefined;
+  const split = html.match(/^<p>([\s\S]*?\(the (?:gift|cost|finale)\)\.?)<\/strong>\s*([\s\S]*)<\/p>\s*$/i);
+  if (!split) return { actions, html };
+  const name = split[1]
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .replace(ROLE_MARKER, '')
+    .replace(/[\s\d.]+$/, '')
+    .trim();
+  return { name: name || undefined, actions, html: `<p>${split[2].trim()}</p>` };
+}
+
+/** Enrich the description, split on `<hr>`, and rebuild one titled block per ability. */
 export async function buildOfferCard(item: ItemPF2e): Promise<OfferCard> {
   const system = item.system as OfferItemSystem;
   const enriched = await enricher(item)(system.description?.value ?? '');
@@ -106,23 +107,9 @@ export async function buildOfferCard(item: ItemPF2e): Promise<OfferCard> {
     .split(/<hr\s*\/?>/i)
     .map((html) => html.trim())
     .filter(Boolean)
-    .map((html, index) => ({ kind: classify(html, index), html }));
-  return cardFrom(item, system, blocks);
-}
-
-/** Structured path: a lede block from the description, then one block per named ability. */
-export async function buildOfferCardFromParts(item: ItemPF2e, parts: OfferParts): Promise<OfferCard> {
-  const system = item.system as OfferItemSystem;
-  const enrich = enricher(item);
-  const blocks: OfferBlock[] = [];
-  if (parts.description.trim()) blocks.push({ kind: 'lede', html: await enrich(parts.description) });
-  for (const ability of parts.abilities) {
-    blocks.push({
-      kind: ability.kind,
-      name: ability.name,
-      actions: ability.actions,
-      html: await enrich(ability.effect),
+    .map((html, index) => {
+      const kind = classify(html, index);
+      return kind === 'lede' ? { kind, html } : { kind, ...parseAbilityBlock(html) };
     });
-  }
   return cardFrom(item, system, blocks);
 }
