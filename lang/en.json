@@ -50,8 +50,21 @@
       "tag": {
         "boon": "Boon",
         "cost": "Cost",
-        "action": "Action"
+        "action": "Action",
+        "finale": "Final Battle Only"
       }
+    },
+    "sacrament": {
+      "cardTitle": "Impaling Chain",
+      "selfDamage": "The barbs tear {name} for {damage}.",
+      "cooldown": "The chain coils — Impaling Chain recharges in {rounds} {unit}.",
+      "round": "round",
+      "rounds": "rounds",
+      "noActor": "Select your token or assign a character before firing the Impaling Chain.",
+      "noEffect": "Impaling Chain: the cooldown effect is missing — rebuild the effects pack.",
+      "recharging": "Impaling Chain hasn't coiled yet — the chain is still recharging.",
+      "woundCardTitle": "The Wound Reopens",
+      "woundReopens": "The cold-iron hook tears open as {name} enters the fray — {formula} persistent bleed (flat DC 15 to end)."
     },
     "notifications": {
       "gmOnly": "Only a GM can manage nether world scenes.",

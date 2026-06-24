@@ -25,6 +25,15 @@ export const ADVENTURE_PACK = 'netherworld';
 export const ADVENTURE_ID = 'nwNetherworldAdv';
 export const ADVENTURE_UUID = `Compendium.${MODULE_ID}.${ADVENTURE_PACK}.Adventure.${ADVENTURE_ID}`;
 
+export const EFFECTS_PACK = 'effects';
+
+// The Sacrament of Pain's Impaling Chain costs the wielder 1d8 piercing per Strike and recharges over
+// 1d4 rounds. PF2e can't gate a weapon Strike, so the strike hook posts the self-damage card and lands
+// this duration effect the table honors (src/sacrament.ts).
+export const SACRAMENT_IMG = 'modules/pf2e-netherworld/assets/threshold-of-pain/sacrement-of-pain.webp';
+export const CHAIN_COILS_EFFECT_ID = 'nwChainCoils0001';
+export const CHAIN_COILS_EFFECT_UUID = `Compendium.${MODULE_ID}.${EFFECTS_PACK}.Item.${CHAIN_COILS_EFFECT_ID}`;
+
 export const INTRO_JOURNAL_ID = 'nwThroughGlassJE';
 
 // makeShadow nests recreated reflection folders under the NetherWorld root so they never land loose.

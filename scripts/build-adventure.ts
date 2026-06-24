@@ -26,6 +26,12 @@ const ADVENTURE = {
 // Every source dir except `effects` (a runtime library, shipped as its own compendium).
 const SOURCE_DIRS = ['scenes', 'journals', 'macros', 'bestiary', 'hazards', 'items'];
 
+// …except this one, which is ALSO imported into the world with the Sacrament gift. The weapon links it by
+// world @UUID[Item.…], so the crit rider (a core-PF2e rule element) keeps working even if the module is
+// later removed. It still ships in the effects compendium too (the GM journal and offer dialog link it
+// there). Aura-granted effects like the Queen's Rime stay compendium-only.
+const IMPORTED_EFFECTS = new Set(['nwImpalingChain1']);
+
 // Each unpacked doc's `_key` (`!collection!id`) names the Adventure field it belongs in. Routing by
 // `_key` rather than directory keeps the bestiary's folder docs out of `actors`.
 type Doc = { _key?: string } & Record<string, unknown>;
@@ -57,6 +63,16 @@ export function buildAdventure(): void {
       }
       (adventure[collection] as Doc[]).push(doc);
       counts[collection] = (counts[collection] ?? 0) + 1;
+    }
+  }
+
+  // The allowlisted effects get a world copy alongside their compendium one, so the gift survives removal.
+  for (const file of readdirSync(join(SRC, 'effects'))) {
+    if (!file.endsWith('.json')) continue;
+    const { _key, ...doc } = JSON.parse(readFileSync(join(SRC, 'effects', file), 'utf8')) as Doc;
+    if (_key && IMPORTED_EFFECTS.has(doc._id as string)) {
+      (adventure.items as Doc[]).push(doc);
+      counts.items = (counts.items ?? 0) + 1;
     }
   }
 

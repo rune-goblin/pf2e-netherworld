@@ -1,0 +1,43 @@
+{
+    "_id": "nwChainCoils0001",
+    "_key": "!items!nwChainCoils0001",
+    "img": "systems/pf2e/icons/equipment/adventuring-gear/chain.webp",
+    "name": "Effect: The Chain Coils",
+    "type": "effect",
+    "system": {
+        "description": {
+            "value": "<p>The barbed chain of @UUID[Item.nwSurgeonsGraft1]{The Sacrament of Pain} has lashed out and recoiled.</p>\n<hr />\n<p>It must gather before it can strike again &mdash; you cannot use <strong>Impaling Chain</strong> until this effect ends. Its duration was rolled when the chain struck.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "level": {
+            "value": 14
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": "Nether World"
+        },
+        "rules": [],
+        "slug": "the-chain-coils",
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": []
+        },
+        "badge": null
+    },
+    "ownership": {
+        "default": 0
+    }
+}

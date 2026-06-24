@@ -14,6 +14,7 @@ import { OfferToolbarApp } from './ui/OfferToolbarApp';
 import { OfferDialogApp } from './ui/OfferDialogApp';
 import { setMirrorState, type MirrorState } from './mirror';
 import { makeShadow } from './shadow';
+import { impalingChain, onSacramentStrike, tearWoundOnInitiative } from './sacrament';
 import { captureSourceAction, clearCaptures } from './reflection';
 
 /** Mount/unmount the floating toolbars for the current canvas and combat state. */
@@ -39,6 +40,8 @@ interface ModuleApi {
   makeShadow: (pc: Actor) => Promise<Actor | null>;
   /** Open the Interlocutor's offer dialog on this client. */
   offer: () => void;
+  /** Fire the Sacrament of Pain's Impaling Chain on an actor: self-damage card + rolled cooldown. */
+  impalingChain: (actor: Actor | null | undefined) => Promise<void>;
 }
 
 /** GM-gate a scene-flag write, then resolve to the scene's resulting state. Warns and no-ops for players. */
@@ -113,7 +116,15 @@ Hooks.once('init', () => {
 
   // Capture each original's actions onto the active combat as they happen; wipe on a new encounter.
   Hooks.on('createChatMessage', (message: ChatMessagePF2e) => captureSourceAction(message));
+
+  // The Sacrament of Pain's recoil rides its own Strike: striking posts the self-damage card and rolls
+  // the recharge, so the bearer never reaches for a separate macro.
+  Hooks.on('createChatMessage', (message: ChatMessagePF2e) => onSacramentStrike(message));
   Hooks.on('combatStart', (combat: Combat) => void clearCaptures(combat));
+
+  // The Sacrament's wound reopens the instant its bearer rolls initiative.
+  Hooks.on('updateCombatant', (combatant: Combatant, changed: Record<string, unknown>) =>
+    void tearWoundOnInitiative(combatant, changed));
 
   // Open the intro journal the moment the import creates it. keepId preserves its id, so this fires once.
   Hooks.on('createJournalEntry', (entry: JournalEntry) => {
@@ -145,6 +156,7 @@ Hooks.once('ready', () => {
     mirror: (state) => canvas.scene ? setMirrorState(canvas.scene, state) : Promise.resolve(),
     makeShadow,
     offer: () => void OfferDialogApp.open(),
+    impalingChain,
   };
   // `api` is Foundry's public-API convention but isn't typed on Module.
   if (module) (module as { api?: ModuleApi }).api = api;

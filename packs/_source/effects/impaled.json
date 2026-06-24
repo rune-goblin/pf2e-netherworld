@@ -2,11 +2,11 @@
     "_id": "nwImpalingChain1",
     "_key": "!items!nwImpalingChain1",
     "img": "systems/pf2e/icons/equipment/adventuring-gear/chain.webp",
-    "name": "Effect: Impaling Chain",
+    "name": "Effect: Impaled",
     "type": "effect",
     "system": {
         "description": {
-            "value": "<p>Inflicted by a critical hit with the Impaling Chain Strike of @UUID[Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The target is impaled and anchored in place, becoming @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the chain. It is <strong>unable to recover from persistent bleed damage</strong> until it gets free (Escape vs. the wielder's class DC or Athletics DC).</p>"
+            "value": "<p>Inflicted by a critical hit with @UUID[Item.nwSurgeonsGraft1]{The Sacrament of Pain}.</p>\n<hr />\n<p>The target is impaled and anchored in place, becoming @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} by the chain. It is <strong>unable to recover from persistent bleed damage</strong> until it gets free (Escape vs. the wielder's class DC or Athletics DC).</p>"
         },
         "duration": {
             "expiry": "turn-start",
@@ -43,7 +43,7 @@
                 }
             }
         ],
-        "slug": "impaling-chain",
+        "slug": "impaled",
         "start": {
             "value": 0,
             "initiative": null

@@ -3,48 +3,12 @@
     "_key": "!items!nwSurgeonsGraft1",
     "img": "modules/pf2e-netherworld/assets/threshold-of-pain/sacrement-of-pain.webp",
     "name": "The Sacrament of Pain",
-    "type": "equipment",
+    "type": "weapon",
     "system": {
         "description": {
-            "value": "<p>The Interlocutor works a hook of cold iron into the bearer and names it a sacrament &mdash; a rite of pain that makes the unkillable killable. It cannot be pried loose; only something profound can cut it out.</p>\n<hr />\n<p><strong>Against Lord Veyrin (the gift).</strong> Your Strikes <strong>ignore Veyrin's physical resistances</strong>, and once you draw his blood <strong>his fast healing never returns</strong>.</p>\n<hr />\n<p><strong>The wound never closes (the cost).</strong> It reopens the moment the fight begins: <strong>when you roll initiative, the wound tears.</strong> Apply @UUID[Compendium.pf2e-netherworld.effects.Item.nwWoundReopens01]{Effect: The Wound Reopens} (@Damage[2d6[persistent,bleed]] damage, flat DC 15 to end).</p>\n<hr />\n<p><strong>Impaling Chain</strong> <span class=\"action-glyph\">1</span></p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Cost</strong> each Strike tears you further &mdash; you take @Damage[2d6[persistent,bleed]] damage.</p>\n<p><strong>Effect</strong> You make a melee <strong>Impaling Chain</strong> Strike (added to your Strikes list): <strong>2d8+7 piercing plus 1d6 persistent bleed</strong>, with the disarm, magical, reach, trip, and unholy traits; add your Strength to damage as with any melee weapon. On a <strong>critical hit</strong>, apply @UUID[Compendium.pf2e-netherworld.effects.Item.nwImpalingChain1]{Effect: Impaling Chain}: the target is @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} and cannot recover from persistent bleed until it Escapes against your class DC or Athletics DC.</p>"
+            "value": "<p>The Shaper of Ecstasy buries a serpentine spiked chain into your chest cavity. You may call upon it to strike your foes.</p>\n<hr />\n<p><strong>Impaling Chain (the gift).</strong> A <strong>+2 greater striking wounding cold iron</strong> chain bursts from your body to Strike. When you Strike with the chain you take @Damage[1d8[piercing]] damage as it tears free, then it can't Strike again for <strong>1d4 rounds</strong>. On a critical hit, apply @UUID[Item.nwImpalingChain1]{Effect: Impaled}.</p>\n<hr />\n<p><strong>The Wound Never Closes (the cost).</strong> When you roll initiative it tears &mdash; you take @Damage[1d8[persistent,bleed]] damage (flat DC 15 to end).</p>\n<hr />\n<p><strong>Last Embrace (the finale).</strong> Your Strikes <strong>ignore Veyrin's physical resistances</strong>, and once you draw his blood <strong>his fast healing never returns</strong>.</p>"
         },
-        "rules": [
-            {
-                "key": "Strike",
-                "slug": "impaling-chain",
-                "label": "Impaling Chain",
-                "img": "systems/pf2e/icons/equipment/adventuring-gear/chain.webp",
-                "category": "martial",
-                "group": "flail",
-                "range": null,
-                "damage": {
-                    "base": {
-                        "damageType": "piercing",
-                        "dice": 2,
-                        "die": "d8",
-                        "modifier": 7
-                    }
-                },
-                "traits": [
-                    "disarm",
-                    "magical",
-                    "reach",
-                    "trip",
-                    "unholy"
-                ]
-            },
-            {
-                "key": "DamageDice",
-                "slug": "impaling-chain-bleed",
-                "selector": [
-                    "impaling-chain-damage"
-                ],
-                "category": "persistent",
-                "damageType": "bleed",
-                "diceNumber": 1,
-                "dieSize": "d6"
-            }
-        ],
+        "rules": [],
         "slug": "the-sacrament-of-pain",
         "level": {
             "value": 14
@@ -53,7 +17,11 @@
             "rarity": "unique",
             "value": [
                 "cursed",
-                "magical"
+                "disarm",
+                "magical",
+                "reach",
+                "trip",
+                "unholy"
             ]
         },
         "publication": {
@@ -62,13 +30,41 @@
             "title": "Nether World"
         },
         "baseItem": null,
+        "category": "martial",
+        "group": "flail",
         "bulk": {
             "value": 0
         },
         "containerId": null,
+        "damage": {
+            "damageType": "piercing",
+            "dice": 1,
+            "die": "d8"
+        },
+        "bonus": {
+            "value": 0
+        },
+        "bonusDamage": {
+            "value": 0
+        },
+        "material": {
+            "grade": "standard",
+            "type": "cold-iron"
+        },
+        "runes": {
+            "potency": 2,
+            "striking": 2,
+            "property": [
+                "wounding"
+            ]
+        },
+        "range": null,
+        "reload": {
+            "value": null
+        },
         "equipped": {
-            "carryType": "worn",
-            "handsHeld": 0,
+            "carryType": "held",
+            "handsHeld": 1,
             "invested": null
         },
         "hardness": 0,
@@ -76,17 +72,13 @@
             "max": 0,
             "value": 0
         },
-        "material": {
-            "grade": null,
-            "type": null
-        },
         "price": {
             "value": {}
         },
         "quantity": 1,
         "size": "med",
         "usage": {
-            "value": "worn"
+            "value": "held-in-one-hand"
         }
     },
     "ownership": {
