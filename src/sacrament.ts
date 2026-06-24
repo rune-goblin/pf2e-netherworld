@@ -2,8 +2,7 @@ import type { ChatMessagePF2e } from 'foundry-pf2e';
 import { MODULE_ID, SACRAMENT_IMG, CHAIN_COILS_EFFECT_UUID } from './constants';
 
 const SACRAMENT_SLUG = 'the-sacrament-of-pain';
-const PERSISTENT_DAMAGE_UUID = 'Compendium.pf2e.conditionitems.Item.Persistent Damage';
-const WOUND_FORMULA = '1d8';
+const WOUND_FORMULA = '2d6';
 const WOUND_TORN_FLAG = 'woundTorn';
 
 const enrich = (html: string, actor: Actor): Promise<string> =>
@@ -101,11 +100,12 @@ export async function tearWoundOnInitiative(combatant: Combatant, changed: Recor
   if (!bears || combatant.getFlag(MODULE_ID, WOUND_TORN_FLAG)) return;
   await combatant.setFlag(MODULE_ID, WOUND_TORN_FLAG, true);
 
-  const condition = await fromUuid(PERSISTENT_DAMAGE_UUID);
+  // Looked up by slug — fromUuid can't resolve the persistent-damage condition by name.
+  const condition = game.pf2e.ConditionManager.getCondition('persistent-damage', {
+    system: { persistent: { formula: WOUND_FORMULA, damageType: 'bleed', dc: 15 } },
+  });
   if (condition) {
-    const source = (condition as { toObject(): { system: Record<string, unknown> } }).toObject();
-    source.system.persistent = { formula: WOUND_FORMULA, damageType: 'bleed', dc: 15 };
-    await actor.createEmbeddedDocuments('Item', [source as Record<string, unknown>]);
+    await actor.createEmbeddedDocuments('Item', [condition.toObject() as Record<string, unknown>]);
   }
 
   const flavor = t('sacrament.woundReopens', { name: actor.name, formula: WOUND_FORMULA });
