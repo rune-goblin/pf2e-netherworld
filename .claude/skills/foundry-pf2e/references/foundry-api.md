@@ -1,4 +1,4 @@
-# Foundry API (v13/v14) — quick reference
+look look# Foundry API (v13/v14) — quick reference
 
 Everything lives under the `foundry.*` tree; the old bare globals are off-limits (see
 the v14 hard rule in SKILL.md).

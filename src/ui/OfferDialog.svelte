@@ -101,17 +101,20 @@
         <article class="card">
           <header class="header">
             {#if isGM}
-              <button
-                type="button"
+              <!-- Literal role/tabindex (not a dynamic expression) so svelte-check sees a static
+                   interactive element; a <button> here won't stretch to fill the grid track. -->
+              <div
                 class="frame grantable"
                 data-aura={auraTrait}
                 draggable="true"
                 ondragstart={onGrantDragStart}
+                role="button"
+                tabindex="0"
                 aria-label={t('offer.dragHint')}
                 title={t('offer.dragHint')}
               >
                 <img src={active.img} alt={active.name} draggable="false" />
-              </button>
+              </div>
             {:else}
               <div class="frame" data-aura={auraTrait}>
                 <img src={active.img} alt={active.name} />
@@ -304,17 +307,6 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1;
-  }
-  /* The GM's frame is a <button> for drag-to-grant; strip native chrome so it matches the div. */
-  button.frame {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: none;
-    font: inherit;
-    color: inherit;
-    appearance: none;
   }
   .frame.grantable {
     cursor: grab;
