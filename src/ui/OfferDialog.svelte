@@ -55,6 +55,17 @@
       .sort((a, b) => ORDER[a.kind] - ORDER[b.kind]),
   );
 
+  // GM-only: hand the offered item to Foundry's drag pipeline so dropping the icon on a token grants
+  // it (PF2e's dropCanvasData hook routes an Item drop to the target actor's sheet).
+  function onGrantDragStart(event: DragEvent): void {
+    const item = active ? game.items.get(active.id) : null;
+    if (!isGM || !item || !event.dataTransfer) return;
+    event.dataTransfer.setData('text/plain', JSON.stringify(item.toDragData()));
+    event.dataTransfer.effectAllowed = 'copy';
+    const img = event.currentTarget instanceof HTMLElement ? event.currentTarget.querySelector('img') : null;
+    if (img) event.dataTransfer.setDragImage(img, img.clientWidth / 2, img.clientHeight / 2);
+  }
+
   onMount(async () => {
     // The GM's preview starts empty, so build the cards here; a player's client already has them
     // injected from the broadcast (see OfferDialogApp.#receive).
@@ -89,9 +100,23 @@
       {#key active.id}
         <article class="card">
           <header class="header">
-            <div class="frame" data-aura={auraTrait}>
-              <img src={active.img} alt={active.name} />
-            </div>
+            {#if isGM}
+              <button
+                type="button"
+                class="frame grantable"
+                data-aura={auraTrait}
+                draggable="true"
+                ondragstart={onGrantDragStart}
+                aria-label={t('offer.dragHint')}
+                title={t('offer.dragHint')}
+              >
+                <img src={active.img} alt={active.name} draggable="false" />
+              </button>
+            {:else}
+              <div class="frame" data-aura={auraTrait}>
+                <img src={active.img} alt={active.name} />
+              </div>
+            {/if}
             <div class="info">
               <h2 class="name">{active.name}</h2>
               {#if lede}
@@ -279,6 +304,23 @@
     position: relative;
     width: 100%;
     aspect-ratio: 1;
+  }
+  /* The GM's frame is a <button> for drag-to-grant; strip native chrome so it matches the div. */
+  button.frame {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+    appearance: none;
+  }
+  .frame.grantable {
+    cursor: grab;
+  }
+  .frame.grantable:active {
+    cursor: grabbing;
   }
   .frame[data-aura='cold'] {
     --aura: color-mix(in srgb, var(--ice) 40%, transparent);
