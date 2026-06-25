@@ -161,8 +161,6 @@
     <div class="status">
       {#if isGM && offerStore.sharing}
         <span class="live" title={t('offer.liveHint')}><span class="pulse"></span>{t('offer.live')}</span>
-      {:else if !isGM}
-        <span class="presented">{t('offer.presented')}</span>
       {/if}
     </div>
     <div class="actions">
@@ -216,21 +214,13 @@
     color: var(--bone-dim);
   }
 
-  .live,
-  .presented {
+  .live {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     font-size: 0.8rem;
     letter-spacing: 0.02em;
-  }
-  .live {
     color: #f0c9c9;
-  }
-  .presented {
-    color: var(--bone-dim);
-    font-style: italic;
-    font-size: 0.85rem;
   }
   .pulse {
     width: 8px;
@@ -374,11 +364,12 @@
     animation: rise 0.5s ease both;
     animation-delay: calc(var(--i, 0) * 70ms + 0.12s);
   }
-  /* The lede: large display size, set apart from the body blocks. */
+  /* The lede: display copy, set apart from the body blocks. */
   .lede.body {
     font-family: var(--font-primary, 'Signika', sans-serif);
-    font-size: 1.35rem;
-    line-height: 1.25;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.4;
     color: #ddd6c6;
   }
   .block.boon {

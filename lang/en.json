@@ -44,7 +44,6 @@
       "live": "Live to players",
       "liveHint": "The players are seeing this card; your tab changes are pushed to them.",
       "dragHint": "Drag onto a token to grant this gift.",
-      "presented": "The Interlocutor lays these before you…",
       "loading": "Summoning the offer…",
       "empty": "The offered gifts aren't in this world yet — import the adventure first.",
       "itemLevel": "Item",
