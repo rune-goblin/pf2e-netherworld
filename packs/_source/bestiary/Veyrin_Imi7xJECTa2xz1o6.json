@@ -166,15 +166,16 @@
         "value": [
           "common",
           "necril",
-          "shadowtongue"
+          "shadowtongue",
+          "thassilonian"
         ],
         "details": ""
       },
       "level": {
         "value": 16
       },
-      "blurb": "Vampiric scoundrel of a fallen empire",
-      "publicNotes": "<p>Once a noble of a decadent empire long since crumbled to dust, this strigoi has spent millennia perfecting the art of the silent kill. They walk the night as a charming socialite by day's end and a shadow-cloaked killer by midnight, blending the cunning of a master scoundrel with the otherworldly powers of an ancient strigoi. Their preferred weapon is a slim, silver-flecked rapier carried at the hip beneath fine clothes, but they are equally happy to fall on prey as a cloud of shadow and feed in silence.</p>\n<hr>\n<p>This strigoi is a level 16 rogue (Scoundrel racket) with the Wizard and Acrobat free archetypes. Built from a Pathbuilder PC stat block and templated onto an ancient strigoi for use as an NPC.</p>",
+      "blurb": "Strigoi Assassin - Hand of the Shadow Queen",
+      "publicNotes": "<p>Years ago, an entire noble house was drawn into the NetherWorld and consumed by strigoi. As the insatiable Stragoi grew in power, so did their hunger, and they continue to reach into our world to devour the unwise, luring them with promises of power. This one has preyed on the princess all her life, finally manifesting in physical form to do her bidding all the while drawing her deeper into the netherworld and preying upon their shared victims. . </p>",
       "privateNotes": "<h3>Reference Abilities (kept off the combat sheet)</h3><p><em>Moved here to keep Veyrin's action list runnable. None of these change his numbers — they're already baked into his statistics. Click any link for the full rules.</em></p><p><strong>Shadow &amp; vampire actions:</strong> @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.eQLGYrJhu787pEwc]{Shadow Form}, @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.R5VgwNbwc3QbqVXC]{Shadow Escape}, @UUID[Compendium.pf2e.feats-srd.Item.sIeuPW0j39fTZm08]{Conceal Spell}, @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.8IQqWkLqzvWA1JRJ]{Create Spawn}.</p><p><strong>Defensive passives:</strong> @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FXHjmH1oce7Z3tZb]{Coffin Restoration}, @UUID[Compendium.pf2e.classfeatures.Item.fMHYzXEUMoWskKMF]{Rogue Resilience}, @UUID[Compendium.pf2e.classfeatures.Item.BTpL6XvMk4jvVYYJ]{Greater Rogue Reflexes}, @UUID[Compendium.pf2e.feats-srd.Item.5YlHrBCZJmb6Q4Lz]{Slippery Prey}, @UUID[Compendium.pf2e.feats-srd.Item.c9fHUSI5lRdXu1Ic]{Feather Step}, @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Greater Darkvision}, @UUID[Compendium.pf2e.feats-srd.Item.2kwXTUjYYhoAGySr]{Incredible Initiative}.</p><p><strong>Offensive passives:</strong> @UUID[Compendium.pf2e.classfeatures.Item.myvcir1LEkaVxOlE]{Master Tricks}, @UUID[Compendium.pf2e.classfeatures.Item.Z7HX6TeFsaup7Dx9]{Greater Weapon Specialization}, @UUID[Compendium.pf2e.feats-srd.Item.80AC6Q1m0eQiE7Et]{Tumbling Theft}.</p><p><strong>Skill &amp; exploration:</strong> @UUID[Compendium.pf2e.feats-srd.Item.n0urrOL8YlnVBVRQ]{Legendary Sneak}, @UUID[Compendium.pf2e.feats-srd.Item.IJQJBnD5CjKvFYEx]{Foil Senses}, @UUID[Compendium.pf2e.feats-srd.Item.N7IsnLDFt73r7x56]{Shadow Mark}, @UUID[Compendium.pf2e.feats-srd.Item.09PurtIanNUPfNRq]{Combat Climber}, @UUID[Compendium.pf2e.feats-srd.Item.pKnX7MGZayqZui0Z]{Aerobatics Mastery}, @UUID[Compendium.pf2e.feats-srd.Item.Ux73dmoF8KnavyUD]{Fleet}, Heraldry Lore (Lore skill).</p><p><strong>Origin:</strong> @UUID[Compendium.pf2e.feats-srd.Item.ACeqRSWr4CEwLZgO]{Shadow Pact} — the pact that grants his Domain of Dusk focus spell.</p>",
       "publication": {
         "title": "Custom (Pathbuilder import)",
@@ -2129,8 +2130,8 @@
       "effects": [],
       "system": {
         "description": {
-          "gm": "<p><em>Veyrin casts Enervation/Claim Undead from his <strong>Innate Spells</strong> entry (DC 34, 1/day each). A creature that loots the ring can gain the same casts via the <strong>Attune Signet Ring</strong> macro. The void weakness applies only to non-undead wearers.</em></p><hr><p><strong>Curse (cursed).</strong> While worn by a creature that lacks the shadow trait, the Signet Ring imposes a −2 status penalty to saving throws against shadow-trait spells and effects. It can't be removed except by <em>remove curse</em> or similar (GM-adjudicated). Shadow creatures such as Veyrin are unaffected.</p>",
-          "value": "<p>The signet ring of a long-fallen noble house.</p><p>This ancient platinum ring is set with an umbral stone that flickers with shadowy vapours. The wearer is closer to the netherworld.</p><p>Weakness 10 to void damage</p><p><strong>once per day may cast (DC 34)</strong></p><p>@UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Enervation} heightened to 8th rank</p><p>@UUID[Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l]{Claim Undead}</p>"
+          "gm": "<p><em>Veyrin casts Enervation/Claim Undead from his <strong>Innate Spells</strong> entry (DC 34, 1/day each). A creature that loots the ring can gain the same casts via the <strong>Attune Signet Ring</strong> macro. The void weakness applies only to non-undead wearers.</em></p>",
+          "value": "<p>House Rogarvia Signet ring.</p><p>This ancient platinum ring is set with an umbral stone that flickers with shadowy vapours. The wearer is closer to the netherworld.</p><p>Weakness 10 to void damage</p><p><strong>once per day may cast (DC 34)</strong></p><p>@UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Enervation} heightened to 8th rank</p><p>@UUID[Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l]{Claim Undead}</p>"
         },
         "rules": [
           {
@@ -2142,18 +2143,6 @@
                 "not": "self:trait:undead"
               }
             ]
-          },
-          {
-            "key": "FlatModifier",
-            "selector": "saving-throw",
-            "type": "status",
-            "value": -2,
-            "predicate": [
-              "item:trait:shadow",
-              {
-                "not": "self:trait:shadow"
-              }
-            ]
           }
         ],
         "slug": null,
@@ -2163,9 +2152,7 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [
-            "cursed"
-          ],
+          "value": [],
           "rarity": "common"
         },
         "publication": {
