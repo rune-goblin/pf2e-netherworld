@@ -66,6 +66,41 @@
       "woundCardTitle": "The Wound Reopens",
       "woundReopens": "The cold-iron hook tears open as {name} enters the fray — {formula} persistent bleed (flat DC 15 to end)."
     },
+    "debilitatingStrike": {
+      "dialogTitle": "Strigoi Critical Debilitation — {name}",
+      "targetLabel": "Target",
+      "prompt": "Select <strong>two</strong> debilitations. They last until the end of the strigoi's next turn; removing one removes both.",
+      "critPrompt": "<strong>Critical Hit?</strong> Also post Debilitating Strike (Fort DC {dc}) save prompt",
+      "apply": "Apply",
+      "cancel": "Cancel",
+      "pickTwo": "Please select exactly two debilitations.",
+      "noTarget": "Please select a single token first.",
+      "effectName": "Strigoi's Double Debilitation ({picks})",
+      "effectIntro": "Until end of the strigoi's next turn, the target:",
+      "removingNote": "Removing one removes both.",
+      "cardTitle": "Double Debilitation",
+      "cardIntro": "<strong>{name}</strong> (until end of strigoi's next turn):",
+      "labels": {
+        "speed": "−10-foot Speed status penalty",
+        "enfeebled": "Enfeebled 1",
+        "reactions": "Can't use reactions (Tactical)",
+        "flank": "Can't flank or contribute to allies' flanking (Tactical)"
+      },
+      "lines": {
+        "speed": "takes a −10-foot status penalty to its Speeds",
+        "enfeebled": "becomes @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "reactions": "can't use reactions",
+        "flank": "can't flank or contribute to allies' flanking"
+      },
+      "crit": {
+        "title": "Debilitating Strike — Critical Hit",
+        "intro": "<strong>{name}</strong>, attempt a Fortitude save against the strigoi's class DC:",
+        "criticalSuccess": "<strong>Critical Success</strong> Unaffected.",
+        "success": "<strong>Success</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until end of strigoi's next turn.",
+        "failure": "<strong>Failure</strong> @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until end of strigoi's next turn.",
+        "criticalFailure": "<strong>Critical Failure</strong> @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until end of strigoi's next turn."
+      }
+    },
     "notifications": {
       "gmOnly": "Only a GM can manage nether world scenes.",
       "saved": "Nether world scenes updated.",
@@ -101,6 +136,10 @@
         "name": "Nether World",
         "label": "Open Picker",
         "hint": "Mark scenes as nether world to dim their lights one step (bright → dim, dim → dark)."
+      },
+      "autoDebilitatingStrike": {
+        "name": "Auto-prompt Debilitating Strike",
+        "hint": "When Veyrin's Strike hits an off-guard creature, automatically open the debilitation picker — aimed at the victim, with the crit save pre-handled. The manual macro still works either way."
       }
     }
   }

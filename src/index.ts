@@ -3,7 +3,7 @@ import type { ChatMessagePF2e } from 'foundry-pf2e';
 import {
   MODULE_ID, ENABLED_FLAG, TOOLBAR_POSITION_SETTING, REFLECTION_TOOLBAR_POSITION_SETTING,
   REFLECT_ACTIONS_TOOLBAR_POSITION_SETTING, OFFER_TOOLBAR_POSITION_SETTING, ADVENTURE_UUID,
-  INTRO_JOURNAL_ID,
+  INTRO_JOURNAL_ID, AUTO_DEBILITATING_STRIKE_SETTING,
 } from './constants';
 import { installLightPatch, registerSceneSync, setNetherworld } from './lightPatch';
 import { NetherWorldApp } from './ui/NetherWorldApp';
@@ -15,6 +15,7 @@ import { OfferDialogApp } from './ui/OfferDialogApp';
 import { setMirrorState, type MirrorState } from './mirror';
 import { makeShadow } from './shadow';
 import { impalingChain, onSacramentStrike, tearWoundOnInitiative } from './sacrament';
+import { openDebilitatingStrike, onStrigoiStrike } from './debilitatingStrike';
 import { captureSourceAction, clearCaptures } from './reflection';
 
 /** Mount/unmount the floating toolbars for the current canvas and combat state. */
@@ -42,6 +43,8 @@ interface ModuleApi {
   offer: () => void;
   /** Fire the Sacrament of Pain's Impaling Chain on an actor: self-damage card + rolled cooldown. */
   impalingChain: (actor: Actor | null | undefined) => Promise<void>;
+  /** Open the Strigoi's debilitation picker for a victim (default: controlled token). */
+  debilitatingStrike: (victim?: Actor | null, opts?: { isCrit?: boolean }) => Promise<void>;
 }
 
 /** GM-gate a scene-flag write, then resolve to the scene's resulting state. Warns and no-ops for players. */
@@ -105,6 +108,15 @@ Hooks.once('init', () => {
     default: {},
   });
 
+  game.settings.register(MODULE_ID, AUTO_DEBILITATING_STRIKE_SETTING, {
+    name: `${MODULE_ID}.settings.autoDebilitatingStrike.name`,
+    hint: `${MODULE_ID}.settings.autoDebilitatingStrike.hint`,
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true,
+  });
+
   // One scene-load hook gates the toolbars: each mounts on its scene and unmounts on leave.
   Hooks.on('canvasReady', () => syncToolbars());
 
@@ -120,6 +132,10 @@ Hooks.once('init', () => {
   // The Sacrament of Pain's recoil rides its own Strike: striking posts the self-damage card and rolls
   // the recharge, so the bearer never reaches for a separate macro.
   Hooks.on('createChatMessage', (message: ChatMessagePF2e) => onSacramentStrike(message));
+
+  // Veyrin's Debilitating Strike: a Strike hitting an off-guard creature auto-opens the picker for the GM,
+  // pre-aimed at the victim with the crit save pre-ticked (toggleable; manual macro stays as fallback).
+  Hooks.on('createChatMessage', (message: ChatMessagePF2e) => onStrigoiStrike(message));
   Hooks.on('combatStart', (combat: Combat) => void clearCaptures(combat));
 
   // The Sacrament's wound reopens the instant its bearer rolls initiative.
@@ -157,6 +173,7 @@ Hooks.once('ready', () => {
     makeShadow,
     offer: () => void OfferDialogApp.open(),
     impalingChain,
+    debilitatingStrike: openDebilitatingStrike,
   };
   // `api` is Foundry's public-API convention but isn't typed on Module.
   if (module) (module as { api?: ModuleApi }).api = api;

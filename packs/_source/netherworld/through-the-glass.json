@@ -3124,8 +3124,8 @@
           }
         },
         "perception": {
-          "details": "+2 circumstance from Incredible Initiative",
-          "mod": 24,
+          "details": "",
+          "mod": 22,
           "senses": [
             {
               "type": "greater-darkvision"
@@ -4206,7 +4206,7 @@
             },
             "category": "offensive",
             "description": {
-              "value": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:25] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>",
+              "value": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:34|traits:incapacitation] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>",
               "gm": ""
             },
             "publication": {
@@ -4249,17 +4249,17 @@
           "flags": {
             "pf2e-reignmaker": {
               "abilityBenchmarks": {
-                "descriptionTemplate": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:{0}] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>",
+                "descriptionTemplate": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:{0}|traits:incapacitation] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>",
                 "scalableValues": [
                   {
                     "type": "dc",
                     "benchmark": 0,
-                    "originalValue": "25",
+                    "originalValue": "34",
                     "baseLevel": 16,
                     "checkType": "fortitude"
                   }
                 ],
-                "originalDescription": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:25] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>"
+                "originalDescription": "<p>Whenever the strigoi critically succeeds at an attack roll against an enemy and uses Debilitating Strike, it can apply this debilitation. The target attempts a @Check[fortitude|dc:34|traits:incapacitation] save against the strigoi's class DC.</p>\n<p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1} until the end of the strigoi's next turn.</p>\n<p><strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} until the end of the strigoi's next turn.</p>\n<p><strong>Critical Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] until the end of the strigoi's next turn.</p>"
               }
             }
           },
@@ -9017,6 +9017,67 @@
             "exportSource": null
           },
           "_key": "!actors.items!Imi7xJECTa2xz1o6.Ew1ihu8GQZZm7BDe"
+        },
+        {
+          "_id": "haGUwBMdTWm6WmYf",
+          "img": "systems/pf2e/icons/actions/Passive.webp",
+          "name": "Incredible Initiative",
+          "sort": 1970000,
+          "system": {
+            "actionType": {
+              "value": "passive"
+            },
+            "actions": {
+              "value": null
+            },
+            "category": "interaction",
+            "description": {
+              "value": "<p>@UUID[Compendium.pf2e.feats-srd.Item.2kwXTUjYYhoAGySr]{Incredible Initiative} grants Veyrin a +2 circumstance bonus to initiative rolls — applied to the initiative check itself, so it counts whether he rolls Perception or Stealth.</p>",
+              "gm": ""
+            },
+            "publication": {
+              "license": "ORC",
+              "remaster": true,
+              "title": "Pathfinder Player Core",
+              "authors": ""
+            },
+            "rules": [
+              {
+                "key": "FlatModifier",
+                "selector": "initiative",
+                "type": "circumstance",
+                "value": 2
+              }
+            ],
+            "slug": "incredible-initiative",
+            "traits": {
+              "value": [
+                "general"
+              ],
+              "otherTags": []
+            },
+            "_migration": {
+              "version": 0.959,
+              "previous": {
+                "schema": 0.955,
+                "foundry": "14.361",
+                "system": "8.1.2"
+              }
+            }
+          },
+          "type": "action",
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": null,
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.haGUwBMdTWm6WmYf"
         }
       ],
       "folder": "tPzW5eubmMnK6wMU",
@@ -11537,6 +11598,19 @@
       "ownership": {
         "default": 0
       }
+    },
+    {
+      "_id": "nwDebilStrike001",
+      "name": "Nether World: Debilitating Strike",
+      "type": "script",
+      "author": "rgnetherworld001",
+      "img": "modules/pf2e-netherworld/assets/debilitating-strike.webp",
+      "scope": "global",
+      "command": "game.modules.get(\"pf2e-netherworld\")?.api?.debilitatingStrike?.();",
+      "ownership": {
+        "default": 0
+      },
+      "folder": "nwNetherMacroFld"
     },
     {
       "_id": "nwLinkMirror0001",

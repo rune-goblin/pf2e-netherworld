@@ -1,0 +1,13 @@
+{
+    "_id": "nwDebilStrike001",
+    "_key": "!macros!nwDebilStrike001",
+    "name": "Nether World: Debilitating Strike",
+    "type": "script",
+    "author": "rgnetherworld001",
+    "img": "modules/pf2e-netherworld/assets/debilitating-strike.webp",
+    "scope": "global",
+    "command": "game.modules.get(\"pf2e-netherworld\")?.api?.debilitatingStrike?.();",
+    "ownership": {
+        "default": 0
+    }
+}

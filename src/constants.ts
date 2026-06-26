@@ -34,6 +34,14 @@ export const SACRAMENT_IMG = 'modules/pf2e-netherworld/assets/threshold-of-pain/
 export const CHAIN_COILS_EFFECT_ID = 'nwChainCoils0001';
 export const CHAIN_COILS_EFFECT_UUID = `Compendium.${MODULE_ID}.${EFFECTS_PACK}.Item.${CHAIN_COILS_EFFECT_ID}`;
 
+// Veyrin, the Strigoi. The bundled Adventure imports with keepId, so this base-actor id is stable on
+// every install. His Debilitating Strike free action triggers when a Strike hits an off-guard creature;
+// the strike hook (src/debilitatingStrike.ts) auto-opens the debilitation picker. DC 34 is his class DC
+// at level 16 — the Critical Debilitation ability text's "25" was a template leftover.
+export const STRIGOI_ACTOR_ID = 'Imi7xJECTa2xz1o6';
+export const DEBILITATING_STRIKE_DC = 34;
+export const AUTO_DEBILITATING_STRIKE_SETTING = 'autoDebilitatingStrike';
+
 export const INTRO_JOURNAL_ID = 'nwThroughGlassJE';
 
 // makeShadow nests recreated reflection folders under the NetherWorld root so they never land loose.
