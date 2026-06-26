@@ -1,0 +1,14 @@
+{
+    "_id": "nwAttuneRing0001",
+    "_key": "!macros!nwAttuneRing0001",
+    "name": "Nether World: Attune Signet Ring",
+    "type": "script",
+    "author": "rgnetherworld001",
+    "img": "modules/pf2e-netherworld/assets/signet-ring.webp",
+    "scope": "global",
+    "folder": "nwNetherMacroFld",
+    "command": "/*\n * Attune Signet Ring — grant the ring's innate spells to a PC (pf2e v8 / Foundry v14).\n *\n * Equipment can't carry a castable spell in pf2e, so when a player character loots the\n * Signet Ring, select their token and run this. It adds a divine \"Signet Ring\" innate entry\n * holding Enervation (heightened to 8th, 1/day) and Claim Undead (1/day) — the same casts\n * Veyrin uses. The ring's item DC is 34; a character's innate entry derives its own DC from\n * the chosen ability + proficiency, so adjust the entry if you want a flat 34.\n */\n\nconst ENERVATION = \"Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK\";\nconst CLAIM_UNDEAD = \"Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l\";\nconst SOURCE_FLAG = \"signet-ring\";\n\nconst actor = canvas.tokens.controlled[0]?.actor ?? game.user.character;\nif (!actor) {\n  ui.notifications.warn(\"Select the character's token (or assign yourself a character) first.\");\n  return;\n}\n\nif (actor.itemTypes.spellcastingEntry.some((e) => e.getFlag(\"pf2e-netherworld\", \"source\") === SOURCE_FLAG)) {\n  ui.notifications.warn(`${actor.name} already carries the Signet Ring spells.`);\n  return;\n}\n\nconst [enervation, claimUndead] = await Promise.all([fromUuid(ENERVATION), fromUuid(CLAIM_UNDEAD)]);\nif (!enervation || !claimUndead) {\n  ui.notifications.error(\"Attune Signet Ring: couldn't load the ring's spells — is the pf2e system compendium available?\");\n  return;\n}\n\nconst [entry] = await actor.createEmbeddedDocuments(\"Item\", [\n  {\n    type: \"spellcastingEntry\",\n    name: \"Signet Ring\",\n    system: {\n      prepared: { value: \"innate\" },\n      tradition: { value: \"divine\" },\n      ability: { value: \"cha\" },\n      proficiency: { value: 1 },\n    },\n    flags: { \"pf2e-netherworld\": { source: SOURCE_FLAG } },\n  },\n]);\n\nconst enervationData = enervation.toObject();\nenervationData.system.location = { value: entry.id, heightenedLevel: 8, uses: { value: 1, max: 1 } };\n\nconst claimUndeadData = claimUndead.toObject();\nclaimUndeadData.system.location = { value: entry.id, uses: { value: 1, max: 1 } };\n\nawait actor.createEmbeddedDocuments(\"Item\", [enervationData, claimUndeadData]);\nui.notifications.info(`Signet Ring attuned to ${actor.name}: Enervation (8th) and Claim Undead, 1/day each.`);\nactor.sheet?.render(true);\n",
+    "ownership": {
+        "default": 0
+    }
+}

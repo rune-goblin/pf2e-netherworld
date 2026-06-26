@@ -2903,7 +2903,7 @@
       "sort": 150000
     },
     {
-      "name": "Veyrin Myrcovich Rorgarvia",
+      "name": "Veyrin",
       "type": "npc",
       "ownership": {
         "default": 0,
@@ -3070,17 +3070,16 @@
             "value": [
               "common",
               "necril",
-              "shadowtongue",
-              "thassilonian"
+              "shadowtongue"
             ],
             "details": ""
           },
           "level": {
             "value": 16
           },
-          "blurb": "Vampiric scoundrel of ancient Eurythnia",
-          "publicNotes": "<p>Once a noble of Runelord Sorshen's Eurythnia, this strigoi has spent millennia perfecting the art of the silent kill. They walk the night as a charming socialite by day's end and a shadow-cloaked killer by midnight, blending the cunning of a master scoundrel with the otherworldly powers of a strigoi progenitor. Their preferred weapon is a slim, silver-flecked rapier carried at the hip beneath fine clothes, but they are equally happy to fall on prey as a cloud of shadow and feed in silence.</p>\n<hr>\n<p>This strigoi is a level 16 rogue (Scoundrel racket) with the Wizard and Acrobat free archetypes. Built from a Pathbuilder PC stat block and templated onto a strigoi progenitor for use as an NPC.</p>",
-          "privateNotes": "",
+          "blurb": "Vampiric scoundrel of a fallen empire",
+          "publicNotes": "<p>Once a noble of a decadent empire long since crumbled to dust, this strigoi has spent millennia perfecting the art of the silent kill. They walk the night as a charming socialite by day's end and a shadow-cloaked killer by midnight, blending the cunning of a master scoundrel with the otherworldly powers of an ancient strigoi. Their preferred weapon is a slim, silver-flecked rapier carried at the hip beneath fine clothes, but they are equally happy to fall on prey as a cloud of shadow and feed in silence.</p>\n<hr>\n<p>This strigoi is a level 16 rogue (Scoundrel racket) with the Wizard and Acrobat free archetypes. Built from a Pathbuilder PC stat block and templated onto an ancient strigoi for use as an NPC.</p>",
+          "privateNotes": "<h3>Reference Abilities (kept off the combat sheet)</h3><p><em>Moved here to keep Veyrin's action list runnable. None of these change his numbers — they're already baked into his statistics. Click any link for the full rules.</em></p><p><strong>Shadow &amp; vampire actions:</strong> @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.eQLGYrJhu787pEwc]{Shadow Form}, @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.R5VgwNbwc3QbqVXC]{Shadow Escape}, @UUID[Compendium.pf2e.feats-srd.Item.sIeuPW0j39fTZm08]{Conceal Spell}, @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.8IQqWkLqzvWA1JRJ]{Create Spawn}.</p><p><strong>Defensive passives:</strong> @UUID[Compendium.pf2e.bestiary-family-ability-glossary.Item.FXHjmH1oce7Z3tZb]{Coffin Restoration}, @UUID[Compendium.pf2e.classfeatures.Item.fMHYzXEUMoWskKMF]{Rogue Resilience}, @UUID[Compendium.pf2e.classfeatures.Item.BTpL6XvMk4jvVYYJ]{Greater Rogue Reflexes}, @UUID[Compendium.pf2e.feats-srd.Item.5YlHrBCZJmb6Q4Lz]{Slippery Prey}, @UUID[Compendium.pf2e.feats-srd.Item.c9fHUSI5lRdXu1Ic]{Feather Step}, @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr]{Greater Darkvision}, @UUID[Compendium.pf2e.feats-srd.Item.2kwXTUjYYhoAGySr]{Incredible Initiative}.</p><p><strong>Offensive passives:</strong> @UUID[Compendium.pf2e.classfeatures.Item.myvcir1LEkaVxOlE]{Master Tricks}, @UUID[Compendium.pf2e.classfeatures.Item.Z7HX6TeFsaup7Dx9]{Greater Weapon Specialization}, @UUID[Compendium.pf2e.feats-srd.Item.80AC6Q1m0eQiE7Et]{Tumbling Theft}.</p><p><strong>Skill &amp; exploration:</strong> @UUID[Compendium.pf2e.feats-srd.Item.n0urrOL8YlnVBVRQ]{Legendary Sneak}, @UUID[Compendium.pf2e.feats-srd.Item.IJQJBnD5CjKvFYEx]{Foil Senses}, @UUID[Compendium.pf2e.feats-srd.Item.N7IsnLDFt73r7x56]{Shadow Mark}, @UUID[Compendium.pf2e.feats-srd.Item.09PurtIanNUPfNRq]{Combat Climber}, @UUID[Compendium.pf2e.feats-srd.Item.pKnX7MGZayqZui0Z]{Aerobatics Mastery}, @UUID[Compendium.pf2e.feats-srd.Item.Ux73dmoF8KnavyUD]{Fleet}, Heraldry Lore (Lore skill).</p><p><strong>Origin:</strong> @UUID[Compendium.pf2e.feats-srd.Item.ACeqRSWr4CEwLZgO]{Shadow Pact} — the pact that grants his Domain of Dusk focus spell.</p>",
           "publication": {
             "title": "Custom (Pathbuilder import)",
             "authors": "",
@@ -3221,7 +3220,7 @@
           "_id": "9o4KT1mz9ZBfGqn0",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Rapier",
-          "sort": 800000,
+          "sort": 100000,
           "system": {
             "attackEffects": {
               "value": []
@@ -3302,7 +3301,7 @@
           "_id": "7Icj14IGbzzwaZ3U",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Claw",
-          "sort": 600000,
+          "sort": 200000,
           "system": {
             "attackEffects": {
               "value": [
@@ -3385,7 +3384,7 @@
           "_id": "brECyHtwNBTEwK20",
           "img": "systems/pf2e/icons/default-icons/melee.svg",
           "name": "Fangs",
-          "sort": 700000,
+          "sort": 300000,
           "system": {
             "attackEffects": {
               "value": [
@@ -3465,68 +3464,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.brECyHtwNBTEwK20"
         },
         {
-          "_id": "mbdTSCGwJ58d1y0l",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Greater Darkvision",
-          "sort": 1000000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "interaction",
-            "description": {
-              "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.GreaterDarkvision]</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "OGL",
-              "remaster": false,
-              "title": "Pathfinder Bestiary",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "greater-darkvision",
-            "traits": {
-              "value": [],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.4Ho2xMPEC05aSxzr",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.mbdTSCGwJ58d1y0l"
-        },
-        {
           "_id": "QwrA439BrxTowhOA",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Fast Healing 15",
-          "sort": 1700000,
+          "sort": 1200000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -3587,71 +3528,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.QwrA439BrxTowhOA"
         },
         {
-          "_id": "JjpaQlFvG2qbSTqr",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Coffin Restoration",
-          "sort": 1300000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>Unlike other undead, a vampire isn't destroyed at 0 HP. Instead, it falls @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]. If its body rests in its coffin for 1 hour, the vampire gains 1 HP, after which its fast healing begins to function normally.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "OGL",
-              "remaster": false,
-              "title": "Pathfinder Bestiary",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "vampire-basic-coffin-restoration",
-            "traits": {
-              "value": [
-                "divine",
-                "void"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.FXHjmH1oce7Z3tZb",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.JjpaQlFvG2qbSTqr"
-        },
-        {
           "_id": "necqzLfLt5cCMp6L",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Void Healing",
-          "sort": 3400000,
+          "sort": 1210000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -3716,7 +3596,7 @@
           "_id": "h491AD4DH2vlNUTt",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Strigoi Weaknesses",
-          "sort": 3200000,
+          "sort": 1230000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -3832,131 +3712,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.h491AD4DH2vlNUTt"
         },
         {
-          "_id": "uEK8VaZaU6brMJjE",
-          "img": "systems/pf2e/icons/actions/OneAction.webp",
-          "name": "Shadow Form",
-          "sort": 2800000,
-          "system": {
-            "actionType": {
-              "value": "action"
-            },
-            "actions": {
-              "value": 1
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi reverts to pure shadow and absorbs its body and its gear into the darkness, or it shifts back to its physical form. In shadow form, the strigoi gains a climb Speed equal to its land Speed and can move through any gap that isn't airtight. It can only move along solid surfaces that aren't highly reflective, not liquid or mirrored surfaces. If the surface is destroyed, the strigoi returns to physical form and is @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}. The strigoi loses fast healing while in shadow form but can remain in shadow form indefinitely.</p>\n<p>A strigoi exposed to sunlight while in shadow form becomes @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 2} and must attempt a @Check[flat|dc:16] at the end of each of its turns. If it fails this flat check, it is destroyed.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "OGL",
-              "remaster": false,
-              "title": "Pathfinder Adventure: Shadows at Sundown",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "vampire-strigoi-shadow-form",
-            "traits": {
-              "value": [
-                "concentrate",
-                "divine",
-                "shadow"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.eQLGYrJhu787pEwc",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.uEK8VaZaU6brMJjE"
-        },
-        {
-          "_id": "FiLM7HKHSm5aebAM",
-          "img": "systems/pf2e/icons/actions/FreeAction.webp",
-          "name": "Shadow Escape",
-          "sort": 2700000,
-          "system": {
-            "actionType": {
-              "value": "free"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p><strong>Trigger</strong> The strigoi is reduced to 0 HP</p>\n<hr>\n<p><strong>Effect</strong> The strigoi uses Shadow Form. It can take move actions to move toward its coffin even though it's at 0 HP. While at 0 HP in this form, the strigoi is unaffected by further damage. Once the strigoi reaches its coffin, or if it hasn't done so within 2 hours, it automatically returns to its physical form, @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf].</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "OGL",
-              "remaster": false,
-              "title": "Pathfinder Adventure: Shadows at Sundown",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "vampire-strigoi-progenitor-shadow-escape",
-            "traits": {
-              "value": [],
-              "otherTags": []
-            },
-            "deathNote": true,
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.R5VgwNbwc3QbqVXC",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.FiLM7HKHSm5aebAM"
-        },
-        {
           "_id": "BpcDGANm6IPDFyXv",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Nimble Dodge",
-          "sort": 2400000,
+          "sort": 200000,
           "system": {
             "actionType": {
               "value": "reaction"
@@ -4016,7 +3775,7 @@
           "_id": "nJbSUDkNSJdgqtkl",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Sidestep",
-          "sort": 3000000,
+          "sort": 210000,
           "system": {
             "actionType": {
               "value": "reaction"
@@ -4076,7 +3835,7 @@
           "_id": "wLl6D6ADAfzradRj",
           "img": "systems/pf2e/icons/actions/Reaction.webp",
           "name": "Dodge Away",
-          "sort": 1500000,
+          "sort": 220000,
           "system": {
             "actionType": {
               "value": "reaction"
@@ -4136,7 +3895,7 @@
           "_id": "xKrj9QXfun2V07cD",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Mobility",
-          "sort": 2300000,
+          "sort": 1270000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4193,190 +3952,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.xKrj9QXfun2V07cD"
         },
         {
-          "_id": "RjzXtddoFIK26Aab",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Greater Rogue Reflexes",
-          "sort": 2000000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi's reflexes are unmatched. Its proficiency rank for Reflex saves is legendary.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "greater-rogue-reflexes",
-            "traits": {
-              "value": [
-                "rogue"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.RjzXtddoFIK26Aab"
-        },
-        {
-          "_id": "cxvMLCTLZkF17eZB",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Rogue Resilience",
-          "sort": 2600000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>Hard knocks have taught the strigoi how to roll with a punch. Its proficiency rank for Fortitude saves is expert. When it rolls a success on a Fortitude save, it gets a critical success instead.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "rogue-resilience",
-            "traits": {
-              "value": [
-                "rogue"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.cxvMLCTLZkF17eZB"
-        },
-        {
-          "_id": "yyDYF1p2EUHk8y6H",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Slippery Prey",
-          "sort": 3100000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi gets a +2 circumstance bonus to Reflex saves and Acrobatics checks to @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9] from a grab, restraint, or similar effect.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "slippery-prey",
-            "traits": {
-              "value": [
-                "general"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.yyDYF1p2EUHk8y6H"
-        },
-        {
           "_id": "niRQNAPlA4NNSjpH",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Sneak Attack +5d6",
-          "sort": 4900000,
+          "sort": 1000000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4436,7 +4015,7 @@
           "_id": "A16Cjff3oiH2zOXv",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Surprise Attack",
-          "sort": 5200000,
+          "sort": 1050000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4496,7 +4075,7 @@
           "_id": "msUv3PVMLfP19gYF",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Scoundrel's Feint",
-          "sort": 4600000,
+          "sort": 1010000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4556,7 +4135,7 @@
           "_id": "C8Hkc0BAtNDufUtq",
           "img": "systems/pf2e/icons/actions/FreeAction.webp",
           "name": "Debilitating Strike",
-          "sort": 3800000,
+          "sort": 300000,
           "system": {
             "actionType": {
               "value": "free"
@@ -4616,7 +4195,7 @@
           "_id": "CBzVWtpdst2q7ARS",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Critical Debilitation",
-          "sort": 3700000,
+          "sort": 1020000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4690,130 +4269,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.CBzVWtpdst2q7ARS"
         },
         {
-          "_id": "n78ijINttOGinixP",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Master Tricks",
-          "sort": 4400000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>The strigoi has refined its weapon expertise. It is master in simple weapons, martial weapons, and unarmed attacks.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "master-tricks",
-            "traits": {
-              "value": [
-                "rogue"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.n78ijINttOGinixP"
-        },
-        {
-          "_id": "C90jvB5Eru7IZg2U",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Greater Weapon Specialization",
-          "sort": 4300000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>The strigoi has learned how to inflict greater injuries with the weapons it knows best. It deals 4 additional damage with weapons and unarmed attacks in which it is an expert; 6 with master; and 8 with legendary.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "greater-weapon-specialization",
-            "traits": {
-              "value": [
-                "rogue"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.C90jvB5Eru7IZg2U"
-        },
-        {
           "_id": "UzFilKpq02ijZgaZ",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Spring from the Shadows",
-          "sort": 5000000,
+          "sort": 100000,
           "system": {
             "actionType": {
               "value": "action"
@@ -4874,7 +4333,7 @@
           "_id": "E6xXoJ81Ly2r84Rk",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Tumble Behind",
-          "sort": 5300000,
+          "sort": 1100000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4934,7 +4393,7 @@
           "_id": "MK6lEfGVuaGdTUHK",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Overextending Feint",
-          "sort": 4500000,
+          "sort": 1110000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -4994,7 +4453,7 @@
           "_id": "PGMZdPFe2nYtFIfE",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Sly Disarm",
-          "sort": 4800000,
+          "sort": 1120000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -5054,7 +4513,7 @@
           "_id": "LzLQayl9QcVEU8c0",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Tumbling Strike",
-          "sort": 5400000,
+          "sort": 110000,
           "system": {
             "actionType": {
               "value": "action"
@@ -5113,132 +4572,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.LzLQayl9QcVEU8c0"
         },
         {
-          "_id": "KO9PjlxuVPn0yIap",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Tumbling Theft",
-          "sort": 5500000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>The strigoi can use Acrobatics to @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k] an object from a creature, even if another creature is observing.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "tumbling-theft",
-            "traits": {
-              "value": [
-                "rogue"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.KO9PjlxuVPn0yIap"
-        },
-        {
-          "_id": "xjzFJyBoDfcpjrut",
-          "img": "systems/pf2e/icons/actions/OneAction.webp",
-          "name": "Conceal Spell",
-          "sort": 3500000,
-          "system": {
-            "actionType": {
-              "value": "action"
-            },
-            "actions": {
-              "value": 1
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>If the strigoi's next action is to Cast a Spell, the spell gains the subtle trait, hiding the manifestations that would usually give away its spellcasting. The trait hides only the spell's spellcasting actions and manifestations, not its effects.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "conceal-spell",
-            "traits": {
-              "value": [
-                "concentrate",
-                "spellshape",
-                "wizard"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.xjzFJyBoDfcpjrut"
-        },
-        {
           "_id": "HnauM7kv0LpiFDAA",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Steady Spellcasting",
-          "sort": 5100000,
+          "sort": 1960000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -5298,7 +4635,7 @@
           "_id": "rUARv4J0MQgCM0M4",
           "img": "systems/pf2e/icons/actions/TwoActions.webp",
           "name": "Domain of Dusk",
-          "sort": 3900000,
+          "sort": 140000,
           "system": {
             "actionType": {
               "value": "action"
@@ -5375,7 +4712,7 @@
           "_id": "szbj0maaf21FeolV",
           "img": "systems/pf2e/icons/actions/TwoActions.webp",
           "name": "Dominate",
-          "sort": 4000000,
+          "sort": 150000,
           "system": {
             "actionType": {
               "value": "action"
@@ -5454,7 +4791,7 @@
           "_id": "Saq0582UjZrem6aR",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Drink Essence",
-          "sort": 4100000,
+          "sort": 120000,
           "system": {
             "actionType": {
               "value": "action"
@@ -5511,71 +4848,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.Saq0582UjZrem6aR"
         },
         {
-          "_id": "vNKKJdDBpvaSfn7O",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Create Spawn",
-          "sort": 3600000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>If a creature dies after being reduced to 0 HP by Drink Essence or Domain of Dusk, the strigoi can turn the victim into a vampire by donating some of its own blood and burying the victim in earth for 3 nights.</p>\n<p>If the new vampire is lower level than its creator, it is under the creator's control. A victim that is 8th level or higher becomes a strigoi servant; a lower-level victim becomes a moroi vampire.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "OGL",
-              "remaster": false,
-              "title": "Pathfinder Adventure: Shadows at Sundown",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "vampire-strigoi-progenitor-create-spawn",
-            "traits": {
-              "value": [
-                "divine",
-                "downtime"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.8IQqWkLqzvWA1JRJ",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.vNKKJdDBpvaSfn7O"
-        },
-        {
           "_id": "BHjL2qtEDmlQRhFl",
           "img": "systems/pf2e/icons/actions/OneAction.webp",
           "name": "Grab",
-          "sort": 4200000,
+          "sort": 130000,
           "system": {
             "actionType": {
               "value": "action"
@@ -5630,71 +4906,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.BHjL2qtEDmlQRhFl"
         },
         {
-          "_id": "Cw4wQXeaWpoVsD6a",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Legendary Sneak",
-          "sort": 2200000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi can @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa] and @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4] even without cover or being concealed. It also doesn't become observed if it Sneaks while being observed.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "legendary-sneak",
-            "traits": {
-              "value": [
-                "general",
-                "skill"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.Cw4wQXeaWpoVsD6a"
-        },
-        {
           "_id": "HJul6UlOSIYSsUNC",
           "img": "systems/pf2e/icons/actions/Passive.webp",
           "name": "Swift Sneak",
-          "sort": 3300000,
+          "sort": 1910000,
           "system": {
             "actionType": {
               "value": "passive"
@@ -5752,132 +4967,10 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.HJul6UlOSIYSsUNC"
         },
         {
-          "_id": "hfTD3WAuOWDnE9G2",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Foil Senses",
-          "sort": 1900000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi is always considered to be taking precautions against special senses (see @UUID[Compendium.pf2e.actionspf2e.Item.IE2nThCmoyhQA0Jn], @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa], @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]).</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "foil-senses",
-            "traits": {
-              "value": [
-                "general",
-                "skill"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.hfTD3WAuOWDnE9G2"
-        },
-        {
-          "_id": "XIZTQSkTZWez6lFO",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Shadow Mark",
-          "sort": 2900000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi can blend into shadows. As long as it's in dim light or darkness, creatures that would track it take a -2 circumstance penalty to their Survival checks to do so.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "shadow-mark",
-            "traits": {
-              "value": [
-                "general",
-                "skill"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.XIZTQSkTZWez6lFO"
-        },
-        {
           "_id": "YLGdQVfN8Ob7epqv",
           "img": "systems/pf2e/icons/actions/FreeAction.webp",
           "name": "Kip Up",
-          "sort": 2100000,
+          "sort": 310000,
           "system": {
             "actionType": {
               "value": "free"
@@ -5935,432 +5028,13 @@
           "_key": "!actors.items!Imi7xJECTa2xz1o6.YLGdQVfN8Ob7epqv"
         },
         {
-          "_id": "GJeIkr8QKHPqq1mz",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Combat Climber",
-          "sort": 1400000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi isn't @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg] while @UUID[Compendium.pf2e.actionspf2e.Item.pprgrYQ1QnIDGZiy]ing, and it can fight while Climbing. It can also Climb with a hand occupied.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "combat-climber",
-            "traits": {
-              "value": [
-                "general",
-                "skill"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.GJeIkr8QKHPqq1mz"
-        },
-        {
-          "_id": "CD0h4siZNV2IlAjV",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Aerobatics Mastery",
-          "sort": 1200000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi can use Acrobatics to @UUID[Compendium.pf2e.actionspf2e.Item.Qf1ylAbdVi1rkc8M] and is automatically trained in that action. When Flying, it doesn't need to attempt Acrobatics checks to perform basic maneuvers in poor wind conditions.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "aerobatics-mastery",
-            "traits": {
-              "value": [
-                "general",
-                "skill"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.CD0h4siZNV2IlAjV"
-        },
-        {
-          "_id": "ZXGkQpg0sJ5hT6wS",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Incredible Initiative",
-          "sort": 1100000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "interaction",
-            "description": {
-              "value": "<p>The strigoi gains a +2 circumstance bonus to initiative rolls.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "incredible-initiative",
-            "traits": {
-              "value": [
-                "general"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.ZXGkQpg0sJ5hT6wS"
-        },
-        {
-          "_id": "FcT4Nygt9wL6BlpI",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Feather Step",
-          "sort": 1800000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "defensive",
-            "description": {
-              "value": "<p>The strigoi can take Step actions into difficult terrain, but not into greater difficult terrain.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "feather-step",
-            "traits": {
-              "value": [
-                "general"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.FcT4Nygt9wL6BlpI"
-        },
-        {
-          "_id": "odglRTvKlXTbz9jX",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Fleet",
-          "sort": 900000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "interaction",
-            "description": {
-              "value": "<p>The strigoi's Speed is increased by 5 feet.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "fleet",
-            "traits": {
-              "value": [
-                "general"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.odglRTvKlXTbz9jX"
-        },
-        {
-          "_id": "FVqTzmjliGozsMHX",
-          "img": "systems/pf2e/icons/actions/Passive.webp",
-          "name": "Shadow Pact",
-          "sort": 4700000,
-          "system": {
-            "actionType": {
-              "value": "passive"
-            },
-            "actions": {
-              "value": null
-            },
-            "category": "offensive",
-            "description": {
-              "value": "<p>Thousands of years ago, the strigoi's ancestors made a pact with @UUID[Compendium.pf2e.deities.Item.ZfN7jkK6boU1FuiS]. The strigoi can take @Damage[1]{1 damage} to mix blood and shadows to cast 5th-rank @UUID[Compendium.pf2e.spells-srd.Item.TUj8eugNqAvB1vVR] as an innate divine spell. It can use this ability as often as it wishes, but it can have only one such object in existence at a time. If the object encounters bright light, the spell ends and the object dissolves into shadows.</p>",
-              "gm": ""
-            },
-            "publication": {
-              "license": "ORC",
-              "remaster": false,
-              "title": "Pathfinder Player Core",
-              "authors": ""
-            },
-            "rules": [],
-            "slug": "shadow-pact",
-            "traits": {
-              "value": [
-                "human"
-              ],
-              "otherTags": []
-            },
-            "_migration": {
-              "version": 0.959,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            }
-          },
-          "type": "action",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": "Compendium.pf2e.feats-srd.Item.ACeqRSWr4CEwLZgO",
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.FVqTzmjliGozsMHX"
-        },
-        {
-          "_id": "KvQzMxUsVkAIieZG",
-          "img": "systems/pf2e/icons/default-icons/lore.svg",
-          "name": "Heraldry Lore",
-          "sort": 5600000,
-          "system": {
-            "description": {
-              "gm": "",
-              "value": ""
-            },
-            "rules": [],
-            "slug": null,
-            "_migration": {
-              "version": 0.959,
-              "lastMigration": null,
-              "previous": {
-                "schema": 0.955,
-                "foundry": "14.361",
-                "system": "8.1.2"
-              }
-            },
-            "traits": {
-              "otherTags": []
-            },
-            "publication": {
-              "title": "Pathfinder Player Core",
-              "authors": "",
-              "license": "OGL",
-              "remaster": false
-            },
-            "mod": {
-              "value": 23
-            },
-            "proficient": {
-              "value": 0
-            }
-          },
-          "type": "lore",
-          "_stats": {
-            "coreVersion": "14.361",
-            "systemId": "pf2e",
-            "systemVersion": "8.1.2",
-            "compendiumSource": null,
-            "createdTime": 1780915231634,
-            "modifiedTime": 1780915231634,
-            "lastModifiedBy": "rJDvcbHa2crb2UJb",
-            "duplicateSource": null,
-            "exportSource": null
-          },
-          "effects": [],
-          "flags": {},
-          "folder": null,
-          "ownership": {
-            "default": 0
-          },
-          "_key": "!actors.items!Imi7xJECTa2xz1o6.KvQzMxUsVkAIieZG"
-        },
-        {
-          "name": "Rogarvia Signet Ring",
+          "name": "Signet Ring",
           "type": "equipment",
           "effects": [],
           "system": {
             "description": {
-              "gm": "",
-              "value": "<p>House Rogarvia Signet ring.</p><p>This ancient platinum ring is set with an umbral stone that flickers with shadowy vapours. The wearer is closer to the netherworld.</p><p>Weakness 10 to void damage</p><p><strong>once per day may cast (DC 34)</strong></p><p>@UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Enervation} heighteed to level 8</p><p>@UUID[Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l]{Claim Undead}</p>"
+              "gm": "<p><em>Veyrin casts Enervation/Claim Undead from his <strong>Innate Spells</strong> entry (DC 34, 1/day each). A creature that loots the ring can gain the same casts via the <strong>Attune Signet Ring</strong> macro. The void weakness applies only to non-undead wearers.</em></p><hr><p><strong>Curse (cursed).</strong> While worn by a creature that lacks the shadow trait, the Signet Ring imposes a −2 status penalty to saving throws against shadow-trait spells and effects. It can't be removed except by <em>remove curse</em> or similar (GM-adjudicated). Shadow creatures such as Veyrin are unaffected.</p>",
+              "value": "<p>The signet ring of a long-fallen noble house.</p><p>This ancient platinum ring is set with an umbral stone that flickers with shadowy vapours. The wearer is closer to the netherworld.</p><p>Weakness 10 to void damage</p><p><strong>once per day may cast (DC 34)</strong></p><p>@UUID[Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK]{Enervation} heightened to 8th rank</p><p>@UUID[Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l]{Claim Undead}</p>"
             },
             "rules": [
               {
@@ -6372,6 +5046,18 @@
                     "not": "self:trait:undead"
                   }
                 ]
+              },
+              {
+                "key": "FlatModifier",
+                "selector": "saving-throw",
+                "type": "status",
+                "value": -2,
+                "predicate": [
+                  "item:trait:shadow",
+                  {
+                    "not": "self:trait:shadow"
+                  }
+                ]
               }
             ],
             "slug": null,
@@ -6381,7 +5067,9 @@
             },
             "traits": {
               "otherTags": [],
-              "value": [],
+              "value": [
+                "cursed"
+              ],
               "rarity": "common"
             },
             "publication": {
@@ -6436,7 +5124,7 @@
             "subitems": []
           },
           "_id": "ExcmbySTYOBgWYhj",
-          "img": "systems/pf2e/icons/default-icons/equipment.svg",
+          "img": "modules/pf2e-netherworld/assets/signet-ring.webp",
           "folder": null,
           "sort": 0,
           "ownership": {
@@ -9666,6 +8354,682 @@
           "flags": {},
           "_id": "7iwJV6itQgerIuDC",
           "_key": "!actors.items!Imi7xJECTa2xz1o6.7iwJV6itQgerIuDC"
+        },
+        {
+          "name": "Innate Spells",
+          "type": "spellcastingEntry",
+          "system": {
+            "description": {
+              "value": "",
+              "gm": ""
+            },
+            "rules": [],
+            "slug": null,
+            "_migration": {
+              "version": 0.959,
+              "lastMigration": null
+            },
+            "traits": {
+              "otherTags": []
+            },
+            "publication": {
+              "title": "",
+              "authors": "",
+              "license": "OGL",
+              "remaster": false
+            },
+            "ability": {
+              "value": "wis"
+            },
+            "spelldc": {
+              "value": 26,
+              "dc": 34,
+              "mod": 0
+            },
+            "tradition": {
+              "value": "divine"
+            },
+            "prepared": {
+              "value": "innate",
+              "flexible": false
+            },
+            "showSlotlessLevels": {
+              "value": true
+            },
+            "proficiency": {
+              "value": 0
+            },
+            "slots": {},
+            "autoHeightenLevel": {
+              "value": null
+            }
+          },
+          "_id": "cRDf2wpAqo3KCNMv",
+          "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+          "effects": [],
+          "folder": null,
+          "sort": 0,
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": null,
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.cRDf2wpAqo3KCNMv"
+        },
+        {
+          "_id": "TMQlgA1cI9Lo0ifo",
+          "folder": null,
+          "img": "systems/pf2e/icons/spells/enervation.webp",
+          "name": "Enervation",
+          "system": {
+            "area": {
+              "type": "line",
+              "value": 30
+            },
+            "cost": {
+              "value": ""
+            },
+            "counteraction": false,
+            "damage": {},
+            "defense": {
+              "save": {
+                "basic": false,
+                "statistic": "fortitude"
+              }
+            },
+            "description": {
+              "value": "<p>Extending a finger, you fire a beam of void energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[(floor(@item.rank/2))d8[persistent,void]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1}.</p><hr /><p><strong>Heightened (+2)</strong> The persistent void damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure.</p>"
+            },
+            "duration": {
+              "sustained": false,
+              "value": ""
+            },
+            "heightening": {
+              "damage": {}
+            },
+            "level": {
+              "value": 4
+            },
+            "publication": {
+              "license": "OGL",
+              "remaster": false,
+              "title": "Pathfinder Advanced Player's Guide"
+            },
+            "range": {
+              "value": ""
+            },
+            "requirements": "",
+            "rules": [],
+            "target": {
+              "value": ""
+            },
+            "time": {
+              "value": "2"
+            },
+            "traits": {
+              "rarity": "common",
+              "traditions": [
+                "arcane",
+                "divine",
+                "occult"
+              ],
+              "value": [
+                "concentrate",
+                "manipulate",
+                "void"
+              ]
+            },
+            "location": {
+              "value": "cRDf2wpAqo3KCNMv",
+              "heightenedLevel": 8,
+              "uses": {
+                "value": 1,
+                "max": 1
+              }
+            }
+          },
+          "type": "spell",
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.TMQlgA1cI9Lo0ifo",
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": "Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK",
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "sort": 0,
+          "flags": {},
+          "effects": []
+        },
+        {
+          "_id": "fpbjiAObrBYeKmHv",
+          "folder": null,
+          "img": "systems/pf2e/icons/spells/claim-undead.webp",
+          "name": "Claim Undead",
+          "system": {
+            "area": null,
+            "cost": {
+              "value": ""
+            },
+            "counteraction": false,
+            "damage": {},
+            "defense": {
+              "save": {
+                "basic": false,
+                "statistic": "will"
+              }
+            },
+            "description": {
+              "value": "<p>You attempt to wrest control of a target undead or force it to recognize you as its master. If the target is controlled by another creature, that controller attempts a Will saving throw to retain control; otherwise, the target must attempt a Will save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and @UUID[Compendium.pf2e.conditionitems.Item.Confused] for 1 round as it fights off your commands.</p>\n<p><strong>Failure</strong> The target becomes controlled by you and follows your orders. It (or the creature previously controlling it) can attempt a new Will save at the end of each of its turns; on a success, the spell ends, and the creature becomes stunned 1 and confused for 1 round. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order.</p>\n<p><strong>Critical Failure</strong> As failure, but the target (or the creature previously controlling it) receives a new save only if you give it a new order that is against its nature.</p>"
+            },
+            "duration": {
+              "sustained": false,
+              "value": "10 minutes"
+            },
+            "level": {
+              "value": 6
+            },
+            "publication": {
+              "license": "ORC",
+              "remaster": true,
+              "title": "Pathfinder Player Core 2"
+            },
+            "range": {
+              "value": "30 feet"
+            },
+            "requirements": "",
+            "rules": [],
+            "target": {
+              "value": "1 undead creature"
+            },
+            "time": {
+              "value": "2"
+            },
+            "traits": {
+              "rarity": "uncommon",
+              "traditions": [],
+              "value": [
+                "concentrate",
+                "focus",
+                "incapacitation",
+                "manipulate",
+                "oracle"
+              ]
+            },
+            "location": {
+              "value": "cRDf2wpAqo3KCNMv",
+              "uses": {
+                "value": 1,
+                "max": 1
+              }
+            }
+          },
+          "type": "spell",
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.fpbjiAObrBYeKmHv",
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": "Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l",
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "sort": 0,
+          "flags": {},
+          "effects": []
+        },
+        {
+          "name": "Harm Font",
+          "type": "spellcastingEntry",
+          "system": {
+            "description": {
+              "gm": "",
+              "value": ""
+            },
+            "rules": [],
+            "slug": null,
+            "_migration": {
+              "version": 0.959,
+              "lastMigration": null
+            },
+            "traits": {
+              "otherTags": []
+            },
+            "publication": {
+              "title": "",
+              "authors": "",
+              "license": "OGL",
+              "remaster": false
+            },
+            "ability": {
+              "value": "wis"
+            },
+            "spelldc": {
+              "value": 26,
+              "dc": 34,
+              "mod": 0
+            },
+            "tradition": {
+              "value": "divine"
+            },
+            "prepared": {
+              "value": "spontaneous"
+            },
+            "showSlotlessLevels": {
+              "value": false
+            },
+            "proficiency": {
+              "value": 1
+            },
+            "slots": {
+              "slot0": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot1": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot2": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot3": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot4": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot5": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot6": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot7": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot8": {
+                "prepared": [],
+                "value": 6,
+                "max": 6
+              },
+              "slot9": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot10": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              },
+              "slot11": {
+                "prepared": [],
+                "value": 0,
+                "max": 0
+              }
+            },
+            "autoHeightenLevel": {
+              "value": null
+            }
+          },
+          "_id": "hZQq4BOBgi2yRuc0",
+          "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
+          "effects": [],
+          "folder": null,
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": null,
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.hZQq4BOBgi2yRuc0"
+        },
+        {
+          "folder": null,
+          "img": "systems/pf2e/icons/spells/harm.webp",
+          "name": "Harm",
+          "system": {
+            "description": {
+              "gm": "",
+              "value": "<p>You channel void energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 void damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.</p>\n<p><span class=\"action-glyph\">1</span> The spell has a range of touch.</p>\n<p><span class=\"action-glyph\">2</span> (concentrate) The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8.</p>\n<p><span class=\"action-glyph\">3</span> (concentrate) You disperse void energy in a @Template[emanation|distance:30]. This targets all living and undead creatures in the area.</p>\n<hr>\n<p><strong>Heightened (+1)</strong> The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.</p>"
+            },
+            "rules": [],
+            "slug": "harm",
+            "_migration": {
+              "version": 0.959,
+              "lastMigration": null,
+              "previous": null
+            },
+            "traits": {
+              "otherTags": [],
+              "value": [
+                "manipulate",
+                "void"
+              ],
+              "rarity": "common",
+              "traditions": [
+                "divine"
+              ]
+            },
+            "publication": {
+              "title": "Pathfinder Player Core",
+              "authors": "",
+              "license": "ORC",
+              "remaster": true
+            },
+            "level": {
+              "value": 1
+            },
+            "requirements": "",
+            "target": {
+              "value": "1 living creature or 1 willing undead creature"
+            },
+            "range": {
+              "value": "varies"
+            },
+            "area": null,
+            "time": {
+              "value": "1 to 3"
+            },
+            "duration": {
+              "value": "",
+              "sustained": false
+            },
+            "damage": {
+              "0": {
+                "applyMod": false,
+                "category": null,
+                "formula": "1d8",
+                "kinds": [
+                  "damage",
+                  "healing"
+                ],
+                "materials": [],
+                "type": "void"
+              }
+            },
+            "defense": {
+              "save": {
+                "basic": true,
+                "statistic": "fortitude"
+              }
+            },
+            "cost": {
+              "value": ""
+            },
+            "location": {
+              "value": "hZQq4BOBgi2yRuc0",
+              "heightenedLevel": 8
+            },
+            "counteraction": false,
+            "heightening": {
+              "damage": {
+                "0": "1d8"
+              },
+              "interval": 1,
+              "type": "interval"
+            },
+            "overlays": {
+              "4gyp3qlsv5ywdyjq": {
+                "_id": "4gyp3qlsv5ywdyjq",
+                "name": "Harm (vs. Undead)",
+                "overlayType": "override",
+                "sort": 3,
+                "system": {
+                  "damage": {
+                    "0": {
+                      "formula": "1d8+8",
+                      "kinds": [
+                        "healing"
+                      ]
+                    }
+                  },
+                  "defense": null,
+                  "heightening": {
+                    "damage": {
+                      "0": "1d8+8"
+                    }
+                  },
+                  "range": {
+                    "value": "30 feet"
+                  },
+                  "target": {
+                    "value": "1 willing undead creature"
+                  },
+                  "time": {
+                    "value": "2"
+                  },
+                  "traits": {
+                    "value": [
+                      "concentrate",
+                      "manipulate",
+                      "void"
+                    ]
+                  }
+                }
+              },
+              "pq7cxntbz4s8g5ik": {
+                "_id": "pq7cxntbz4s8g5ik",
+                "overlayType": "override",
+                "sort": 1,
+                "system": {
+                  "range": {
+                    "value": "touch"
+                  },
+                  "time": {
+                    "value": "1"
+                  }
+                }
+              },
+              "rvhoa43rqqqp8izn": {
+                "_id": "rvhoa43rqqqp8izn",
+                "overlayType": "override",
+                "sort": 4,
+                "system": {
+                  "area": {
+                    "type": "emanation",
+                    "value": 30
+                  },
+                  "range": {
+                    "value": ""
+                  },
+                  "target": {
+                    "value": "all living and undead creatures"
+                  },
+                  "time": {
+                    "value": "3"
+                  },
+                  "traits": {
+                    "value": [
+                      "concentrate",
+                      "manipulate",
+                      "void"
+                    ]
+                  }
+                }
+              },
+              "z04svm1cvfcxtplb": {
+                "_id": "z04svm1cvfcxtplb",
+                "name": "Harm (vs. Living)",
+                "overlayType": "override",
+                "sort": 2,
+                "system": {
+                  "damage": {
+                    "0": {
+                      "kinds": [
+                        "damage"
+                      ]
+                    }
+                  },
+                  "range": {
+                    "value": "30 feet"
+                  },
+                  "target": {
+                    "value": "1 living creature"
+                  },
+                  "time": {
+                    "value": "2"
+                  },
+                  "traits": {
+                    "value": [
+                      "concentrate",
+                      "manipulate",
+                      "void"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "type": "spell",
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": "Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz",
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "effects": [],
+          "sort": 0,
+          "flags": {},
+          "_id": "giKIYyeEvuhnud3z",
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.giKIYyeEvuhnud3z"
+        },
+        {
+          "_id": "Ew1ihu8GQZZm7BDe",
+          "img": "icons/magic/control/silhouette-hold-beam-blue.webp",
+          "name": "One with the Shadows",
+          "sort": 0,
+          "type": "effect",
+          "system": {
+            "description": {
+              "value": "<p><em>The light finds nothing to hold.</em></p><p>Veyrin's outline bleeds into the dark like ink through water — a suggestion of a shape, a cold pressure at the edge of sight, a smile already gone by the time you turn to look. You cannot say where he is standing, only that he is nearer than he was, and that the shadows lean toward him.</p>",
+              "gm": "<p>Veyrin is @UUID[Compendium.pf2e.conditionitems.Item.Concealed]{Concealed}. This shroud breaks only when the Dark Mirror is shattered.</p>"
+            },
+            "rules": [
+              {
+                "key": "GrantItem",
+                "inMemoryOnly": true,
+                "uuid": "Compendium.pf2e.conditionitems.Item.Concealed"
+              }
+            ],
+            "slug": "one-with-the-shadows",
+            "traits": {
+              "value": [
+                "shadow"
+              ],
+              "rarity": "rare",
+              "otherTags": []
+            },
+            "level": {
+              "value": 16
+            },
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null,
+              "sustained": false
+            },
+            "start": {
+              "value": 0,
+              "initiative": null
+            },
+            "tokenIcon": {
+              "show": true
+            },
+            "badge": null,
+            "context": null,
+            "unidentified": false,
+            "publication": {
+              "license": "ORC",
+              "remaster": true,
+              "title": "",
+              "authors": ""
+            },
+            "_migration": {
+              "version": 0.959,
+              "previous": null
+            }
+          },
+          "effects": [],
+          "flags": {},
+          "folder": null,
+          "ownership": {
+            "default": 0,
+            "rJDvcbHa2crb2UJb": 3
+          },
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "pf2e",
+            "systemVersion": "8.1.2",
+            "compendiumSource": null,
+            "createdTime": 1780915231634,
+            "modifiedTime": 1780915231634,
+            "lastModifiedBy": "rJDvcbHa2crb2UJb",
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items!Imi7xJECTa2xz1o6.Ew1ihu8GQZZm7BDe"
         }
       ],
       "folder": "tPzW5eubmMnK6wMU",
@@ -9716,7 +9080,7 @@
               "spellDC": 35,
               "spellAttack": 25
             },
-            "importedFrom": "Veyrin Myrcovich",
+            "importedFrom": "Veyrin",
             "createdAt": 1780915231668,
             "updatedAt": 1780915420400,
             "isTroop": false
@@ -9840,11 +9204,11 @@
               {
                 "key": "Aura",
                 "slug": "queens-rime",
-                "radius": 60,
+                "radius": 200,
                 "effects": [
                   {
                     "uuid": "Compendium.pf2e-netherworld.effects.Item.nwQueensRimeFx01",
-                    "affects": "all",
+                    "affects": "enemies",
                     "events": [
                       "enter",
                       "turn-start"
@@ -10091,7 +9455,7 @@
       "type": "equipment",
       "system": {
         "description": {
-          "value": "<p>The Shaper of Ecstasy parts winds cables of void-ice through your heart. It no longer beats so much as aches, pushing meltwater where blood once ran.</p>\n<hr />\n<p><strong>Bound by Cold (the gift).</strong> You gain permanent resistance 10 to cold.</p>\n<hr />\n<p><strong>Mantle of the Frozen Heart</strong> <span class=\"action-glyph\">2</span> <strong>(the gift).</strong> Once per day, you cast @UUID[Compendium.pf2e.spells-srd.Item.CcXtbTxtdV9MKQfu]{Mantle of the Frozen Heart} as an innate spell &mdash; for 1 minute your skin and armor turn to the void's blue ice. Choose two of its four aspects; the frost-resistance is already yours, so spend the gift on claws, retaliation, or the glide of ice.</p>\n<hr />\n<p><strong>The Name Given to the Dark (the cost).</strong> The filaments unspool the warmth of who you were, draining it into the void until your name is a word you can no longer hold. The world forgets you &mdash; a permanent &minus;2 status penalty to Diplomacy checks. Those once closest to you feel a glimmer of familiarity. You may take a new name.</p>\n<hr />\n<p><strong>The Cold Does Not Bite Its Own (the finale).</strong> You and your party ignore the Queen of Shadows' bone-chilling rime.</p>"
+          "value": "<p>The Shaper of Ecstasy winds cables of void-ice through your heart. It no longer beats so much as aches, pushing meltwater where blood once ran.</p>\n<hr />\n<p><strong>Bound by Cold (the gift).</strong> You gain permanent resistance 10 to cold.</p>\n<hr />\n<p><strong>Mantle of the Frozen Heart</strong> <span class=\"action-glyph\">2</span> <strong>(the gift).</strong> Once per day, you cast @UUID[Compendium.pf2e.spells-srd.Item.CcXtbTxtdV9MKQfu]{Mantle of the Frozen Heart} as an innate spell &mdash; for 1 minute your skin and armor turn to the void's blue ice. Choose two of its four aspects; the frost-resistance is already yours, so spend the gift on claws, retaliation, or the glide of ice.</p>\n<hr />\n<p><strong>The Name Given to the Dark (the cost).</strong> The filaments unspool the warmth of who you were, draining it into the void until your name is a word you can no longer hold. The world forgets you &mdash; a permanent &minus;2 status penalty to Diplomacy checks. Those once closest to you feel a glimmer of familiarity. You may take a new name.</p>\n<hr />\n<p><strong>The Cold Does Not Bite Its Own (the finale).</strong> You and your party ignore the Queen of Shadows' bone-chilling rime.</p>"
         },
         "rules": [
           {
@@ -11345,6 +10709,113 @@
           "_movementHistory": [],
           "_regions": [],
           "_key": "!scenes.tokens!yx63y21u1f3Ola0w.mZpjquL3cfVD2Bvn"
+        },
+        {
+          "flags": {
+            "pf2e": {
+              "linkToActorSize": true,
+              "autoscale": true
+            }
+          },
+          "height": 2,
+          "width": 2,
+          "name": "The Glass to the Ice Palace",
+          "displayName": 0,
+          "actorLink": true,
+          "depth": 1,
+          "texture": {
+            "src": "icons/magic/water/snowflake-ice-blue.webp",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "sight": {
+            "enabled": false,
+            "range": 0,
+            "angle": 360,
+            "visionMode": "basic",
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 0,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "actorId": "nwGlassIcePalace",
+          "hidden": false,
+          "sort": 0,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "_id": "nwGlassTokenDM01",
+          "x": 6200,
+          "y": 2600,
+          "elevation": 0,
+          "locked": false,
+          "_movementHistory": [],
+          "_regions": [],
+          "_key": "!scenes.tokens!yx63y21u1f3Ola0w.nwGlassTokenDM01"
         }
       ],
       "levels": [
@@ -12067,6 +11538,19 @@
     }
   ],
   "macros": [
+    {
+      "_id": "nwAttuneRing0001",
+      "name": "Nether World: Attune Signet Ring",
+      "type": "script",
+      "author": "rgnetherworld001",
+      "img": "modules/pf2e-netherworld/assets/signet-ring.webp",
+      "scope": "global",
+      "folder": "nwNetherMacroFld",
+      "command": "/*\n * Attune Signet Ring — grant the ring's innate spells to a PC (pf2e v8 / Foundry v14).\n *\n * Equipment can't carry a castable spell in pf2e, so when a player character loots the\n * Signet Ring, select their token and run this. It adds a divine \"Signet Ring\" innate entry\n * holding Enervation (heightened to 8th, 1/day) and Claim Undead (1/day) — the same casts\n * Veyrin uses. The ring's item DC is 34; a character's innate entry derives its own DC from\n * the chosen ability + proficiency, so adjust the entry if you want a flat 34.\n */\n\nconst ENERVATION = \"Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK\";\nconst CLAIM_UNDEAD = \"Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l\";\nconst SOURCE_FLAG = \"signet-ring\";\n\nconst actor = canvas.tokens.controlled[0]?.actor ?? game.user.character;\nif (!actor) {\n  ui.notifications.warn(\"Select the character's token (or assign yourself a character) first.\");\n  return;\n}\n\nif (actor.itemTypes.spellcastingEntry.some((e) => e.getFlag(\"pf2e-netherworld\", \"source\") === SOURCE_FLAG)) {\n  ui.notifications.warn(`${actor.name} already carries the Signet Ring spells.`);\n  return;\n}\n\nconst [enervation, claimUndead] = await Promise.all([fromUuid(ENERVATION), fromUuid(CLAIM_UNDEAD)]);\nif (!enervation || !claimUndead) {\n  ui.notifications.error(\"Attune Signet Ring: couldn't load the ring's spells — is the pf2e system compendium available?\");\n  return;\n}\n\nconst [entry] = await actor.createEmbeddedDocuments(\"Item\", [\n  {\n    type: \"spellcastingEntry\",\n    name: \"Signet Ring\",\n    system: {\n      prepared: { value: \"innate\" },\n      tradition: { value: \"divine\" },\n      ability: { value: \"cha\" },\n      proficiency: { value: 1 },\n    },\n    flags: { \"pf2e-netherworld\": { source: SOURCE_FLAG } },\n  },\n]);\n\nconst enervationData = enervation.toObject();\nenervationData.system.location = { value: entry.id, heightenedLevel: 8, uses: { value: 1, max: 1 } };\n\nconst claimUndeadData = claimUndead.toObject();\nclaimUndeadData.system.location = { value: entry.id, uses: { value: 1, max: 1 } };\n\nawait actor.createEmbeddedDocuments(\"Item\", [enervationData, claimUndeadData]);\nui.notifications.info(`Signet Ring attuned to ${actor.name}: Enervation (8th) and Claim Undead, 1/day each.`);\nactor.sheet?.render(true);\n",
+      "ownership": {
+        "default": 0
+      }
+    },
     {
       "_id": "nwLinkMirror0001",
       "name": "Nether World: Link Mirror",

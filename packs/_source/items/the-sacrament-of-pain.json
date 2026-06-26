@@ -9,7 +9,7 @@
             "value": "<p>The Shaper of Ecstasy anchors a spiked chain to your ribcage, where it writhes in viscera. You may call upon it to burst forth and strike.</p>\n<hr />\n<p><strong>Impaling Chain</strong> <span class=\"action-glyph\">1</span> <strong>(the gift).</strong> Spend a single action to Strike with a <strong>+2 greater striking wounding cold iron</strong> chain that bursts from your body; the Strike does not require a free hand. When you Strike with the chain you take @Damage[1d8[piercing]] damage as it tears free, then it can't Strike again for <strong>1d4 rounds</strong>. On a critical hit, apply @UUID[Compendium.pf2e-netherworld.effects.Item.nwImpalingChain1]{Effect: Impaled}.</p>\n<hr />\n<p><strong>The Wound Never Closes (the cost).</strong> The chain thrashes with anticipation. When you roll initiative it tears &mdash; you take @Damage[2d6[persistent,bleed]] damage (flat DC 15 to end).</p>\n<hr />\n<p><strong>Last Embrace (the finale).</strong> Your Strikes <strong>ignore Veyrin's physical resistances</strong>, and once you draw his blood <strong>his fast healing never returns</strong>.</p>"
         },
         "rules": [
-            {
+            {/clear
                 "key": "Note",
                 "selector": "{item|_id}-attack",
                 "outcome": ["criticalSuccess"],

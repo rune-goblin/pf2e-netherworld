@@ -97,11 +97,11 @@
                     {
                         "key": "Aura",
                         "slug": "queens-rime",
-                        "radius": 60,
+                        "radius": 200,
                         "effects": [
                             {
                                 "uuid": "Compendium.pf2e-netherworld.effects.Item.nwQueensRimeFx01",
-                                "affects": "all",
+                                "affects": "enemies",
                                 "events": [
                                     "enter",
                                     "turn-start"
