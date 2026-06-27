@@ -34,7 +34,7 @@
   },
   "environment": {
     "darknessLevel": 1,
-    "darknessLock": false,
+    "darknessLock": true,
     "globalLight": {
       "enabled": false,
       "alpha": 0.5,
@@ -398,7 +398,7 @@
       },
       "movementAction": null,
       "actorId": "nwWardedSarcophagus",
-      "hidden": false,
+      "hidden": true,
       "sort": 0,
       "shape": 4,
       "level": "defaultLevel0000",

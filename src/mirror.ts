@@ -1,4 +1,4 @@
-import { MODULE_ID } from './constants';
+import { MODULE_ID, WARDED_SARCOPHAGUS_ACTOR_ID } from './constants';
 
 // Two independent scene-overlay groups, each a set of placed tiles toggled by visibility. 'intact'
 // is the bare scene (every overlay in the group hidden); a damaged state shows its one matching tile,
@@ -52,5 +52,14 @@ export const COFFIN_STATES: readonly CoffinState[] = ['intact', 'cracked', 'smas
 const COFFIN_FILES = { cracked: 'coffin-cracked.webp', smashed: 'coffin-smashed.webp' } as const;
 
 export const currentCoffinState = (scene: Scene): CoffinState => currentGroupState(scene, COFFIN_FILES);
-export const setCoffinState = (scene: Scene, state: CoffinState): Promise<void> =>
-  setGroupState(scene, COFFIN_FILES, state);
+
+export async function setCoffinState(scene: Scene, state: CoffinState): Promise<void> {
+  await setGroupState(scene, COFFIN_FILES, state);
+  if (!game.user.isGM) return; // setGroupState already warned
+  // The hazard token rides hidden until the coffin is revealed (cracked/smashed); intact hides it again.
+  const hidden = state === 'intact';
+  const updates = scene.tokens
+    .filter((t) => t.actorId === WARDED_SARCOPHAGUS_ACTOR_ID && t.hidden !== hidden)
+    .map((t) => ({ _id: t.id, hidden }));
+  if (updates.length) await scene.updateEmbeddedDocuments('Token', updates);
+}

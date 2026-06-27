@@ -39,6 +39,10 @@ export const CHAIN_COILS_EFFECT_UUID = `Compendium.${MODULE_ID}.${EFFECTS_PACK}.
 // the strike hook (src/debilitatingStrike.ts) auto-opens the debilitation picker. DC 34 is his class DC
 // at level 16 — the Critical Debilitation ability text's "25" was a template leftover.
 export const STRIGOI_ACTOR_ID = 'Imi7xJECTa2xz1o6';
+
+// The Warded Sarcophagus hazard (Veyrin's coffin). Its token rides hidden on the Dark Mirror scene
+// until the coffin overlay is revealed at a damage threshold (src/mirror.ts setCoffinState).
+export const WARDED_SARCOPHAGUS_ACTOR_ID = 'nwWardedSarcophagus';
 export const DEBILITATING_STRIKE_DC = 34;
 export const AUTO_DEBILITATING_STRIKE_SETTING = 'autoDebilitatingStrike';
 
