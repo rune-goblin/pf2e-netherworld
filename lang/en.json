@@ -21,6 +21,7 @@
     },
     "mirror": {
       "drag": "Drag to reposition",
+      "title": "Mirror",
       "intact": {
         "label": "Intact",
         "hint": "Hide both overlays — the glass is whole"
@@ -32,6 +33,21 @@
       "broken": {
         "label": "Broken",
         "hint": "Show the shattered glass"
+      }
+    },
+    "coffin": {
+      "title": "Coffin",
+      "intact": {
+        "label": "Intact",
+        "hint": "Hide both overlays — the sarcophagus is whole"
+      },
+      "cracked": {
+        "label": "Cracked",
+        "hint": "Show the cracked coffin — at its Broken Threshold"
+      },
+      "smashed": {
+        "label": "Smashed",
+        "hint": "Show the smashed coffin — Destroyed"
       }
     },
     "offer": {

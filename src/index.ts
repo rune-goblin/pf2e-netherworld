@@ -12,7 +12,7 @@ import { ReflectionToolbarApp } from './ui/ReflectionToolbarApp';
 import { ReflectActionsToolbarApp } from './ui/ReflectActionsToolbarApp';
 import { OfferToolbarApp } from './ui/OfferToolbarApp';
 import { OfferDialogApp } from './ui/OfferDialogApp';
-import { setMirrorState, type MirrorState } from './mirror';
+import { setMirrorState, setCoffinState, type MirrorState, type CoffinState } from './mirror';
 import { makeShadow } from './shadow';
 import { impalingChain, onSacramentStrike, tearWoundOnInitiative } from './sacrament';
 import { openDebilitatingStrike, onStrigoiStrike } from './debilitatingStrike';
@@ -37,6 +37,8 @@ interface ModuleApi {
   toggle: (scene?: Scene | null) => Promise<boolean>;
   /** Set the dark-mirror overlay on the active scene. GM-only. */
   mirror: (state: MirrorState) => Promise<void>;
+  /** Set the Warded Sarcophagus overlay on the active scene. GM-only. */
+  coffin: (state: CoffinState) => Promise<void>;
   /** Clone a PC into a hostile Reflection and drop its token on the active scene. GM-only. */
   makeShadow: (pc: Actor) => Promise<Actor | null>;
   /** Open the Interlocutor's offer dialog on this client. */
@@ -170,6 +172,7 @@ Hooks.once('ready', () => {
     disable: (scene = canvas.scene) => setActive(scene, false),
     toggle: (scene = canvas.scene) => setActive(scene, !scene?.getFlag(MODULE_ID, ENABLED_FLAG)),
     mirror: (state) => canvas.scene ? setMirrorState(canvas.scene, state) : Promise.resolve(),
+    coffin: (state) => canvas.scene ? setCoffinState(canvas.scene, state) : Promise.resolve(),
     makeShadow,
     offer: () => void OfferDialogApp.open(),
     impalingChain,

@@ -2,8 +2,7 @@
   "name": "Veyrin",
   "type": "npc",
   "ownership": {
-    "default": 0,
-    "rJDvcbHa2crb2UJb": 3
+    "default": 0
   },
   "prototypeToken": {
     "flags": {
@@ -111,9 +110,9 @@
   "system": {
     "attributes": {
       "hp": {
-        "value": 220,
+        "value": 270,
         "temp": 0,
-        "max": 220,
+        "max": 290,
         "details": "coffin restoration, fast healing 15, void healing"
       },
       "ac": {
@@ -165,9 +164,9 @@
       "languages": {
         "value": [
           "common",
+          "diabolic",
           "necril",
-          "shadowtongue",
-          "thassilonian"
+          "shadowtongue"
         ],
         "details": ""
       },
@@ -221,7 +220,7 @@
     },
     "perception": {
       "details": "",
-      "mod": 22,
+      "mod": 28,
       "senses": [
         {
           "type": "greater-darkvision"
@@ -245,52 +244,44 @@
     },
     "skills": {
       "acrobatics": {
-        "base": 29
+        "base": 32,
+        "special": []
       },
       "arcana": {
-        "base": 27
+        "base": 27,
+        "special": []
       },
       "athletics": {
-        "base": 25
+        "base": 28,
+        "special": []
       },
       "crafting": {
-        "base": 23
+        "base": 25,
+        "special": []
       },
       "deception": {
-        "base": 26
+        "base": 32,
+        "special": []
       },
       "diplomacy": {
-        "base": 22
+        "base": 28,
+        "special": []
       },
       "intimidation": {
-        "base": 22
-      },
-      "medicine": {
-        "base": 18
-      },
-      "nature": {
-        "base": 18
-      },
-      "occultism": {
-        "base": 23
-      },
-      "performance": {
-        "base": 22
+        "base": 28,
+        "special": []
       },
       "religion": {
-        "base": 18
-      },
-      "society": {
-        "base": 27
+        "base": 32,
+        "special": []
       },
       "stealth": {
-        "base": 29
-      },
-      "survival": {
-        "base": 18
+        "base": 32,
+        "special": []
       },
       "thievery": {
-        "base": 29
+        "base": 30,
+        "special": []
       }
     },
     "traits": {
@@ -314,87 +305,6 @@
   "img": "modules/pf2e-netherworld/assets/bestiary/veyrin-portrait.png",
   "items": [
     {
-      "_id": "9o4KT1mz9ZBfGqn0",
-      "img": "systems/pf2e/icons/default-icons/melee.svg",
-      "name": "Rapier",
-      "sort": 100000,
-      "system": {
-        "attackEffects": {
-          "value": []
-        },
-        "bonus": {
-          "value": 30
-        },
-        "damageRolls": {
-          "ctd3xf8whjgau1ul": {
-            "damage": "3d10+15",
-            "damageType": "piercing",
-            "category": null
-          }
-        },
-        "description": {
-          "value": "",
-          "gm": ""
-        },
-        "publication": {
-          "license": "OGL",
-          "remaster": false,
-          "title": "",
-          "authors": ""
-        },
-        "range": null,
-        "rules": [],
-        "slug": null,
-        "traits": {
-          "value": [
-            "deadly-d8",
-            "disarm",
-            "finesse",
-            "magical"
-          ],
-          "otherTags": [],
-          "config": {}
-        },
-        "_migration": {
-          "version": 0.959,
-          "previous": {
-            "schema": 0.955,
-            "foundry": "14.361",
-            "system": "8.1.2"
-          }
-        },
-        "action": "strike",
-        "area": null,
-        "subjectToMAP": true
-      },
-      "type": "melee",
-      "_stats": {
-        "coreVersion": "14.361",
-        "systemId": "pf2e",
-        "systemVersion": "8.1.2",
-        "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
-        "lastModifiedBy": "rJDvcbHa2crb2UJb",
-        "duplicateSource": null,
-        "exportSource": null
-      },
-      "effects": [],
-      "flags": {
-        "pf2e-reignmaker": {
-          "itemBenchmarks": {
-            "attackBenchmark": 0.3333333333333333,
-            "damageBenchmark": 0.3333333333333333
-          }
-        }
-      },
-      "folder": null,
-      "ownership": {
-        "default": 0
-      },
-      "_key": "!actors.items!Imi7xJECTa2xz1o6.9o4KT1mz9ZBfGqn0"
-    },
-    {
       "_id": "7Icj14IGbzzwaZ3U",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "Claw",
@@ -406,7 +316,7 @@
           ]
         },
         "bonus": {
-          "value": 28
+          "value": 30
         },
         "damageRolls": {
           "gbexyu9ipboy5kfq": {
@@ -452,12 +362,12 @@
       },
       "type": "melee",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513830653,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -535,12 +445,12 @@
       },
       "type": "melee",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -606,12 +516,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -671,12 +581,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -774,12 +684,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.qjgrMhwz78T31kLU",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -850,12 +760,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -910,12 +820,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -970,12 +880,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1030,12 +940,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1090,12 +1000,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1150,12 +1060,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1210,12 +1120,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1270,12 +1180,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1331,12 +1241,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1408,12 +1318,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162840,
+        "modifiedTime": 1782513162840,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1468,12 +1378,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1528,12 +1438,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1588,12 +1498,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1650,12 +1560,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1710,12 +1620,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1767,16 +1677,17 @@
             "foundry": "14.361",
             "system": "8.1.2"
           }
-        }
+        },
+        "deathNote": false
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.AzvCvgx9SUAB2blo",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513950485,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1850,12 +1761,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.AjTkksppymqzCivT",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1926,12 +1837,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.fh7ar6QrFT8YWgQ9",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -1984,12 +1895,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -2045,12 +1956,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -2106,12 +2017,12 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513162841,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -2152,7 +2063,9 @@
         },
         "traits": {
           "otherTags": [],
-          "value": [],
+          "value": [
+            "cursed"
+          ],
           "rarity": "common"
         },
         "publication": {
@@ -2210,21 +2123,20 @@
       "img": "modules/pf2e-netherworld/assets/signet-ring.webp",
       "folder": null,
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "systemVersion": "8.2.0",
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782518804999,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "compendiumSource": null,
         "duplicateSource": "Scene.Ff3u00YRtOv4jw8m.Token.Ylz5QK1Wunp7Qh4A.Actor.A2zn3Ttfj6T0gxnM.Item.OhCl7OGxQBpzyY14",
         "exportSource": null
+      },
+      "ownership": {
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.ExcmbySTYOBgWYhj"
     },
@@ -2471,21 +2383,20 @@
       "effects": [],
       "folder": null,
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
-        "createdTime": 1780915581747,
-        "modifiedTime": 1780922363807,
+        "systemVersion": "8.2.0",
+        "createdTime": 1782513162841,
+        "modifiedTime": 1782513983060,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
+      },
+      "ownership": {
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.p9ripFR66RbrFjCo"
     },
@@ -2578,24 +2489,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.PgLvO8UNHSj5f61m",
-        "createdTime": 1780915804456,
-        "modifiedTime": 1780915804456,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "XG9cTMEdcrL0BGGc",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.XG9cTMEdcrL0BGGc"
     },
     {
@@ -2670,23 +2580,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.MS60WhVifb45qORJ",
-        "createdTime": 1780915877875,
-        "modifiedTime": 1780915877875,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.SECzRwBlCPiRQOjV"
     },
     {
@@ -2775,23 +2684,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.qlxM7Ik3uUeUIOcv",
-        "createdTime": 1780915917359,
-        "modifiedTime": 1780915917360,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.A6lNMryX32YFoE9i"
     },
     {
@@ -2901,23 +2809,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.0jadeyQIItIuRgeH",
-        "createdTime": 1780916055238,
-        "modifiedTime": 1780916055238,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.75uDRRgnbkftsUoq"
     },
     {
@@ -2993,23 +2900,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P",
-        "createdTime": 1780916457775,
-        "modifiedTime": 1780916457775,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.qSzvz14vO7Sc2XQG"
     },
     {
@@ -3079,24 +2985,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.uqlxMQQeSGWEVjki",
-        "createdTime": 1780916540622,
-        "modifiedTime": 1780916540622,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "lBUBm2hVyLxdC3qO",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.lBUBm2hVyLxdC3qO"
     },
     {
@@ -3194,23 +3099,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.fd31tAHSSGXyOxW6",
-        "createdTime": 1780916545295,
-        "modifiedTime": 1780916545296,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.bD5kdoqX8fXdOBnn"
     },
     {
@@ -3278,24 +3182,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.29ytKctjg7qSW2ff",
-        "createdTime": 1780916569108,
-        "modifiedTime": 1780916569108,
+        "createdTime": 1782513162842,
+        "modifiedTime": 1782513162842,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "d3PEGpIzBIhSSCEx",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.d3PEGpIzBIhSSCEx"
     },
     {
@@ -3363,24 +3266,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.IqJ9URobmJ9L9UBG",
-        "createdTime": 1780916597706,
-        "modifiedTime": 1780916597706,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "9fwiQ3BF3YlTmNDN",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.9fwiQ3BF3YlTmNDN"
     },
     {
@@ -3450,24 +3352,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.TDaMnCtZ72uyYrz8",
-        "createdTime": 1780916630263,
-        "modifiedTime": 1780916630263,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "054bqVHwka9obumh",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.054bqVHwka9obumh"
     },
     {
@@ -3562,23 +3463,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.TLqMFgCewxuricJw",
-        "createdTime": 1780916780655,
-        "modifiedTime": 1780916780655,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.WYJtw3RJrPwZHQKL"
     },
     {
@@ -3653,23 +3553,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.VXUrO8TwRqBpNzdU",
-        "createdTime": 1780917827547,
-        "modifiedTime": 1780917827547,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.LrX1FFYuDkEGh2Ak"
     },
     {
@@ -3749,24 +3648,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK",
-        "createdTime": 1780917847568,
-        "modifiedTime": 1780917847568,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "qwogqzwtgDtoq9jI",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.qwogqzwtgDtoq9jI"
     },
     {
@@ -3846,24 +3744,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.FwW2asotQE8dH1WP",
-        "createdTime": 1780918023840,
-        "modifiedTime": 1780918023840,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "1aMRb32akarUSowc",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.1aMRb32akarUSowc"
     },
     {
@@ -3966,24 +3863,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.07xYlmGX32XtHGEt",
-        "createdTime": 1780918166645,
-        "modifiedTime": 1780918166645,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "SoMMF2gy8tRSnSI3",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.SoMMF2gy8tRSnSI3"
     },
     {
@@ -4106,23 +4002,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l",
-        "createdTime": 1780918364515,
-        "modifiedTime": 1780918364515,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.z0tKsrPQqAJ2XCCI"
     },
     {
@@ -4197,23 +4092,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.JLdbyGKhjwAAoRLs",
-        "createdTime": 1780918479132,
-        "modifiedTime": 1780918479132,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.z3vjhhyrb2xxxL1Y"
     },
     {
@@ -4281,24 +4175,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.k9x6bXXpIgAXMDsx",
-        "createdTime": 1780919815025,
-        "modifiedTime": 1780919815025,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "MKTMFCU6jB9v9939",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.MKTMFCU6jB9v9939"
     },
     {
@@ -4366,24 +4259,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.CIjj9CU5ekeq1oLT",
-        "createdTime": 1780920771161,
-        "modifiedTime": 1780920771161,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "cNNu6I8FHoVGcBoS",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.cNNu6I8FHoVGcBoS"
     },
     {
@@ -4473,24 +4365,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.TaaMEYdZXQXF0Sks",
-        "createdTime": 1780920920487,
-        "modifiedTime": 1780920920487,
+        "createdTime": 1782513162843,
+        "modifiedTime": 1782513162843,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "an78xHowMB2ag5BD",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.an78xHowMB2ag5BD"
     },
     {
@@ -4568,24 +4459,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.b515AZlB0sridKSq",
-        "createdTime": 1780921015300,
-        "modifiedTime": 1780921015300,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "t47zoqBbiP9bM001",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.t47zoqBbiP9bM001"
     },
     {
@@ -4654,24 +4544,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG",
-        "createdTime": 1780921065987,
-        "modifiedTime": 1780921065987,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "InG5mhXs84pWHTbi",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.InG5mhXs84pWHTbi"
     },
     {
@@ -4739,23 +4628,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.8xRzLhwGL7Dgy3EZ",
-        "createdTime": 1780921289287,
-        "modifiedTime": 1780921289287,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.0jHvH0FY9GQDRbTv"
     },
     {
@@ -4823,23 +4711,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.gMODOGamz88rgHuf",
-        "createdTime": 1780921750993,
-        "modifiedTime": 1780921750993,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.CH6ZkTFFwAe3w2Xc"
     },
     {
@@ -4909,23 +4796,22 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.TVKNbcgTee19PXZR",
-        "createdTime": 1780921898751,
-        "modifiedTime": 1780921898751,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.vWE9q3dO9L55IMLj"
     },
     {
@@ -4993,24 +4879,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.Azoh0BSoCASrA1lr",
-        "createdTime": 1780922065238,
-        "modifiedTime": 1780922065238,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "hAAZJNKaioTPZCxH",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.hAAZJNKaioTPZCxH"
     },
     {
@@ -5106,24 +4991,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.b5BQbwmuBhgPXTyi",
-        "createdTime": 1780922184918,
-        "modifiedTime": 1780922184918,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "hbBG82R7UW10tlNP",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.hbBG82R7UW10tlNP"
     },
     {
@@ -5217,24 +5101,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4",
-        "createdTime": 1780922240862,
-        "modifiedTime": 1780922240862,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "MsgzpGF7wcw3I69D",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.MsgzpGF7wcw3I69D"
     },
     {
@@ -5308,24 +5191,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl",
-        "createdTime": 1780922337716,
-        "modifiedTime": 1780922337716,
+        "createdTime": 1782513162844,
+        "modifiedTime": 1782513162844,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "JAQUSCzEnAT4Lk4F",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.JAQUSCzEnAT4Lk4F"
     },
     {
@@ -5418,24 +5300,23 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.mAMEt4FFbdqoRnkN",
-        "createdTime": 1780922361178,
-        "modifiedTime": 1780922361178,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "effects": [],
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_id": "7iwJV6itQgerIuDC",
+      "ownership": {
+        "default": 0
+      },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.7iwJV6itQgerIuDC"
     },
     {
@@ -5443,8 +5324,8 @@
       "type": "spellcastingEntry",
       "system": {
         "description": {
-          "value": "",
-          "gm": ""
+          "gm": "",
+          "value": ""
         },
         "rules": [],
         "slug": null,
@@ -5482,7 +5363,68 @@
         "proficiency": {
           "value": 0
         },
-        "slots": {},
+        "slots": {
+          "slot0": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot1": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot2": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot3": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot4": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot5": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot6": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot7": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot8": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot9": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot10": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          },
+          "slot11": {
+            "prepared": [],
+            "value": 0,
+            "max": 0
+          }
+        },
         "autoHeightenLevel": {
           "value": null
         }
@@ -5492,21 +5434,20 @@
       "effects": [],
       "folder": null,
       "sort": 0,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "flags": {},
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
+      },
+      "ownership": {
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.cRDf2wpAqo3KCNMv"
     },
@@ -5516,14 +5457,57 @@
       "img": "systems/pf2e/icons/spells/enervation.webp",
       "name": "Enervation",
       "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Extending a finger, you fire a beam of void energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save.</p><hr><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[(floor(@item.rank/2))d8[persistent,void]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1}.</p><hr><p><strong>Heightened (+2)</strong> The persistent void damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "_migration": {
+          "version": null,
+          "lastMigration": null
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "concentrate",
+            "manipulate",
+            "void"
+          ],
+          "rarity": "common",
+          "traditions": [
+            "arcane",
+            "divine",
+            "occult"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Advanced Player's Guide",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 4
+        },
+        "requirements": "",
+        "target": {
+          "value": ""
+        },
+        "range": {
+          "value": ""
+        },
         "area": {
           "type": "line",
           "value": 30
         },
-        "cost": {
-          "value": ""
+        "time": {
+          "value": "2"
         },
-        "counteraction": false,
+        "duration": {
+          "value": "",
+          "sustained": false
+        },
         "damage": {},
         "defense": {
           "save": {
@@ -5531,47 +5515,8 @@
             "statistic": "fortitude"
           }
         },
-        "description": {
-          "value": "<p>Extending a finger, you fire a beam of void energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[(floor(@item.rank/2))d8[persistent,void]] damage.</p>\n<p><strong>Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1}.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[(floor(@item.rank/2)*2)d8[persistent,void]] damage and becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 2} and @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1}.</p><hr /><p><strong>Heightened (+2)</strong> The persistent void damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure.</p>"
-        },
-        "duration": {
-          "sustained": false,
+        "cost": {
           "value": ""
-        },
-        "heightening": {
-          "damage": {}
-        },
-        "level": {
-          "value": 4
-        },
-        "publication": {
-          "license": "OGL",
-          "remaster": false,
-          "title": "Pathfinder Advanced Player's Guide"
-        },
-        "range": {
-          "value": ""
-        },
-        "requirements": "",
-        "rules": [],
-        "target": {
-          "value": ""
-        },
-        "time": {
-          "value": "2"
-        },
-        "traits": {
-          "rarity": "common",
-          "traditions": [
-            "arcane",
-            "divine",
-            "occult"
-          ],
-          "value": [
-            "concentrate",
-            "manipulate",
-            "void"
-          ]
         },
         "location": {
           "value": "cRDf2wpAqo3KCNMv",
@@ -5580,28 +5525,31 @@
             "value": 1,
             "max": 1
           }
+        },
+        "counteraction": false,
+        "heightening": {
+          "damage": {}
         }
       },
       "type": "spell",
-      "_key": "!actors.items!Imi7xJECTa2xz1o6.TMQlgA1cI9Lo0ifo",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.eexkxcqnkXazsGfK",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "sort": 0,
       "flags": {},
-      "effects": []
+      "effects": [],
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!Imi7xJECTa2xz1o6.TMQlgA1cI9Lo0ifo"
     },
     {
       "_id": "fpbjiAObrBYeKmHv",
@@ -5609,11 +5557,52 @@
       "img": "systems/pf2e/icons/spells/claim-undead.webp",
       "name": "Claim Undead",
       "system": {
-        "area": null,
-        "cost": {
-          "value": ""
+        "description": {
+          "gm": "",
+          "value": "<p>You attempt to wrest control of a target undead or force it to recognize you as its master. If the target is controlled by another creature, that controller attempts a Will saving throw to retain control; otherwise, the target must attempt a Will save.</p><hr><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and @UUID[Compendium.pf2e.conditionitems.Item.Confused] for 1 round as it fights off your commands.</p>\n<p><strong>Failure</strong> The target becomes controlled by you and follows your orders. It (or the creature previously controlling it) can attempt a new Will save at the end of each of its turns; on a success, the spell ends, and the creature becomes stunned 1 and confused for 1 round. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order.</p>\n<p><strong>Critical Failure</strong> As failure, but the target (or the creature previously controlling it) receives a new save only if you give it a new order that is against its nature.</p>"
         },
-        "counteraction": false,
+        "rules": [],
+        "slug": null,
+        "_migration": {
+          "version": null,
+          "lastMigration": null
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "concentrate",
+            "focus",
+            "incapacitation",
+            "manipulate",
+            "oracle"
+          ],
+          "rarity": "uncommon",
+          "traditions": []
+        },
+        "publication": {
+          "title": "Pathfinder Player Core 2",
+          "authors": "",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 6
+        },
+        "requirements": "",
+        "target": {
+          "value": "1 undead creature"
+        },
+        "range": {
+          "value": "30 feet"
+        },
+        "area": null,
+        "time": {
+          "value": "2"
+        },
+        "duration": {
+          "value": "10 minutes",
+          "sustained": false
+        },
         "damage": {},
         "defense": {
           "save": {
@@ -5621,42 +5610,8 @@
             "statistic": "will"
           }
         },
-        "description": {
-          "value": "<p>You attempt to wrest control of a target undead or force it to recognize you as its master. If the target is controlled by another creature, that controller attempts a Will saving throw to retain control; otherwise, the target must attempt a Will save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and @UUID[Compendium.pf2e.conditionitems.Item.Confused] for 1 round as it fights off your commands.</p>\n<p><strong>Failure</strong> The target becomes controlled by you and follows your orders. It (or the creature previously controlling it) can attempt a new Will save at the end of each of its turns; on a success, the spell ends, and the creature becomes stunned 1 and confused for 1 round. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order.</p>\n<p><strong>Critical Failure</strong> As failure, but the target (or the creature previously controlling it) receives a new save only if you give it a new order that is against its nature.</p>"
-        },
-        "duration": {
-          "sustained": false,
-          "value": "10 minutes"
-        },
-        "level": {
-          "value": 6
-        },
-        "publication": {
-          "license": "ORC",
-          "remaster": true,
-          "title": "Pathfinder Player Core 2"
-        },
-        "range": {
-          "value": "30 feet"
-        },
-        "requirements": "",
-        "rules": [],
-        "target": {
-          "value": "1 undead creature"
-        },
-        "time": {
-          "value": "2"
-        },
-        "traits": {
-          "rarity": "uncommon",
-          "traditions": [],
-          "value": [
-            "concentrate",
-            "focus",
-            "incapacitation",
-            "manipulate",
-            "oracle"
-          ]
+        "cost": {
+          "value": ""
         },
         "location": {
           "value": "cRDf2wpAqo3KCNMv",
@@ -5664,28 +5619,28 @@
             "value": 1,
             "max": 1
           }
-        }
+        },
+        "counteraction": false
       },
       "type": "spell",
-      "_key": "!actors.items!Imi7xJECTa2xz1o6.fpbjiAObrBYeKmHv",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.GzN9bG6cKZ96YC6l",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "sort": 0,
       "flags": {},
-      "effects": []
+      "effects": [],
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!Imi7xJECTa2xz1o6.fpbjiAObrBYeKmHv"
     },
     {
       "name": "Harm Font",
@@ -5803,19 +5758,18 @@
       "sort": 0,
       "flags": {},
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
       },
       "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.hZQq4BOBgi2yRuc0"
     },
@@ -6018,12 +5972,12 @@
       },
       "type": "spell",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": "Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz",
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
@@ -6033,8 +5987,7 @@
       "flags": {},
       "_id": "giKIYyeEvuhnud3z",
       "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.giKIYyeEvuhnud3z"
     },
@@ -6061,7 +6014,6 @@
           "value": [
             "shadow"
           ],
-          "rarity": "rare",
           "otherTags": []
         },
         "level": {
@@ -6092,25 +6044,25 @@
         "_migration": {
           "version": 0.959,
           "previous": null
-        }
+        },
+        "fromSpell": false
       },
       "effects": [],
       "flags": {},
       "folder": null,
-      "ownership": {
-        "default": 0,
-        "rJDvcbHa2crb2UJb": 3
-      },
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
+      },
+      "ownership": {
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.Ew1ihu8GQZZm7BDe"
     },
@@ -6163,15 +6115,21 @@
       },
       "type": "action",
       "_stats": {
-        "coreVersion": "14.361",
+        "coreVersion": "14.363",
         "systemId": "pf2e",
-        "systemVersion": "8.1.2",
+        "systemVersion": "8.2.0",
         "compendiumSource": null,
-        "createdTime": 1780915231634,
-        "modifiedTime": 1780915231634,
+        "createdTime": 1782513162845,
+        "modifiedTime": 1782513162845,
         "lastModifiedBy": "rJDvcbHa2crb2UJb",
         "duplicateSource": null,
         "exportSource": null
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {},
+      "ownership": {
+        "default": 0
       },
       "_key": "!actors.items!Imi7xJECTa2xz1o6.haGUwBMdTWm6WmYf"
     }
@@ -6234,18 +6192,18 @@
   "_stats": {
     "coreVersion": "14.363",
     "systemId": "pf2e",
-    "systemVersion": "8.1.2",
-    "createdTime": 1780915231634,
-    "modifiedTime": 1781281494031,
+    "systemVersion": "8.2.0",
+    "createdTime": 1782513162839,
+    "modifiedTime": 1782518632014,
     "lastModifiedBy": "rJDvcbHa2crb2UJb",
     "compendiumSource": null,
     "duplicateSource": "Actor.A2zn3Ttfj6T0gxnM",
     "exportSource": {
-      "worldId": "km-sandbox14",
-      "uuid": "Actor.B2F2VFQ4U0ahZXJm",
-      "coreVersion": "14.360",
+      "worldId": "stolen-lands",
+      "uuid": "Actor.Imi7xJECTa2xz1o6",
+      "coreVersion": "14.363",
       "systemId": "pf2e",
-      "systemVersion": "8.0.3"
+      "systemVersion": "8.2.0"
     }
   },
   "_id": "Imi7xJECTa2xz1o6",

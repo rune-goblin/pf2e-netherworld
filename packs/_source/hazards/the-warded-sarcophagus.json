@@ -1,0 +1,145 @@
+{
+    "_id": "nwWardedSarcophagus",
+    "_key": "!actors!nwWardedSarcophagus",
+    "img": "icons/containers/misc/coffin-wood-brown.webp",
+    "name": "The Warded Sarcophagus",
+    "type": "hazard",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": 33
+            },
+            "emitsSound": "encounter",
+            "hardness": 18,
+            "hp": {
+                "details": "Broken Threshold 35 &mdash; the lid splits when the coffin is Broken; the hazard ends when it is Destroyed.",
+                "max": 70,
+                "temp": 0,
+                "value": 70
+            },
+            "immunities": [
+                {
+                    "type": "critical-hits"
+                },
+                {
+                    "type": "object-immunities"
+                },
+                {
+                    "type": "precision"
+                }
+            ],
+            "stealth": {
+                "details": "<p>(initiative when the binding-wards wake; the coffin itself sits in plain sight on the dais beneath the mirror)</p>",
+                "value": 27
+            }
+        },
+        "creatureType": "",
+        "details": {
+            "description": "<p>A heavy iron sarcophagus bound in black chains, set on the dais beneath the mirror, its sides pierced with finger-width holes. @UUID[Actor.Imi7xJECTa2xz1o6]{Veyrin} can pour through them in mist form to shelter and heal &mdash; the &ldquo;coffin restoration&rdquo; named on his stat block. Disturb it and the binding-wards wake, flinging iron shards and grasping shadow-chains at anyone close.</p>",
+            "disable": "<p>@Check[religion|dc:36|name:Unravel the Binding-Wards] or @Check[arcana|dc:36|name:Unravel the Binding-Wards] (master) to unravel the binding-wards and still the coffin (ends the Routine), or @Check[athletics|dc:38|name:Wrench the Lid Wide] to wrench the lid open and expose Veyrin directly. A single hit that drives <strong>25 or more</strong> damage past its Hardness staggers the wards: the hazard is dormant until the end of its next turn.</p>\n<hr />\n<p>It is an <strong>object</strong>: <strong>Hardness 18</strong> (solid iron; halved to <strong>9</strong> against adamantine, as with the hall's other glass-wards), <strong>HP 70</strong>, <strong>Broken Threshold 35</strong>; attacks resolve against <strong>AC 33</strong>, and it is immune to critical hits and precision damage, so no blow doubles against it. The fighter grinds it down; the party converging &mdash; a Disintegrate, a second martial &mdash; breaks it in a round or two.</p>\n<hr />\n<p><strong>Broken (35 HP):</strong> the lid splits. The warded area shrinks to a @Template[square|distance:5], the Routine loses Grasping Chains, and Veyrin within drops from total cover to <strong>standard cover</strong> (+2 AC) and is <strong>concealed</strong> through the gap &mdash; he can now be targeted on a DC 5 flat check.</p>\n<p><strong>Destroyed (0 HP):</strong> the sarcophagus breaks open and the hazard ends. If Veyrin is inside, he is spat into the open, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} until the end of his next turn &mdash; the refuge spent.</p>",
+            "isComplex": true,
+            "level": {
+                "value": 14
+            },
+            "publication": {
+                "license": "OGL",
+                "remaster": false,
+                "title": "Nether World"
+            },
+            "reset": "<p>If Veyrin isn't inside and no creature has been in its area for 1 round, the sarcophagus falls dormant until disturbed again.</p>",
+            "routine": "<p>(2 actions) Fixed in place, the sarcophagus acts on its own initiative each round it is awake. Its wards fill a @Template[square|distance:10] centered on the coffin (a @Template[square|distance:5] once it is Broken).</p>\n<ul>\n<li><strong>Lash</strong> (1 action) Iron shards and shadow-chains erupt across the area. Each creature in it takes @Damage[(2d10+18)[slashing],1d10[void]|options:area-damage]{2d10+18 slashing and 1d10 void} damage (@Check[reflex|dc:35|basic|options:area-effect] save). <em>(Swap the @Damage[1d10[void]]{void} to @Damage[1d10[cold]]{cold} to lean Ice Queen rather than vampire.)</em></li>\n<li><strong>Grasping Chains</strong> (1 action) Shadow-chains seize one creature in the area: @Check[reflex|dc:35] or @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} (escape DC 35).</li>\n</ul>\n<p>Veyrin is never affected &mdash; the wards are his. <strong>Running hot alongside the Queen's Rime?</strong> Drop the Routine to the single Lash action.</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 30
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 28
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 0
+            }
+        },
+        "statusEffects": [],
+        "traits": {
+            "rarity": "unique",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "magical",
+                "unholy"
+            ]
+        }
+    },
+    "items": [
+        {
+            "_id": "nwWardWakeAct01",
+            "_key": "!actors.items!nwWardedSarcophagus.nwWardWakeAct01",
+            "img": "systems/pf2e/icons/actions/Reaction.webp",
+            "name": "Wake the Wards",
+            "sort": 0,
+            "type": "action",
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> A creature attacks the sarcophagus, ends its turn within 10 feet of it, or Veyrin retreats inside.</p>\n<hr />\n<p><strong>Effect</strong> The binding-wards roar to life; the hazard rolls initiative.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": "wake-the-wards",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                }
+            }
+        },
+        {
+            "_id": "nwShelteredAct01",
+            "_key": "!actors.items!nwWardedSarcophagus.nwShelteredAct01",
+            "img": "icons/containers/misc/coffin-wood-brown.webp",
+            "name": "Sheltered Inside",
+            "sort": 1,
+            "type": "action",
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": null,
+                "description": {
+                    "value": "<p>The sarcophagus is @UUID[Actor.Imi7xJECTa2xz1o6]{Veyrin}'s refuge &mdash; the &ldquo;coffin restoration&rdquo; named on his stat block. While the coffin is awake and intact and he is within it in mist form, he has <strong>total cover</strong>: he cannot be targeted, and his fast healing 15 ticks each round, untouched. He cannot Strike out; emerging into the open costs him an action.</p>\n<p>Once the lid is <strong>Broken</strong> he has only <strong>standard cover</strong> (+2 AC) and is <strong>concealed</strong> through the gap (DC 5 flat check to target him). When the coffin is <strong>Destroyed</strong> the refuge is gone and he is spat into the open.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": "sheltered-inside",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                }
+            }
+        }
+    ],
+    "ownership": {
+        "default": 0
+    }
+}
