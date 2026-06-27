@@ -200,12 +200,12 @@
     {
       "flags": {
         "pf2e": {
-          "linkToActorSize": true,
-          "autoscale": true
+          "linkToActorSize": false,
+          "autoscale": false
         }
       },
-      "height": 2,
-      "width": 2,
+      "height": 1,
+      "width": 1,
       "name": "The Glass to the Ice Palace",
       "displayName": 0,
       "actorLink": false,
@@ -307,12 +307,12 @@
     {
       "flags": {
         "pf2e": {
-          "linkToActorSize": true,
-          "autoscale": true
+          "linkToActorSize": false,
+          "autoscale": false
         }
       },
-      "height": 2,
-      "width": 2,
+      "height": 1,
+      "width": 1,
       "name": "The Warded Sarcophagus",
       "displayName": 0,
       "actorLink": false,
@@ -397,14 +397,14 @@
         "disposition": false
       },
       "movementAction": null,
-      "actorId": "nwWardedSarcophagus",
+      "actorId": "nwWardedSarco001",
       "hidden": true,
       "sort": 0,
       "shape": 4,
       "level": "defaultLevel0000",
       "_id": "nwSarcoTokenDM01",
-      "x": 6600,
-      "y": 3200,
+      "x": 6700,
+      "y": 3300,
       "elevation": 0,
       "locked": false,
       "_movementHistory": [],

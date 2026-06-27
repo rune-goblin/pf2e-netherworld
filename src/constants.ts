@@ -42,7 +42,7 @@ export const STRIGOI_ACTOR_ID = 'Imi7xJECTa2xz1o6';
 
 // The Warded Sarcophagus hazard (Veyrin's coffin). Its token rides hidden on the Dark Mirror scene
 // until the coffin overlay is revealed at a damage threshold (src/mirror.ts setCoffinState).
-export const WARDED_SARCOPHAGUS_ACTOR_ID = 'nwWardedSarcophagus';
+export const WARDED_SARCOPHAGUS_ACTOR_ID = 'nwWardedSarco001';
 export const DEBILITATING_STRIKE_DC = 34;
 export const AUTO_DEBILITATING_STRIKE_SETTING = 'autoDebilitatingStrike';
 
